@@ -1,17 +1,19 @@
-cjk (4.8.0+git20080711-2) unstable; urgency=low
-
+cjk (4.8.0+git20080804-1) UNRELEASED; urgency=low
+  
+  * The "GIT+SVN" release.
+  * New upstream release:
+     - Fixes some XeLaTeX issues with the language files.
   * [control]
      - Add Homepage tag;
      - switch from XS-Vcs to Vcs-*;
      - use Debian Alioth's SVN address instead of upstream's GIT
-       address.
+       address;
+     - add dependency on (git?).  Check with pbuilder.  TODO
   * [rules]
-     - Add a new "fetch" target to package the orig.tar.gz file with
-       git-buildpackage (fix Dependency; Indep?).  Cfr. other packages
-       for examples (ufoai, mplayer).  Also automatically change versioning
-       of the package; perhaps do it in debian/changelog as well?  TODO.
+     - Add a new "get-orig-source" target to package the orig.tar.gz file
+       from the upstream GIT repository directly.
 
- --
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Tue, 05 Aug 2008 18:56:54 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
