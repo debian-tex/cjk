@@ -187,6 +187,8 @@ get-orig-source:
 # 5th to 8th byte of the gzip.
 	cd cjk-$(upstream_version) && git-archive --format=tar --prefix=cjk-$(upstream_version)/ master | gzip -9 --no-name > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
 
+	# Clean again, because we use svn-buildpackage afterwards.
+	rm -rf cjk-$(upstream_version)
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install patch unpatch clean1 get-orig-source
