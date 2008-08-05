@@ -5,8 +5,9 @@ Section: tex
 Priority: optional
 Maintainer: Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
 Standards-Version: 3.8.0
-XS-Vcs-Git: git://git.sv.gnu.org/cjk.git
-XS-Vcs-Browser: http://git.sv.gnu.org/gitweb/?p=cjk.git
+Vcs-Svn: svn://svn.debian.org/svn/debian-tex/cjk/trunk
+Vcs-Browser: http://svn.debian.org/wsvn/debian-tex/cjk/trunk/
+Homepage: http://cjk.ffii.org/
 
 Package: latex-cjk-common
 Architecture: any
