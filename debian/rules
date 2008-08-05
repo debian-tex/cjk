@@ -29,7 +29,7 @@ unixdate := $(shell date -d $(isodate) +%s)
 unixdate := $(shell expr $(unixdate) + 86400 )
 
 # To get the Master revision number (i.e. 4.8.0), use:
-# dpkg-parsechangelog | sed -ne 's/^Version: *\([^+-]*\).*/\1/p' # true version
+# dpkg-parsechangelog | sed -ne 's/^Version: *\([^+-]*\).*/\1/p'
 
 
 build: build-stamp
