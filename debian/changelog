@@ -1,3 +1,18 @@
+cjk (4.8.0+git20080711-2) unstable; urgency=low
+
+  * [control]
+     - Add Homepage tag;
+     - switch from XS-Vcs to Vcs-*;
+     - use Debian Alioth's SVN address instead of upstream's GIT
+       address.
+  * [rules]
+     - Add a new "fetch" target to package the orig.tar.gz file with
+       git-buildpackage (fix Dependency; Indep?).  Cfr. other packages
+       for examples (ufoai, mplayer).  Also automatically change versioning
+       of the package; perhaps do it in debian/changelog as well?  TODO.
+
+ --
+
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
   * The "Copyright is the right to copy" release.
