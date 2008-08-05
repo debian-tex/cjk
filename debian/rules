@@ -20,6 +20,18 @@ export DH_ALWAYS_EXCLUDE=.git:CVS:.svn
 # The build directory for Thai fonts.
 build_thaifonts = build_thaifonts
 
+# Stuff for get-orig-source.
+# Getting the revision numbers according to debian/changelog, the HARD way.
+upstream_version := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(.*\)-.*/\1/p')
+isodate := $(shell dpkg-parsechangelog | sed -ne 's/^Version.*git\(.*\)-.*/\1/p')
+unixdate := $(shell date -d $(isodate) +%s)
+# Add 24 hours to the Unix time.
+unixdate := $(shell expr $(unixdate) + 86400 )
+
+# To get the Master revision number (i.e. 4.8.0), use:
+# dpkg-parsechangelog | sed -ne 's/^Version: *\([^+-]*\).*/\1/p' # true version
+
+
 build: build-stamp
 build-arch: patch
 	dh_testdir
@@ -161,5 +173,20 @@ unpatch:
 	dpatch deapply-all
 	rm -rf patch-stamp debian/patched
 
+get-orig-source:
+	# Cleaning
+	rm -rf cjk-$(upstream_version)
+	rm -f ../cjk_$(upstream_version).orig.tar.gz
+
+	# Download the latest GIT version and downgrade it to $(isodate).
+	git-clone git://git.sv.gnu.org/cjk.git cjk-$(upstream_version)
+	cd cjk-$(upstream_version) && git reset --hard `git rev-list --all -n 1 --before=$(unixdate)`
+
+	# Make a pristine package.
+# --no-name/-n is important because it won't save the timestamp in the
+# 5th to 8th byte of the gzip.
+	cd cjk-$(upstream_version) && git-archive --format=tar --prefix=cjk-$(upstream_version)/ master | gzip -9 --no-name > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
+
+
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install patch unpatch clean1
+.PHONY: build clean binary-indep binary-arch binary install patch unpatch clean1 get-orig-source
