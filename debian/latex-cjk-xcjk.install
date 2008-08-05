@@ -1,0 +1,13 @@
+texinput/xCJK.sty usr/share/texmf/tex/latex/CJK
+texinput/xpmC.chr usr/share/texmf/tex/latex/CJK
+texinput/xpmC.enc usr/share/texmf/tex/latex/CJK
+texinput/UTF8/xUTF8.* usr/share/texmf/tex/latex/CJK/UTF8
+
+# Documentation files.  Don't use a .docs file.
+doc/xCJK.txt usr/share/doc/latex-cjk-common/
+
+# Example files.  Don't use .examples, as it would install things in
+# /u/s/d/latex-cjk-xcjk/ instead.
+examples/xCJK.tex usr/share/doc/latex-cjk-common/examples/
+debian/xCJK-extended.tex usr/share/doc/latex-cjk-common/examples/
+debian/xCJK-extended.pdf usr/share/doc/latex-cjk-common/examples/
