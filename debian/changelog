@@ -8,7 +8,7 @@ cjk (4.8.0+git20080804-1) UNRELEASED; urgency=low
      - switch from XS-Vcs to Vcs-*;
      - use Debian Alioth's SVN address instead of upstream's GIT
        address;
-     - add dependency on (git?).  Check with pbuilder.  TODO
+     - add Build-Dependency on git-core.
   * [rules]
      - Add a new "get-orig-source" target to package the orig.tar.gz file
        from the upstream GIT repository directly.
