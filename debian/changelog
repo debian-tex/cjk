@@ -12,6 +12,10 @@ cjk (4.8.0+git20080804-1) UNRELEASED; urgency=low
   * [rules]
      - Add a new "get-orig-source" target to package the orig.tar.gz file
        from the upstream GIT repository directly.
+  * Replace use of song cyberbit font in examples (LP: #180529). TODO
+  https://bugs.launchpad.net/ubuntu/+source/cjk/+bug/180529
+  * Cannot format example CJKutf8.tex in latex-cjk-common (LP: #137761). TODO
+  https://bugs.launchpad.net/ubuntu/+source/cjk/+bug/137761
 
  -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Tue, 05 Aug 2008 18:56:54 +0200
 
