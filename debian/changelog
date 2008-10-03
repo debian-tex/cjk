@@ -1,8 +1,9 @@
-cjk (4.8.0+git20080804-1) UNRELEASED; urgency=low
+cjk (4.8.0+git20081001-1) UNRELEASED; urgency=low
   
   * The "GIT+SVN" release.
   * New upstream release:
-     - Fixes some XeLaTeX issues with the language files.
+     - Fixes some XeLaTeX issues with the language files;
+     - add support for CID-keyed fonts in the Fontforge scripts.
   * [control]
      - Add Homepage tag;
      - switch from XS-Vcs to Vcs-*;
@@ -12,12 +13,15 @@ cjk (4.8.0+git20080804-1) UNRELEASED; urgency=low
   * [rules]
      - Add a new "get-orig-source" target to package the orig.tar.gz file
        from the upstream GIT repository directly.
-  * Replace use of song cyberbit font in examples (LP: #180529). TODO
-  https://bugs.launchpad.net/ubuntu/+source/cjk/+bug/180529
+  * [patches/00list] Remove 05_fix_examplefiles.dpatch from the list,
+     as the upstream release now uses CJKutf8 and does not rely on the
+     non-free Bitstream Cyberbit font anymore.  This also closes an
+     Ubuntu bugreport requesting to replace the Cyberbit fonts in the
+     example files (LP: #180529).
   * Cannot format example CJKutf8.tex in latex-cjk-common (LP: #137761). TODO
   https://bugs.launchpad.net/ubuntu/+source/cjk/+bug/137761
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Tue, 05 Aug 2008 18:56:54 +0200
+ --
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
