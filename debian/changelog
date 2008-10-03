@@ -18,10 +18,11 @@ cjk (4.8.0+git20081001-1) UNRELEASED; urgency=low
      non-free Bitstream Cyberbit font anymore.  This also closes an
      Ubuntu bugreport requesting to replace the Cyberbit fonts in the
      example files (LP: #180529).
-  * Cannot format example CJKutf8.tex in latex-cjk-common (LP: #137761). TODO
-  https://bugs.launchpad.net/ubuntu/+source/cjk/+bug/137761
+  * [patches/04_extend_examplefiles.dpatch] This patch has commented out
+     the Korean part of the CJKutf8.tex file since May 2007, which closes
+     an Ubuntu bugreport. (LP: #137761).
 
- --
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Fri, 03 Oct 2008 02:23:32 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
