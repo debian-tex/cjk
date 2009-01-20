@@ -44,15 +44,24 @@ build-arch: patch
 build-indep: patch
 	dh_testdir
 
-	# Extracting binary files
-# How it was used: uuencode thaifonts.tar.gz thaifonts.tar.gz > thaifonts.tar.gz.uu
-	cd debian && uudecode thaifonts.tar.gz.uu && tar xzf thaifonts.tar.gz
-
 	mkdir $(build_thaifonts)
-	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/*c90.* ../utils/thaifont/tools/*.fontinst ../debian/thaifonts/* . && cd ../debian/thaifonts && prename 's/_//' * && prename 's/\./n\./' norasi.* garuda.*)
-# If you depend on thailatex, change above command with this one:
-#	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/*{c90.,.fontinst}* /usr/share/texmf/fonts/afm/public/thai/{garuda,norasi}*.afm .)
-	(cd $(build_thaifonts) && tex norasi.fontinst && tex garuda.fontinst && for i in f*.pl; do pltotf $$i; done)
+
+# The upstream patch on 2008-12-28 in CJK provided support for
+# the ThaiLaTeX fonts that shipped with v0.4.2.
+# Before this patch CJK couldn't directly use the same fonts as
+# ThaiLaTeX.  latex-cjk-thai therefore installed its own extra fonts.
+# If you still wish to use these modified fonts, then don't forget to
+# uncomment the last two lines in debian/latex-cjk-thai.install ,
+# to comment/uncomment some of the lines below and to remove the
+# dependency on thailatex.
+
+#	# Extracting binary files
+# How it was used: uuencode thaifonts.tar.gz thaifonts.tar.gz > thaifonts.tar.gz.uu
+#	cd debian && uudecode thaifonts.tar.gz.uu && tar xzf thaifonts.tar.gz
+#	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst ../debian/thaifonts/* . && cd ../debian/thaifonts && prename 's/_//' * && prename 's/\./n\./' norasi.* garuda.*)
+	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst /usr/share/texmf/fonts/afm/public/thai/{garuda,norasi}*.afm .)
+
+	(cd $(build_thaifonts) && tex norasi-c90.fontinst && tex garuda-c90.fontinst && for i in f*.pl; do pltotf $$i; done)
 
 	touch build-indep-stamp
 
@@ -111,7 +120,7 @@ binary-indep: build-indep
 	dh_link -pcjk-latex usr/share/doc/latex-cjk-common usr/share/doc/cjk-latex
 	dh_link -platex-cjk-thai usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-thai
 	dh_link -platex-cjk-xcjk usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-xcjk
-	dh_installtex -platex-cjk-thai --flavor=map:config_for_all_maps map=Map,garuda.map map=Map,norasi.map
+	dh_installtex -platex-cjk-thai --flavor=map:config_for_all_maps map=Map,garuda-c90.map map=Map,norasi-c90.map
 	dh_installtex -platex-cjk-korean
 	dh_installtex -platex-cjk-xcjk
 	dh_installemacsen -i
