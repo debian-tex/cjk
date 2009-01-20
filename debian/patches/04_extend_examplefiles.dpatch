@@ -73,7 +73,7 @@ diff -Nbaurw cjk-4.7.0/examples/CJKbabel.tex cjk-current/examples/CJKbabel.tex
 @@ -5,26 +5,32 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.1 (10-Aug-2008)
+ % Version 4.8.2 (29-Dec-2008)
 -
 -% You need Emacs 20 to process this file!
 +%
@@ -142,7 +142,7 @@ diff -Nbaurw cjk-4.7.0/examples/CJKmixed.tex cjk-current/examples/CJKmixed.tex
 @@ -4,8 +4,11 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.1 (10-Aug-2008)
+ % Version 4.8.2 (29-Dec-2008)
 +
 +% To get Vietnamese working on Debian, make sure you have
 +% "texlive-lang-vietnamese" installed.
@@ -158,7 +158,7 @@ diff -Nbaurw cjk-4.7.0/examples/CJKutf8.tex cjk-current/examples/CJKutf8.tex
 @@ -4,18 +4,36 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.1 (10-Aug-2008)
+ % Version 4.8.2 (29-Dec-2008)
 -
 -% Vietnamese support for Babel comes with the VnTeX package.
  %
@@ -223,7 +223,7 @@ diff -Nbaurw cjk-4.7.0/examples/KS-hlatex.tex cjk-current/examples/KS-hlatex.tex
 +%
 +% written by Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
 +%
-+ % Version 4.8.1 (10-Aug-2008)
++ % Version 4.8.2 (29-Dec-2008)
 +
 +\documentclass[12pt]{article}
 +
@@ -411,7 +411,7 @@ diff -Nbaurw cjk-4.7.0/examples/muletest.tex cjk-current/examples/muletest.tex
 @@ -4,26 +4,31 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.1 (10-Aug-2008)
+ % Version 4.8.2 (29-Dec-2008)
 -
 -% You need Emacs 20 (or Mule 2.3) to process this file!
 +%
