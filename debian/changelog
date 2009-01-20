@@ -1,28 +1,54 @@
-cjk (4.8.1+git20081001-1) UNRELEASED; urgency=low
+cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
   
   * The "GIT+SVN" release.
   * New upstream release:
      - Fixes some XeLaTeX issues with the language files;
-     - add support for CID-keyed fonts in the Fontforge scripts.
+     - adds support for CID-keyed fonts in the Fontforge scripts;
+     - adds the \CJKdigits* command to use the traditional form of
+       "zero";
+     - adds the \Unicode command to use vertical glyph representation
+       forms;
+     - uses the original font names of ThaiLaTeX 0.4.2;
+     - DNP.txt is now renamed to wadalab.txt;
+     - a new CJKnumb.txt document is available, which explains the "CJKnumb"
+       package;
+     - extra documentation in CJK.txt about using the beamer class in
+       conjunction with CJKutf8.
   * [control]
      - Add Homepage tag;
      - switch from XS-Vcs to Vcs-*;
      - use Debian Alioth's SVN address instead of upstream's GIT
        address;
-     - add Build-Dependency on git-core.
+     - add a build-dependency on git-core and tex-common;
+     - add a dependency on tex-common (>= 1.11) for every (binary) package;
+     - fix a fair Lintian warning by adding a dependency on ${misc:Depends}
+       for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
+       warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
+       ("unknown substitution variable").
   * [rules]
      - Add a new "get-orig-source" target to package the orig.tar.gz file
-       from the upstream GIT repository directly.
+       from the upstream GIT repository directly;
+     - upstream is now compatible with Type1 fonts from ThaiLaTeX v0.4.2,
+       which deprecates the use of a prepackaged set of fonts.  The fontmap
+       files now have a "-c90" appended to them, i.e. "norasi-c90" and
+       "garuda-c90".
+  * [thaifonts.tar.gz.uu] Removed, because CJK is now fully compatible with
+     fonts from the ThaiLaTeX package.  TODO
   * [patches/00list] Remove 05_fix_examplefiles.dpatch from the list,
      as the upstream release now uses CJKutf8 and does not rely on the
      non-free Bitstream Cyberbit font anymore.  This also closes an
      Ubuntu bugreport requesting to replace the Cyberbit fonts in the
      example files (LP: #180529).
+  * [patches/*] Modify them to support CJK version 4.8.2.
   * [patches/04_extend_examplefiles.dpatch] This patch has commented out
      the Korean part of the CJKutf8.tex file since May 2007, which closes
      an Ubuntu bugreport. (LP: #137761).
+  * Add \newpage to the example files.  See
+    http://lists.ffii.org/pipermail/cjk/2008-November/002353.html
+  * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
+  * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Fri, 03 Oct 2008 02:23:32 +0200
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Tue, 20 Jan 2009 02:40:19 +0100
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
