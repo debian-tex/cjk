@@ -25,7 +25,8 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
      - fix a fair Lintian warning by adding a dependency on ${misc:Depends}
        for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
        warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
-       ("unknown substitution variable").
+       ("unknown substitution variable");
+     - bump Standards-Version from 3.8.0 to 3.8.1 (no changes).
   * [rules]
      - Add a new "get-orig-source" target to package the orig.tar.gz file
        from the upstream GIT repository directly;
