@@ -19,8 +19,9 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
      - switch from XS-Vcs to Vcs-*;
      - use Debian Alioth's SVN address instead of upstream's GIT
        address;
-     - add a build-dependency on git-core and tex-common;
-     - add a dependency on tex-common (>= 1.11) for every (binary) package;
+     - add a build-dependency on git-core and tex-common (>= 1.17), the
+       latter providing trigger support;
+     - add a dependency on tex-common (>= 1.17) for every (binary) package;
      - fix a fair Lintian warning by adding a dependency on ${misc:Depends}
        for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
        warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
@@ -40,9 +41,12 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
      Ubuntu bugreport requesting to replace the Cyberbit fonts in the
      example files (LP: #180529).
   * [patches/*] Modify them to support CJK version 4.8.2.
-  * [patches/04_extend_examplefiles.dpatch] This patch has commented out
-     the Korean part of the CJKutf8.tex file since May 2007, which closes
-     an Ubuntu bugreport. (LP: #137761).
+  * [patches/04_extend_examplefiles.dpatch]
+     - This patch has commented out the Korean part of the CJKutf8.tex
+       file since May 2007, which closes an Ubuntu bugreport (LP: #137761);
+     - add \newpage in the example files (?or just one?) before \end{CJK*}
+       to solve \write issues when you
+       include a ToC.  + extra comments.  [TODO]
   * Add \newpage to the example files.  See
     http://lists.ffii.org/pipermail/cjk/2008-November/002353.html
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
