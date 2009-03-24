@@ -19,9 +19,9 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
      - switch from XS-Vcs to Vcs-*;
      - use Debian Alioth's SVN address instead of upstream's GIT
        address;
-     - add a build-dependency on git-core and tex-common (>= 1.17), the
+     - add a build-dependency on git-core and tex-common (>= 1.18), the
        latter providing trigger support;
-     - add a dependency on tex-common (>= 1.17) for every (binary) package;
+     - add a dependency on tex-common (>= 1.18) for every binary package;
      - fix a fair Lintian warning by adding a dependency on ${misc:Depends}
        for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
        warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
@@ -53,7 +53,7 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
   * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Tue, 20 Jan 2009 02:40:19 +0100
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Mon, 23 Mar 2009 22:50:40 +0100
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 

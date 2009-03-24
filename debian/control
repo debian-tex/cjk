@@ -1,5 +1,5 @@
 Source: cjk
-Build-Depends: debhelper (>= 7), dpatch (>= 2.0.14), libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 1.17)
+Build-Depends: debhelper (>= 7), dpatch (>= 2.0.14), libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 1.18)
 Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, sharutils
 Section: tex
 Priority: optional
@@ -11,7 +11,7 @@ Homepage: http://cjk.ffii.org/
 
 Package: latex-cjk-common
 Architecture: any
-Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 1.17), ${misc:Depends}, ${shlibs:Depends}
+Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 1.18), ${misc:Depends}, ${shlibs:Depends}
 Recommends: latex-cjk-xcjk
 Conflicts: cjk-latex (<= 4.5.1), latex-cjk
 Replaces: cjk-latex
@@ -30,7 +30,7 @@ Description: LaTeX macro package for CJK (Chinese/Japanese/Korean)
 
 Package: latex-cjk-xcjk
 Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), texlive-xetex, tex-common (>= 1.17), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), texlive-xetex, tex-common (>= 1.18), ${misc:Depends}
 Suggests: ttf-dejima-mincho, ttf-kiloji, ttf-thai-tlwg, ttf-arphic-ukai, ttf-arphic-uming, ttf-baekmuk, ttf-sazanami-gothic, ttf-sazanami-mincho, ttf-unfonts-core, ttf-unfonts-extra, ttf-vlgothic, ttf-wqy-zenhei
 Conflicts: cjk-latex (<= 4.5.1)
 Description: XeTeX module of LaTeX CJK
@@ -50,7 +50,7 @@ Description: XeTeX module of LaTeX CJK
 
 Package: latex-cjk-chinese
 Architecture: any
-Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 1.17), ${misc:Depends}, ${shlibs:Depends}
+Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 1.18), ${misc:Depends}, ${shlibs:Depends}
 Recommends: latex-cjk-chinese-arphic-bsmi00lp, latex-cjk-chinese-arphic-bkai00mp, latex-cjk-chinese-arphic-gbsn00lp, latex-cjk-chinese-arphic-gkai00mp
 Suggests: hbf-cns40-b5, hbf-jfs56
 Conflicts: cjk-latex (<= 4.5.1), tfm-arphic-bsmi00lp (<= 2.11.2-0.1), tfm-arphic-bkai00mp (<= 2.11.2-0.1), tfm-arphic-gbsn00lp (<= 2.11.2-0.1), tfm-arphic-gkai00mp (<= 2.11.2-0.1)
@@ -68,7 +68,7 @@ Description: Chinese module of LaTeX CJK
 Package: latex-cjk-japanese
 Architecture: any
 Recommends: latex-cjk-japanese-wadalab
-Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 1.17), ${misc:Depends}, ${shlibs:Depends}
+Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 1.18), ${misc:Depends}, ${shlibs:Depends}
 Suggests: hbf-kanji48
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Japanese module of LaTeX CJK
@@ -83,7 +83,7 @@ Description: Japanese module of LaTeX CJK
 Package: latex-cjk-korean
 Architecture: all
 Recommends: ko.tex-extra-hlfont
-Depends: latex-cjk-common (>= ${source:Version}), tex-common (>= 1.17), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), tex-common (>= 1.18), ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Korean module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
@@ -91,7 +91,7 @@ Description: Korean module of LaTeX CJK
 
 Package: latex-cjk-thai
 Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 1.17), thailatex (>= 0.4.2), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 1.18), thailatex (>= 0.4.2), ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Thai module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
