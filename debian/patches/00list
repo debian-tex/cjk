@@ -3,3 +3,4 @@
 04_extend_examplefiles.dpatch
 05_fix_examplefiles.dpatch
 06_extend_JIS_example.dpatch
+#07_remove_unnecessary_C_libs.dpatch

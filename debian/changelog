@@ -50,6 +50,8 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
      - add \newpage in the example files (?or just one?) before \end{CJK*}
        to solve \write issues when you
        include a ToC.  + extra comments.  [TODO]
+  * [patches/07_remove_unnecessary_C_libs.dpatch] Add but do not yet apply
+     this patch intended to fix some of the dpkg-shlibdeps warnings.
   * Add \newpage to the example files.  See
     http://lists.ffii.org/pipermail/cjk/2008-November/002353.html
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
