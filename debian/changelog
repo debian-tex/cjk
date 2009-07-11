@@ -28,7 +28,9 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
        ("unknown substitution variable");
      - bump Standards-Version from 3.8.0 to 3.8.1 (no changes).
   * [rules]
-     - Add a new "get-orig-source" target to package the orig.tar.gz file
+     - Bug fix: "bashism in debian/rules", thanks to Raphael Geissert
+       (Closes: #535375);
+     - add a new "get-orig-source" target to package the orig.tar.gz file
        from the upstream GIT repository directly;
      - upstream is now compatible with Type1 fonts from ThaiLaTeX v0.4.2,
        which deprecates the use of a prepackaged set of fonts.  The fontmap
@@ -53,7 +55,7 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
   * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Mon, 23 Mar 2009 22:50:40 +0100
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Thu, 09 Jul 2009 22:34:07 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 

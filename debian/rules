@@ -79,7 +79,7 @@ clean1:
 
 # If a Debian dpatch has been applied on Makefile, then perform a distclean;
 # if not, do nothing.  Reason: CJK upstream has no cleaning targets.
-	if [[ `grep -c distclean Makefile` -gt 0 ]]; then $(MAKE) distclean; fi
+	if [ `grep -c distclean Makefile` -gt 0 ]; then $(MAKE) distclean; fi
 
 	# Remove the binary files.
 	rm -rf $(build_thaifonts)
