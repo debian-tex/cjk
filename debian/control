@@ -4,7 +4,7 @@ Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils,
 Section: tex
 Priority: optional
 Maintainer: Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
-Standards-Version: 3.8.1
+Standards-Version: 3.8.2
 Vcs-Svn: svn://svn.debian.org/svn/debian-tex/cjk/trunk
 Vcs-Browser: http://svn.debian.org/wsvn/debian-tex/cjk/trunk/
 Homepage: http://cjk.ffii.org/
