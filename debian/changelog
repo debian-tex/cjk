@@ -26,7 +26,7 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
        for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
        warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
        ("unknown substitution variable");
-     - bump Standards-Version from 3.8.0 to 3.8.1 (no changes).
+     - bump Standards-Version from 3.8.0 to 3.8.2 (no changes).
   * [rules]
      - Bug fix: "bashism in debian/rules", thanks to Raphael Geissert
        (Closes: #535375);
