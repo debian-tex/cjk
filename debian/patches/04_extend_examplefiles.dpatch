@@ -453,7 +453,7 @@ diff -Nbaurw cjk-4.7.0/examples/rubytest.tex cjk-current/examples/rubytest.tex
 +++ cjk-current/examples/rubytest.tex	2007-05-09 05:57:21.071665391 +0200
 @@ -5,16 +5,15 @@
  %
- % Version 4.8.2 (10-Aug-2008)
+ % Version 4.8.2 (29-Dec-2008)
  
 -% You need Emacs 20 (or Mule 2.3) to process this file!
 -
