@@ -1,5 +1,5 @@
 cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
-  
+
   * The "GIT+SVN" release.
   * New upstream release:
      - Fixes some XeLaTeX issues with the language files;
@@ -37,7 +37,7 @@ cjk (4.8.2+git20090105-1) UNRELEASED; urgency=low
        files now have a "-c90" appended to them, i.e. "norasi-c90" and
        "garuda-c90".
   * [thaifonts.tar.gz.uu] Removed, because CJK is now fully compatible with
-     fonts from the ThaiLaTeX package.  TODO
+     fonts from the ThaiLaTeX package.
   * [patches/00list] Remove 05_fix_examplefiles.dpatch from the list,
      as the upstream release now uses CJKutf8 and does not rely on the
      non-free Bitstream Cyberbit font anymore.  This also closes an
