@@ -71,7 +71,7 @@ build-stamp:
 clean: clean1 unpatch
 
 clean1:
-	dh_testdir doc/CJKutf8.txt examples/CJKbabel.tex debian/thaifonts.tar.gz.uu
+	dh_testdir doc/CJKutf8.txt examples/CJKbabel.tex
 	dh_testroot
 	rm -f build-stamp build-indep-stamp build-arch-stamp
 
