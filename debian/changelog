@@ -1,12 +1,3 @@
-cjk (4.8.2+git20090105-2) unstable; urgency=low
-
-  * The "Thank goodness we have cowbuilder" release.
-  * [control] Add a build-dependency on an unversioned thailatex, which
-     should allow for a clean pbuilder/cowbuilder build.  Thanks to Norbert
-     Preining.
-
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Sat, 18 Jul 2009 00:57:54 +0200
-
 cjk (4.8.2+git20090105-1) unstable; urgency=low
 
   * The "GIT+SVN" release.
@@ -35,7 +26,10 @@ cjk (4.8.2+git20090105-1) unstable; urgency=low
        for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
        warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
        ("unknown substitution variable");
-     - bump Standards-Version from 3.8.0 to 3.8.2 (no changes).
+     - bump Standards-Version from 3.8.0 to 3.8.2 (no changes);
+     - add a build-dependency on an unversioned thailatex, which should
+       allow for a clean pbuilder/cowbuilder build.  Thanks to Norbert
+       Preining.
   * [rules]
      - Bug fix: "bashism in debian/rules", thanks to Raphael Geissert
        (Closes: #535375);
@@ -66,7 +60,7 @@ cjk (4.8.2+git20090105-1) unstable; urgency=low
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
   * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Tue, 14 Jul 2009 21:40:57 +0200
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Thu, 23 Jul 2009 23:05:49 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
