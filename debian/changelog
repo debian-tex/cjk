@@ -63,6 +63,9 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      documents when you include \tableofcontents.
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
   * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
+  * [README.Debian-source] New file, in which the dpatch mechanism to add
+     patches is explained in a few words.  This fixes a Lintian warning
+     and is in compliance with Standards-Version 3.8.0.
 
  -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Mon, 24 Aug 2009 02:45:03 +0200
 
