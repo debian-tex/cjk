@@ -1,6 +1,8 @@
-cjk (4.8.2+git20090105-1) unstable; urgency=low
+cjk (4.8.2+git20090105-1) unstable; urgency=medium
 
+  [ Danai SAE-HAN (韓達耐) ]
   * The "GIT+SVN" release.
+  * Setting the urgency to "medium" because of an FTBFS.
   * New upstream release:
      - Fixes some XeLaTeX issues with the language files;
      - adds support for CID-keyed fonts in the Fontforge scripts;
@@ -33,6 +35,8 @@ cjk (4.8.2+git20090105-1) unstable; urgency=low
   * [rules]
      - Bug fix: "bashism in debian/rules", thanks to Raphael Geissert
        (Closes: #535375);
+     - Bug fix: "FTBFS: cp: cannot stat `...{garuda,norasi}*.afm':", thanks
+       to Lucas Nussbaum (Closes: #543025);
      - add a new "get-orig-source" target to package the orig.tar.gz file
        from the upstream GIT repository directly;
      - upstream is now compatible with Type1 fonts from ThaiLaTeX v0.4.2,
@@ -60,7 +64,7 @@ cjk (4.8.2+git20090105-1) unstable; urgency=low
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
   * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Thu, 23 Jul 2009 23:05:49 +0200
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Mon, 24 Aug 2009 02:45:03 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
