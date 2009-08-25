@@ -6,7 +6,7 @@
 # This is free software; see the GNU General Public Licence
 # version 2 or later for copying conditions.  There is NO warranty.
 #
-# Currently maintained by Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
+# Currently maintained by Danai SAE-HAN (韓達耐) <danai@debian.org>
 # for Debian GNU/Linux.
 
 SHELL = /bin/sh

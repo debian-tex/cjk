@@ -1,6 +1,5 @@
 cjk (4.8.2+git20090105-1) unstable; urgency=medium
 
-  [ Danai SAE-HAN (韓達耐) ]
   * The "GIT+SVN" release.
   * Setting the urgency to "medium" because of an FTBFS.
   * New upstream release:
@@ -43,7 +42,8 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      - upstream is now compatible with Type1 fonts from ThaiLaTeX v0.4.2,
        which deprecates the use of a prepackaged set of fonts.  The fontmap
        files now have a "-c90" appended to them, i.e. "norasi-c90" and
-       "garuda-c90".
+       "garuda-c90";
+     - change the maintainer's email address.
   * [thaifonts.tar.gz.uu] Removed, because CJK is now fully compatible with
      fonts from the ThaiLaTeX package.
   * [patches/00list] Remove 05_fix_examplefiles.dpatch from the list,
@@ -70,7 +70,7 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      is created.  This fixes a Lintian warning and is in compliance with
      Standards-Version 3.8.0.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Mon, 24 Aug 2009 02:45:03 +0200
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 24 Aug 2009 02:45:03 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
