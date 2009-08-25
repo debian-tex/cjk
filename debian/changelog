@@ -31,7 +31,8 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      - add a build-dependency on an unversioned thailatex, which should
        allow for a clean pbuilder/cowbuilder build.  Thanks to Norbert
        Preining;
-     - add "Debian TeX maintainers" to the Maintainer: line.
+     - add "Debian TeX maintainers" to the Maintainer: line;
+     - add myself to the Uploaders: line.
   * [rules]
      - Bug fix: "bashism in debian/rules", thanks to Raphael Geissert
        (Closes: #535375);
@@ -70,7 +71,7 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      is created.  This fixes a Lintian warning and is in compliance with
      Standards-Version 3.8.0.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 24 Aug 2009 02:45:03 +0200
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Wed, 26 Aug 2009 00:33:38 +0200
 
 cjk (4.8.0+git20080711-1) unstable; urgency=low
 
