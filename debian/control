@@ -3,7 +3,7 @@ Build-Depends: debhelper (>= 7), dpatch (>= 2.0.14), libkpathsea-dev, texlive-ex
 Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, sharutils, thailatex
 Section: tex
 Priority: optional
-Maintainer: Danai SAE-HAN (韓達耐) <danai@debian.org>
+Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>, Danai SAE-HAN (韓達耐) <danai@debian.org>
 Standards-Version: 3.8.3
 Vcs-Svn: svn://svn.debian.org/svn/debian-tex/cjk/trunk
 Vcs-Browser: http://svn.debian.org/wsvn/debian-tex/cjk/trunk/

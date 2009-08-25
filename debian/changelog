@@ -31,7 +31,8 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      - bump Standards-Version from 3.8.0 to 3.8.3;
      - add a build-dependency on an unversioned thailatex, which should
        allow for a clean pbuilder/cowbuilder build.  Thanks to Norbert
-       Preining.
+       Preining;
+     - add "Debian TeX maintainers" to the Maintainer: line.
   * [rules]
      - Bug fix: "bashism in debian/rules", thanks to Raphael Geissert
        (Closes: #535375);
