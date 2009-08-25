@@ -21,14 +21,14 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
      - switch from XS-Vcs to Vcs-*;
      - use Debian Alioth's SVN address instead of upstream's GIT
        address;
-     - add a build-dependency on git-core and tex-common (>= 1.18), the
+     - add a build-dependency on git-core and tex-common (>= 1.20), the
        latter providing trigger support;
-     - add a dependency on tex-common (>= 1.18) for every binary package;
+     - add a dependency on tex-common (>= 1.20) for every binary package;
      - fix a fair Lintian warning by adding a dependency on ${misc:Depends}
        for latex-cjk-{all,korean,xcjk} and cjk-latex, ignoring a harmless
        warning from dpkg-gencontrol for latex-cjk-all and cjk-latex
        ("unknown substitution variable");
-     - bump Standards-Version from 3.8.0 to 3.8.2 (no changes);
+     - bump Standards-Version from 3.8.0 to 3.8.3;
      - add a build-dependency on an unversioned thailatex, which should
        allow for a clean pbuilder/cowbuilder build.  Thanks to Norbert
        Preining.
@@ -64,8 +64,10 @@ cjk (4.8.2+git20090105-1) unstable; urgency=medium
   * [latex-cjk-common.docs] Add CJKnumb.txt to the list of documents.
   * [latex-cjk-japanese.install] Remove DNP.txt and add wadalab.txt.
   * [README.Debian-source] New file, in which the dpatch mechanism to add
-     patches is explained in a few words.  This fixes a Lintian warning
-     and is in compliance with Standards-Version 3.8.0.
+     patches is explained in a few words.
+  * [README.source] New file, that explains how the original source tarball
+     is created.  This fixes a Lintian warning and is in compliance with
+     Standards-Version 3.8.0.
 
  -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Mon, 24 Aug 2009 02:45:03 +0200
 
