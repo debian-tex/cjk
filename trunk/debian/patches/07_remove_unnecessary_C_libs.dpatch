@@ -1,0 +1,42 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 07_remove_unnecessary_C_libs.dpatch by <danai.sae-han@edpnet.be>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: The upstream C files include extra libraries that are not
+## DP: used at all.  Given that dpkg-shlibdeps sends dozens of
+## DP: warnings about this, we will manually remove those includes.
+
+@DPATCH@
+
+diff -Nbaurw old/utils/hbf2gf/hbf2gf.w.orig new/utils/hbf2gf/hbf2gf.w
+--- old/utils/hbf2gf/hbf2gf.w.orig	2009-07-11 23:37:20.684358053 +0200
++++ new/utils/hbf2gf/hbf2gf.w	2009-07-11 23:37:35.580358672 +0200
+@@ -411,7 +411,6 @@
+ 
+ @
+ @<Include files@>=
+-#include <ctype.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff -Nbaurw old/utils/hbf2gf/configure.orig new/utils/hbf2gf/configure
+--- old/utils/hbf2gf/configure.orig	2009-07-11 23:42:37.228357958 +0200
++++ new/utils/hbf2gf/configure	2009-07-11 23:43:07.932357964 +0200
+@@ -3368,7 +3368,6 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <ctype.h>
+ #include <stdlib.h>
+ #if ((' ' & 0x0FF) == 0x020)
+ # define ISLOWER(c) ('a' <= (c) && (c) <= 'z')
+diff -Nbaurw old/utils/hbf2gf/hbf.c.orig new/utils/hbf2gf/hbf.c
+--- old/utils/hbf2gf/hbf.c.orig	2009-07-11 23:12:13.244359434 +0200
++++ new/utils/hbf2gf/hbf.c	2009-07-11 23:12:27.976357286 +0200
+@@ -60,7 +60,6 @@
+ #include <stddef.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <ctype.h>
+ #include <string.h>
+ #include "hbf.h"

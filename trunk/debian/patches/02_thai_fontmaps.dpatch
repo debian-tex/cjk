@@ -1,0 +1,32 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 02_thai_fontmaps.dpatch by  <danai.sae-han@edpnet.be>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Use the same .pfb fonts as those from the thailatex package.
+
+@DPATCH@
+
+diff -Nbaurw cjk_4.6.0.orig/utils/thaifont/texmf/fonts/map/dvips/garuda/garuda.map cjk-4.6.0/utils/thaifont/texmf/fonts/map/dvips/garuda/garuda.map
+--- cjk_4.6.0.orig/utils/thaifont/texmf/fonts/map/dvips/garuda/garuda.map	2005-11-06 23:01:30.000000000 +0100
++++ cjk-4.6.0/utils/thaifont/texmf/fonts/map/dvips/garuda/garuda.map	2005-11-26 01:59:07.000000000 +0100
+@@ -1,4 +1,4 @@
+-fgdr8z Garuda " C90Encoding ReEncodeFont " <c90.enc <garudan.pfb
+-fgdb8z Garuda-Bold " C90Encoding ReEncodeFont " <c90.enc <garudab.pfb
+-fgdo8z Garuda-Oblique " C90Encoding ReEncodeFont " <c90.enc <garudao.pfb
+-fgdbo8z Garuda-BoldOblique " C90Encoding ReEncodeFont " <c90.enc <garudabo.pfb
++fgdr8z Garuda " C90Encoding ReEncodeFont " <c90.enc <garuda.pfb
++fgdb8z Garuda-Bold " C90Encoding ReEncodeFont " <c90.enc <garuda_b.pfb
++fgdo8z Garuda-Oblique " C90Encoding ReEncodeFont " <c90.enc <garuda_o.pfb
++fgdbo8z Garuda-BoldOblique " C90Encoding ReEncodeFont " <c90.enc <garuda_bo.pfb
+diff -Nbaurw cjk_4.6.0.orig/utils/thaifont/texmf/fonts/map/dvips/norasi/norasi.map cjk-4.6.0/utils/thaifont/texmf/fonts/map/dvips/norasi/norasi.map
+--- cjk_4.6.0.orig/utils/thaifont/texmf/fonts/map/dvips/norasi/norasi.map	2005-11-06 23:01:30.000000000 +0100
++++ cjk-4.6.0/utils/thaifont/texmf/fonts/map/dvips/norasi/norasi.map	2005-11-26 01:58:50.000000000 +0100
+@@ -1,4 +1,4 @@
+-ftnr8z Norasi " C90Encoding ReEncodeFont " <c90.enc <norasin.pfb
+-ftnb8z Norasi-Bold " C90Encoding ReEncodeFont " <c90.enc <norasib.pfb
+-ftni8z Norasi-Italic " C90Encoding ReEncodeFont " <c90.enc <norasii.pfb
+-ftnbi8z Norasi-BoldItalic " C90Encoding ReEncodeFont " <c90.enc <norasibi.pfb
++ftnr8z Norasi " C90Encoding ReEncodeFont " <c90.enc <norasi.pfb
++ftnb8z Norasi-Bold " C90Encoding ReEncodeFont " <c90.enc <norasi_b.pfb
++ftni8z Norasi-Italic " C90Encoding ReEncodeFont " <c90.enc <norasi_i.pfb
++ftnbi8z Norasi-BoldItalic " C90Encoding ReEncodeFont " <c90.enc <norasi_bi.pfb

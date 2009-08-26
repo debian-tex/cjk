@@ -1,0 +1,231 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 08_add_newpage_to_examples.dpatch by  <danai.sae-han@edpnet.be>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Fix examples/*.tex: add \newpage in a CJK environment.  I add
+## DP: this because larger documents with \tableofcontents will
+## DP: sometimes fail when writing out the .toc file, even though
+## DP: this behaviour is well documented.  This will surely prevent
+## DP: many future errors with users.
+
+@DPATCH@
+
+diff -Nbaurw cjk-4.8.2/examples/Big5.tex cjk-current/examples/Big5.tex
+--- cjk-4.8.2/examples/Big5.tex	2009-07-14 21:50:47.473912964 +0200
++++ cjk-current/examples/Big5.tex	2009-07-13 01:05:42.853911919 +0200
+@@ -41,6 +41,11 @@
+ \textbf{¦³ö·sµ²ºcªº²Ó¸`¡A¥i°Ñ¦Ò¡u¦p¦ó¾\Åª¥»°İµª¶°¤Î¤F¸Ñ¨ä½s±Æµ²ºc¡v¸Ó
+ ¶µ¤¤ªº»¡©ú¡C}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/Big5vert.tex cjk-current/examples/Big5vert.tex
+--- cjk-4.8.2/examples/Big5vert.tex	2009-07-13 00:40:16.053915841 +0200
++++ cjk-current/examples/Big5vert.tex	2009-07-13 01:11:28.196017210 +0200
+@@ -23,6 +23,11 @@
+ \textbf{¦³ö·sµ²ºcªº²Ó¸`¡A¥i°Ñ¦Ò¡u¦p¦ó¾\Åª¥»°İµª¶°¤Î¤F¸Ñ¨ä½s±Æµ²ºc¡v¸Ó
+ ¶µ¤¤ªº»¡©ú¡C}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/CEF_test.tex cjk-current/examples/CEF_test.tex
+--- cjk-4.8.2/examples/CEF_test.tex	2009-07-14 21:50:47.473912964 +0200
++++ cjk-current/examples/CEF_test.tex	2009-07-13 01:11:46.083118455 +0200
+@@ -40,6 +40,11 @@
+ \verb|\CJKchar[CNS7]{"5A}{"5A}| \CJKchar[CNS7]{"5A}{"5A}
+ \quad \verb|&C7-|\verb|5A5A;| &C7-5A5A;
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/CJKfntef.tex cjk-current/examples/CJKfntef.tex
+--- cjk-4.8.2/examples/CJKfntef.tex	2009-07-13 00:40:16.053915841 +0200
++++ cjk-current/examples/CJKfntef.tex	2009-07-13 01:12:09.249954713 +0200
+@@ -50,6 +50,11 @@
+ 
+ \CJKxout*{ºº×Ö¼Óµã£¬ \CJKunderdot{¿ÉÍ¬Ê±¼ÓÏ»®Ïß¼ÓÏ»®£¬Ïß, ×Ô¶¯»»ĞĞ,}}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/CJKmixed.tex cjk-current/examples/CJKmixed.tex
+--- cjk-4.8.2/examples/CJKmixed.tex	2009-07-14 21:50:47.477914953 +0200
++++ cjk-current/examples/CJKmixed.tex	2009-07-13 01:12:17.553911782 +0200
+@@ -73,6 +73,11 @@
+     è©²é …ä¸­çš„èªªæ˜ã€‚}
+ \end{TChinese}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/CJKspace.tex cjk-current/examples/CJKspace.tex
+--- cjk-4.8.2/examples/CJKspace.tex	2009-07-13 00:40:16.053915841 +0200
++++ cjk-current/examples/CJKspace.tex	2009-07-13 01:12:25.665912216 +0200
+@@ -29,6 +29,11 @@
+   æ··æ’ \verb+anything+ ä¿æŒ \texttt{spaces} ç©ºæ ¼ \LaTeX\ é—´éš”
+   \mbox{boxes} ç›’å­ \hbox{hbox} ä¸­æ–‡ 123456 æ•°å­—.
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/CJKutf8.tex cjk-current/examples/CJKutf8.tex
+--- cjk-4.8.2/examples/CJKutf8.tex	2009-07-14 21:50:47.477914953 +0200
++++ cjk-current/examples/CJKutf8.tex	2009-07-13 01:12:35.121914369 +0200
+@@ -123,6 +123,11 @@
+     ÑÂÑÂ‚Ğ¾ÑÂ‚ FAQ Ğ¸ ĞµĞ³Ğ¾ ÑÂÑÂ‚ÑÂ€ÑÂƒĞºÑÂ‚ÑÂƒÑÂ€Ğ°' Ğ¾Ğ±ÑÂŠÑÂÑÂĞ½ĞµĞ½ÑÂ‹ Ğ´ĞµÑÂ‚Ğ°Ğ»Ğ¸ ÑÂÑÂ‚Ğ¾Ğ¹ Ğ½Ğ¾Ğ²Ğ¾Ğ¹ ÑÂÑÂ‚ÑÂ€ÑÂƒĞºÑÂ‚ÑÂƒÑÂ€ÑÂ‹.}
+ \end{otherlanguage}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/GB.tex cjk-current/examples/GB.tex
+--- cjk-4.8.2/examples/GB.tex	2009-07-13 00:40:16.053915841 +0200
++++ cjk-current/examples/GB.tex	2009-07-13 01:12:45.424137301 +0200
+@@ -20,6 +20,11 @@
+ \textbf{ÓĞ¹ØĞ½á¹¹µÄÏ¸½Ú£¬¿É²Î¿¼¡¸ÈçºÎÔÄ¶q¾ÎÊ´ğ¼¯¼°K½âÆä±àÅÅ½á¹¹¡¹¸Ã
+ ÏîÖĞµÄËµ÷¡£}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/JIS.tex cjk-current/examples/JIS.tex
+--- cjk-4.8.2/examples/JIS.tex	2009-07-14 21:50:47.489915612 +0200
++++ cjk-current/examples/JIS.tex	2009-07-13 01:12:51.839815082 +0200
+@@ -40,6 +40,11 @@
+ \CJKfamily{maru}
+ \testpar
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/KS-hlatex.tex cjk-current/examples/KS-hlatex.tex
+--- cjk-4.8.2/examples/KS-hlatex.tex	2009-07-14 21:50:47.477914953 +0200
++++ cjk-current/examples/KS-hlatex.tex	2009-07-14 21:52:20.524326127 +0200
+@@ -176,6 +176,11 @@
+ \testpar
+ 
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/KS.tex cjk-current/examples/KS.tex
+--- cjk-4.8.2/examples/KS.tex	2009-07-13 00:40:16.053915841 +0200
++++ cjk-current/examples/KS.tex	2009-07-13 01:13:14.174693396 +0200
+@@ -20,6 +20,11 @@
+ È¹±âÀû8·Î º¯°æµÇ¾ú½4Ï´Ù.  \textbf{»ó¼¼ÇÑ °Í: `` FAQ ; ¾î¶»°Ô
+ ; °Í°¡'' ¶ó´Â ´ë¸ñ; ¼vÇÏ½ñâ ¹Ù¶ø´Ï´Ù.}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/SJIS.tex cjk-current/examples/SJIS.tex
+--- cjk-4.8.2/examples/SJIS.tex	2009-07-13 00:40:16.053915841 +0200
++++ cjk-current/examples/SJIS.tex	2009-07-13 01:13:38.509912805 +0200
+@@ -27,6 +27,11 @@
+ Â‚ÌÂ“ÇÂ‚İÂ•ûÂ‚ÆÂ‚»Â‚ÌÂ\Â‘¢ÂvÂ‚ÌÂÂ€Â–ÚÂ‚ğ\ruby{ÂQ}{Â‚³Â‚ñ}\ruby{ÂÆ}{Â‚µÂ‚å‚¤}Â‚µÂ‚ÄÂ‰ºÂ‚³
+ Â‚¢ÂB}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/UTF8.tex cjk-current/examples/UTF8.tex
+--- cjk-4.8.2/examples/UTF8.tex	2009-07-14 21:50:47.485915020 +0200
++++ cjk-current/examples/UTF8.tex	2009-07-13 01:14:10.987838128 +0200
+@@ -37,6 +37,11 @@
+ \CJKnospace
+ \noindent ã“ã‚“ã«ã¡ã¯ ä¸–ç•Œ
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK}
+ 
+ \end{document}
+diff -Nbaurw cjk-4.8.2/examples/xCJK.tex cjk-current/examples/xCJK.tex
+--- cjk-4.8.2/examples/xCJK.tex	2009-07-13 00:40:16.057913912 +0200
++++ cjk-current/examples/xCJK.tex	2009-07-14 21:54:39.077912204 +0200
+@@ -25,7 +25,7 @@
+ % You can also specify a font for a certain CJK family.
+ \setCJKfamilyfont{SimpChinese}[BoldFont={SimHei},
+                                ItalicFont={FZKaiTi}]{SimSun}
+-\setCJKfamilyfont{TChinese}{FZMingTiB}
++\setCJKfamilyfont{TChinese}{FZCMingTiB}
+ \setCJKfamilyfont{Japanese}{MS Gothic}
+ \setCJKfamilyfont{Korean}{Batang}
+ 
+@@ -115,6 +115,11 @@
+   ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤.}  \textbf{ìƒì„¸í•œ ê²ƒì€ â€œì´ FAQ ì„ ì–´ë–»ê²Œ ì½ì„
+   ê²ƒì¸ê°€â€ ë¼ëŠ” ëŒ€ëª©ì„ ì°¸ì¡°í•˜ì‹œê¸° ë°”ëë‹ˆë‹¤.}
+ 
++% We need to end the CJK environment with a \newpage; otherwise the
++% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
++% /usr/share/doc/latex-cjk-common/ for more information, under
++% `Possible errors'.
++\newpage
+ \end{CJK*}
+ 
+ \end{document}
