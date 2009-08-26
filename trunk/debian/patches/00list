@@ -1,7 +1,0 @@
-#02_thai_fontmaps.dpatch
-03_Makefile.dpatch
-04_extend_examplefiles.dpatch
-05_fix_examplefiles.dpatch
-06_extend_JIS_example.dpatch
-#07_remove_unnecessary_C_libs.dpatch
-08_add_newpage_to_examples.dpatch
