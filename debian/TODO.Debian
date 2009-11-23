@@ -175,3 +175,6 @@ From CJK.txt:
     How to get vertical fonts for the Japanese Kochi TTF.
 
   * Fix a few things in README.Debian-msgothic.
+
+Wed, 2006-09-05 (danai.sae-han@edpnet.be):
+  * Switch from dpatch to quilt (DebSrc 3.0).
