@@ -1,11 +1,7 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 05_fix_examplefiles.dpatch by  <danai.sae-han@edpnet.be>
+## 05_fix_examplefiles.diff by <danai@debian.org>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: Fix examples/CJK.tex: firstly, change from CJK to CJKutf8, and
-## DP: secondly, change from cyberb to cyberbit.
-
-@DPATCH@
+## Fix examples/CJK.tex: firstly, change from CJK to CJKutf8, and
+## secondly, change from cyberb to cyberbit.
 
 --- cjk-20060714/examples/UTF8.tex	2006-07-22 22:10:53.000000000 +0200
 +++ new/examples/UTF8.tex	2006-09-05 10:30:33.150336108 +0200

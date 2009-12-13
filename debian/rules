@@ -11,6 +11,8 @@
 
 SHELL = /bin/sh
 
+include /usr/share/quilt/quilt.make
+
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
@@ -32,8 +34,9 @@ unixdate := $(shell expr $(unixdate) + 86400 )
 # dpkg-parsechangelog | sed -ne 's/^Version: *\([^+-]*\).*/\1/p'
 
 
-build: build-stamp
-build-arch: patch
+build: $(QUILT_STAMPFN) build-stamp
+#build-arch: patch
+build-arch:
 	dh_testdir
 
 	# Add here commands to compile the package.
@@ -41,7 +44,8 @@ build-arch: patch
 
 	touch build-arch-stamp
 
-build-indep: patch
+#build-indep: patch
+build-indep:
 	dh_testdir
 
 	mkdir $(build_thaifonts)
@@ -68,10 +72,10 @@ build-indep: patch
 build-stamp:
 	touch build-stamp
 
-clean: clean1 unpatch
+#clean: clean1 unpatch
 
-clean1:
-	dh_testdir doc/CJKutf8.txt examples/CJKbabel.tex
+clean: unpatch
+#	dh_testdir doc/CJKutf8.txt examples/CJKbabel.tex
 	dh_testroot
 	rm -f build-stamp build-indep-stamp build-arch-stamp
 
@@ -79,7 +83,7 @@ clean1:
 
 # If a Debian dpatch has been applied on Makefile, then perform a distclean;
 # if not, do nothing.  Reason: CJK upstream has no cleaning targets.
-	if [ `grep -c distclean Makefile` -gt 0 ]; then $(MAKE) distclean; fi
+	if [ $(shell grep -c distclean Makefile) -gt 0 ]; then $(MAKE) distclean; fi
 
 	# Remove the binary files.
 	rm -rf $(build_thaifonts)
@@ -167,37 +171,22 @@ binary-arch: build build-arch install
 	dh_md5sums -a
 	dh_builddeb -a
 
-# And now the simple things for dpatch. Here we only apply/unapply the patches.
-# You can do more things with dpatch, like having patches only applied on
-# a special architecture - see the non-dh version of the sample for this!
-# Command: dpatch patch-template -p "01_cvs-20060425" "Add the latest changes from the development snapshot, up to 25 April 2006." <../cjk20060425.diff >debian/patches/01_cvs-20060425.dpatch
-patch: patch-stamp
-patch-stamp:
-#	dpatch apply 01_cvs-20060714 03_Makefile
-	dpatch apply-all
-
-	touch $@
-
-unpatch:
-	dpatch deapply-all
-	rm -rf patch-stamp debian/patched
-
 get-orig-source:
 	# Cleaning
 	rm -rf cjk-$(upstream_version)
 	rm -f ../cjk_$(upstream_version).orig.tar.gz
 
 	# Download the latest GIT version and downgrade it to $(isodate).
-	git-clone git://git.sv.gnu.org/cjk.git cjk-$(upstream_version)
-	cd cjk-$(upstream_version) && git reset --hard `git rev-list --all -n 1 --before=$(unixdate)`
+	git clone git://git.sv.gnu.org/cjk.git cjk-$(upstream_version)
+	cd cjk-$(upstream_version) && git reset --hard $(shell git rev-list --all -n 1 --before=$(unixdate))
 
 	# Make a pristine package.
 # --no-name/-n is important because it won't save the timestamp in the
 # 5th to 8th byte of the gzip.
-	cd cjk-$(upstream_version) && git-archive --format=tar --prefix=cjk-$(upstream_version)/ master | gzip -9 --no-name > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
+	cd cjk-$(upstream_version) && git archive --format=tar --prefix=cjk-$(upstream_version)/ master | gzip -9 --no-name > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
 
 	# Clean again, because we use svn-buildpackage afterwards.
 	rm -rf cjk-$(upstream_version)
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install patch unpatch clean1 get-orig-source
+.PHONY: build clean binary-indep binary-arch binary install get-orig-source

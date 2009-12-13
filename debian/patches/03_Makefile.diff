@@ -1,10 +1,6 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 03_Makefile.dpatch by  <danai.sae-han@edpnet.be>
+## 03_Makefile.diff by <danai@debian.org>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: Modify the upstream Makefile so it builds on Debian.
-
-@DPATCH@
+## Modify the upstream Makefile so it builds on Debian.
 
 --- cjk-20060912/Makefile	2006-09-13 09:38:58.440284066 +0200
 +++ cjk-4.6.0+cvs20060912/Makefile	2006-09-13 09:42:31.981880560 +0200

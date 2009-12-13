@@ -1,11 +1,8 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 04_extend_examplefiles.dpatch by  <danai.sae-han@edpnet.be>
+## 04_extend_examplefiles.diff by <danai@debian.org>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
-## DP: Improve some of the example files, and put extra comments if
-## DP: extra packages need to be installed.
-
-@DPATCH@
+## Improve some of the example files, and put extra comments if
+## extra packages need to be installed.
 
 diff -Nbaurw cjk-4.7.0/examples/Big5.tex cjk-current/examples/Big5.tex
 --- cjk-4.7.0/examples/Big5.tex	2007-04-08 23:00:19.556336401 +0200
