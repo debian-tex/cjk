@@ -35,7 +35,6 @@ unixdate := $(shell expr $(unixdate) + 86400 )
 
 
 build: $(QUILT_STAMPFN) build-stamp
-#build-arch: patch
 build-arch:
 	dh_testdir
 
@@ -44,7 +43,6 @@ build-arch:
 
 	touch build-arch-stamp
 
-#build-indep: patch
 build-indep:
 	dh_testdir
 
@@ -81,7 +79,7 @@ clean: unpatch
 
 	# Add here commands to clean up after the build process.
 
-# If a Debian dpatch has been applied on Makefile, then perform a distclean;
+# If a Debian patch has been applied on Makefile, perform a distclean;
 # if not, do nothing.  Reason: CJK upstream has no cleaning targets.
 	if [ $(shell grep -c distclean Makefile) -gt 0 ]; then $(MAKE) distclean; fi
 
@@ -101,7 +99,6 @@ clean: unpatch
 
 	dh_clean
 
-
 install:
 	dh_testdir
 	dh_testroot
@@ -109,7 +106,6 @@ install:
 
 	# Add here commands to install the package into debian/tmp.
 	$(MAKE) prefix=$(CURDIR)/debian/tmp/usr install
-
 
 # Build architecture-independent files here.
 binary-indep: build-indep
@@ -147,7 +143,6 @@ binary-arch: build build-arch install
 
 	chmod +x debian/latex-cjk-common/usr/share/latex-cjk-common/utils/subfonts/*.pl
 
-
 	dh_link -platex-cjk-chinese usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-chinese
 	dh_link -platex-cjk-japanese usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-japanese
 
@@ -155,7 +150,7 @@ binary-arch: build build-arch install
 	dh_link -platex-cjk-common usr/share/doc/latex-cjk-common usr/share/doc/texmf/latex/latex-cjk
 
 	dh_installtex -platex-cjk-common -platex-cjk-japanese
-	dh_installtex -platex-cjk-chinese --priority=20 language=pinyin,pyhyph.tex
+	dh_installtex -platex-cjk-chinese --priority=20 hyphen=pinyin,pyhyph.tex
 
 	dh_installdocs -platex-cjk-common
 	dh_installexamples -platex-cjk-common

@@ -1,3 +1,21 @@
+cjk (4.8.2+git20090105-3) unstable; urgency=low
+
+  * The "Christmas present" release.
+  * [control,rules,patches/*] Switch from dpatch to quilt to comply with
+    the 3.0 (quilt) source format.
+  * [rules] Switch from "language=" to "hyphen=" after dh_installtex.
+  * [control]
+     - Depend and Build-Depend on tex-common (>= 2.03) due to syntax
+       changes with dh_installtex;
+     - only use one email address in the "Maintainer" field: move the
+       Debian TeX ML address to "Uploaders" instead and remove my own
+       email address from the "Uploaders" field.  This should fix bug
+       "Erroneous Maintainer field" (Closes: #561789); thanks to Florian
+       Ernst for the bug report.
+  * Rebuild against libkpathsea-dev as it has bumped to v5.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 21 Dec 2009 23:33:45 +0100
+
 cjk (4.8.2+git20090105-2) unstable; urgency=medium
 
   * The "Doh, wrong version" release.
