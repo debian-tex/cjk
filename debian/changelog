@@ -1,3 +1,12 @@
+cjk (4.8.2+git20090105-4) unstable; urgency=medium
+
+  * The "How do you hyphenate `Eve'" release.
+  * [control] Move myself to "Uploaders", move Debian TeX Maintainers
+     to "Maintainer", and add Norbert Preining to the list of
+     Uploaders.
+
+ --
+
 cjk (4.8.2+git20090105-3) unstable; urgency=low
 
   * The "Christmas present" release.
