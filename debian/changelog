@@ -4,8 +4,14 @@ cjk (4.8.2+git20090105-4) unstable; urgency=medium
   * [control] Move myself to "Uploaders", move Debian TeX Maintainers
      to "Maintainer", and add Norbert Preining to the list of
      Uploaders.
+  * [rules] Switch from "dh_installtex [...] hyphen=pinyin,pyhyph.tex"
+     to "[...] hyphen=pinyin,loadhyph-zh-latn.tex,lhm=1,rhm=1".
+     The hyph-utf8 package requires all hyphenation patterns to be in
+     UTF-8 encoding, and has its own modified pyhyph.tex file.
+     Many thanks to Norbert Preining.  This fixes the bug ""hyphenation
+     definition is wrong, cannot be loaded with luatex" (Closes: #562198).
 
- --
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 28 Dec 2009 01:12:54 +0100
 
 cjk (4.8.2+git20090105-3) unstable; urgency=low
 

@@ -150,7 +150,7 @@ binary-arch: build build-arch install
 	dh_link -platex-cjk-common usr/share/doc/latex-cjk-common usr/share/doc/texmf/latex/latex-cjk
 
 	dh_installtex -platex-cjk-common -platex-cjk-japanese
-	dh_installtex -platex-cjk-chinese --priority=20 hyphen=pinyin,pyhyph.tex
+	dh_installtex -platex-cjk-chinese --priority=20 hyphen=pinyin,loadhyph-zh-latn.tex,lhm=1,rhm=1
 
 	dh_installdocs -platex-cjk-common
 	dh_installexamples -platex-cjk-common
