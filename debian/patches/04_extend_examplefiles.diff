@@ -4,9 +4,10 @@
 ## Improve some of the example files, and put extra comments if
 ## extra packages need to be installed.
 
-diff -Nbaurw cjk-4.7.0/examples/Big5.tex cjk-current/examples/Big5.tex
---- cjk-4.7.0/examples/Big5.tex	2007-04-08 23:00:19.556336401 +0200
-+++ cjk-current/examples/Big5.tex	2007-05-09 05:57:20.691664812 +0200
+Index: cjk-4.8.2+git20090105/examples/Big5.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/Big5.tex	2010-05-17 01:33:42.126854558 +0200
++++ cjk-4.8.2+git20090105/examples/Big5.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -8,15 +8,33 @@
  %
  % process this file with bg5latex
@@ -43,16 +44,17 @@ diff -Nbaurw cjk-4.7.0/examples/Big5.tex cjk-current/examples/Big5.tex
  
  \noindent 本常問問答集~(FAQ list)~是從一些經常被問到的問題及其適當的解
  答中，以方便的形式摘要而出的。跟上一版不同的是，其編排結構已徹底改變。
-@@ -31,5 +50,5 @@
+@@ -31,5 +49,5 @@
  %%% coding: big5
  %%% mode: latex
  %%% TeX-master: t
 -%%% TeX-command-default: "CJKLaTeX"
 +%%% TeX-command-default: "LaTeX"
  %%% End:
-diff -Nbaurw cjk-4.7.0/examples/CEF_test.tex cjk-current/examples/CEF_test.tex
---- cjk-4.7.0/examples/CEF_test.tex	2007-04-08 23:00:19.564336437 +0200
-+++ cjk-current/examples/CEF_test.tex	2007-05-09 05:57:20.799664976 +0200
+Index: cjk-4.8.2+git20090105/examples/CEF_test.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/CEF_test.tex	2010-05-17 01:33:42.146855075 +0200
++++ cjk-4.8.2+git20090105/examples/CEF_test.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -5,6 +5,10 @@
  %
  % process this text with ceflatex
@@ -64,9 +66,10 @@ diff -Nbaurw cjk-4.7.0/examples/CEF_test.tex cjk-current/examples/CEF_test.tex
  \documentclass[12pt]{article}
  
  \usepackage[global]{CJK}
-diff -Nbaurw cjk-4.7.0/examples/CJKbabel.tex cjk-current/examples/CJKbabel.tex
---- cjk-4.7.0/examples/CJKbabel.tex	2007-04-08 23:00:19.576336490 +0200
-+++ cjk-current/examples/CJKbabel.tex	2007-05-09 05:57:20.835665031 +0200
+Index: cjk-4.8.2+git20090105/examples/CJKbabel.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/CJKbabel.tex	2010-05-17 01:33:42.166855731 +0200
++++ cjk-4.8.2+git20090105/examples/CJKbabel.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -5,26 +5,32 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
@@ -133,9 +136,10 @@ diff -Nbaurw cjk-4.7.0/examples/CJKbabel.tex cjk-current/examples/CJKbabel.tex
      FAQ.''}
  \end{otherlanguage}
  
-diff -Nbaurw cjk-4.7.0/examples/CJKmixed.tex cjk-current/examples/CJKmixed.tex
---- cjk-4.7.0/examples/CJKmixed.tex	2007-04-08 23:00:19.644336792 +0200
-+++ cjk-current/examples/CJKmixed.tex	2007-05-09 05:57:20.851665056 +0200
+Index: cjk-4.8.2+git20090105/examples/CJKmixed.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/CJKmixed.tex	2010-05-17 01:33:42.186859739 +0200
++++ cjk-4.8.2+git20090105/examples/CJKmixed.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -4,8 +4,11 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
@@ -149,9 +153,10 @@ diff -Nbaurw cjk-4.7.0/examples/CJKmixed.tex cjk-current/examples/CJKmixed.tex
  
  \documentclass[12pt]{article}
  
-diff -Nbaurw cjk-4.7.0/examples/CJKutf8.tex cjk-current/examples/CJKutf8.tex
---- cjk-4.7.0/examples/CJKutf8.tex	2007-04-08 23:00:19.648336810 +0200
-+++ cjk-current/examples/CJKutf8.tex	2007-05-09 05:57:20.859665068 +0200
+Index: cjk-4.8.2+git20090105/examples/CJKutf8.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/CJKutf8.tex	2010-05-17 01:33:42.202855639 +0200
++++ cjk-4.8.2+git20090105/examples/CJKutf8.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -4,18 +4,36 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
@@ -211,9 +216,10 @@ diff -Nbaurw cjk-4.7.0/examples/CJKutf8.tex cjk-current/examples/CJKutf8.tex
  
  \begin{otherlanguage}{german}
    Dieses FAQ wurde erstellt, um h瓣ufig gestellte Fragen und ihre
-diff -Nbaurw cjk-4.7.0/examples/KS-hlatex.tex cjk-current/examples/KS-hlatex.tex
---- cjk-4.7.0/examples/KS-hlatex.tex	1970-01-01 01:00:00.000000000 +0100
-+++ cjk-current/examples/KS-hlatex.tex	2007-05-09 05:57:20.971665238 +0200
+Index: cjk-4.8.2+git20090105/examples/KS-hlatex.tex
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ cjk-4.8.2+git20090105/examples/KS-hlatex.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -0,0 +1,187 @@
 +% This is a testfile of the CJK Debian package to test Korean.
 +% Please install hlatex-fonts-base (perhaps -extra as well).
@@ -402,9 +408,10 @@ diff -Nbaurw cjk-4.7.0/examples/KS-hlatex.tex cjk-current/examples/KS-hlatex.tex
 +%%% mode: latex
 +%%% TeX-master: t
 +%%% End:
-diff -Nbaurw cjk-4.7.0/examples/muletest.tex cjk-current/examples/muletest.tex
---- cjk-4.7.0/examples/muletest.tex	2007-04-08 23:00:19.664336881 +0200
-+++ cjk-current/examples/muletest.tex	2007-05-09 05:57:21.015665305 +0200
+Index: cjk-4.8.2+git20090105/examples/muletest.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/muletest.tex	2010-05-17 01:33:42.234854983 +0200
++++ cjk-4.8.2+git20090105/examples/muletest.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -4,26 +4,31 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
@@ -445,9 +452,10 @@ diff -Nbaurw cjk-4.7.0/examples/muletest.tex cjk-current/examples/muletest.tex
  
  \documentclass[12pt]{article}
  
-diff -Nbaurw cjk-4.7.0/examples/rubytest.tex cjk-current/examples/rubytest.tex
---- cjk-4.7.0/examples/rubytest.tex	2007-04-08 23:00:19.664336881 +0200
-+++ cjk-current/examples/rubytest.tex	2007-05-09 05:57:21.071665391 +0200
+Index: cjk-4.8.2+git20090105/examples/rubytest.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/rubytest.tex	2010-05-17 01:33:42.254859199 +0200
++++ cjk-4.8.2+git20090105/examples/rubytest.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -5,16 +5,15 @@
  %
  % Version 4.8.2 (29-Dec-2008)
@@ -468,9 +476,10 @@ diff -Nbaurw cjk-4.7.0/examples/rubytest.tex cjk-current/examples/rubytest.tex
  
  \documentclass[12pt]{article}
  
-diff -Nbaurw cjk-4.7.0/examples/thai.tex cjk-current/examples/thai.tex
---- cjk-4.7.0/examples/thai.tex	2007-04-08 23:00:19.668336899 +0200
-+++ cjk-current/examples/thai.tex	2007-05-09 05:57:21.091665421 +0200
+Index: cjk-4.8.2+git20090105/examples/thai.tex
+===================================================================
+--- cjk-4.8.2+git20090105.orig/examples/thai.tex	2010-05-17 01:33:42.274854824 +0200
++++ cjk-4.8.2+git20090105/examples/thai.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -11,21 +11,34 @@
  %   . font switching between Thai and non-Thai
  %   . intercharacter glue

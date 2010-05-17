@@ -1,3 +1,23 @@
+cjk (4.8.2+git20090105-5) unstable; urgency=low
+
+  * The "Find Kimchi" release.
+  * [patches/09_fix_korean_fd_files.diff] Finally update the Korean font
+    definition files to work together with the ko.tex packages instead of
+    the obsolete HLaTeX packages.  This fixes "Some HLaTeX font references
+    used by CJK are not available in ko.tex anymore" (Closes: #579321).
+  * [debian/control]
+     - Remove the build-dependency on the `sharutils' package: we do not
+       use `uuencode' anymore in debian/rules since cjk (4.8.2+git20090105-1);
+     - bump Standards-Version to 3.8.4; no changes.
+  * [debian/source/format] Really switch to Debian Source v3.0 (quilt)
+     this time.
+  * [debian/rules]
+     - We do not include the "thaifonts.tar.gz" file anymore, so we can
+       remove this cleanup procedure;
+     - remove binary ad other files in utils/ created during compile time.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Sun, 16 May 2010 23:21:53 +0200
+
 cjk (4.8.2+git20090105-4) unstable; urgency=medium
 
   * The "How do you hyphenate `Eve'" release.

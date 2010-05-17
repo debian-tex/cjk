@@ -59,6 +59,7 @@ build-indep:
 
 #	# Extracting binary files
 # How it was used: uuencode thaifonts.tar.gz thaifonts.tar.gz > thaifonts.tar.gz.uu
+# You will need a Build-Dependency on the `sharutils' package in debian/control.
 #	cd debian && uudecode thaifonts.tar.gz.uu && tar xzf thaifonts.tar.gz
 #	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst ../debian/thaifonts/* . && cd ../debian/thaifonts && prename 's/_//' * && prename 's/\./n\./' norasi.* garuda.*)
 	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst /usr/share/texmf/fonts/afm/public/thai/garuda*.afm /usr/share/texmf/fonts/afm/public/thai/norasi*.afm .)
@@ -69,8 +70,6 @@ build-indep:
 
 build-stamp:
 	touch build-stamp
-
-#clean: clean1 unpatch
 
 clean: unpatch
 #	dh_testdir doc/CJKutf8.txt examples/CJKbabel.tex
@@ -91,11 +90,20 @@ clean: unpatch
 # "patch-system-but-direct-changes-in-diff".  For more information,
 # check out Debian bug #471263 at
 # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=471263 .
-	rm -f utils/hbf2gf/hbf2gf.c
+# It would otherwise also create problems for Debian Source 3.0 (quilt).
 	rm -f utils/hbf2gf/config.log
-
-	rm -rf debian/thaifonts
-	rm -f debian/thaifonts.tar.gz
+	rm -f utils/hbf2gf/config.status
+	rm -f utils/hbf2gf/hbf.o
+	rm -f utils/hbf2gf/hbf2gf
+	rm -f utils/hbf2gf/hbf2gf.c
+	rm -f utils/hbf2gf/hbf2gf.o
+	rm -f utils/hbf2gf/Makefile
+	rm -f utils/Bg5conv/bg5conv
+	rm -f utils/CEFconv/cefconv
+	rm -f utils/CEFconv/cef5conv
+	rm -f utils/CEFconv/cefsconv
+	rm -f utils/SJISconv/sjisconv
+	rm -f utils/extconv/extconv
 
 	dh_clean
 

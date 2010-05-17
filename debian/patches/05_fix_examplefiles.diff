@@ -20,3 +20,4 @@
 -\DeclareFontShape{T1}{song}{m}{n}{<-> cyberb00}{}
 +\DeclareFontShape{T1}{song}{m}{n}{<-> cyberbit00}{}
  \renewcommand\rmdefault{song}
+ 
