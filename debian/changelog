@@ -14,7 +14,9 @@ cjk (4.8.2+git20090105-5) unstable; urgency=low
   * [debian/rules]
      - We do not include the "thaifonts.tar.gz" file anymore, so we can
        remove this cleanup procedure;
-     - remove binary ad other files in utils/ created during compile time.
+     - remove binary ad other files in utils/ created during compile time;
+     - fix the "get-orig-source" target to work with /bin/sh pointing to
+       dash.
 
  -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Sun, 16 May 2010 23:21:53 +0200
 

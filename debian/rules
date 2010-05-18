@@ -181,7 +181,7 @@ get-orig-source:
 
 	# Download the latest GIT version and downgrade it to $(isodate).
 	git clone git://git.sv.gnu.org/cjk.git cjk-$(upstream_version)
-	cd cjk-$(upstream_version) && git reset --hard $(shell git rev-list --all -n 1 --before=$(unixdate))
+	cd cjk-$(upstream_version) && git reset --hard $(shell cd cjk-$(upstream_version) && git rev-list --all -n 1 --before=1231196400 2>&1)
 
 	# Make a pristine package.
 # --no-name/-n is important because it won't save the timestamp in the
