@@ -1,4 +1,4 @@
-cjk (4.8.2+git20090105-5) unstable; urgency=low
+testcjk (4.8.2+git20090105-5) unstable; urgency=low
 
   * The "Find Kimchi" release.
   * [patches/09_fix_korean_fd_files.diff] Finally update the Korean font
