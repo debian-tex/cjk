@@ -478,23 +478,27 @@ Index: cjk-4.8.2+git20090105/examples/rubytest.tex
  
 Index: cjk-4.8.2+git20090105/examples/thai.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/thai.tex	2010-05-17 01:33:42.274854824 +0200
-+++ cjk-4.8.2+git20090105/examples/thai.tex	2010-05-17 01:37:12.000000000 +0200
-@@ -11,21 +11,34 @@
+--- cjk-4.8.2+git20111216.orig/examples/thai.tex	2011-12-03 15:10:23.000000000 +0100
++++ cjk-4.8.2+git20111216/examples/thai.tex	2012-01-06 00:15:17.029691808 +0100
+@@ -11,7 +11,8 @@
  %   . font switching between Thai and non-Thai
  %   . intercharacter glue
  %
 -% Please read cjk-enc.txt for usage instructions.
--
 +% Please read cjk-enc.txt for usage instructions, or have a look at
-+% muletest.tex or CJKbabel.tex.
++% muletest.tex or CJKbabel.tex instead.
+ %
+ % To process without cjk-enc.el, comment out the line containing
+ % `\extrasthaicjk'.  Note, however, that you get overlong lines, and you
+@@ -20,18 +21,33 @@
  
  \documentclass[12pt]{article}
-+\usepackage[USenglish,thaicjk]{babel} % Last entry is the default.
  
 -\usepackage[thaicjk]{babel}
--
-+\usepackage{CJK}
++\usepackage[USenglish,thaicjk]{babel} % Last entry is the default.
+ 
+ % \addto\extrasthaicjk{\fontencoding{C90}\selectfont}
+ 
  
  \begin{document}
  
@@ -502,6 +506,7 @@ Index: cjk-4.8.2+git20090105/examples/thai.tex
 +%\font\thai = ftnr8z
 +
 +\section{Norasi}
++
 +รายการ FAQ นี้สร้างขึ้นเพื่อสรุปคำถามที่ถามกันบ่อยครั้งและคำตอบคำถามในรูปแบบทีสะดวก.
 +โครงสร้างของรายการ FAQ นี้เปลี่ยนไปมากตั้งแต่รุ่นที่แล้ว.
 +\textbf{ดูรายละเอียดสำหรับโครงสร้างใหม่ได้จากช่วง ``โครงสร้างและวิธีการอ่าน
@@ -510,6 +515,7 @@ Index: cjk-4.8.2+git20090105/examples/thai.tex
 +
 +\section{Garuda}
 +\tt
++
  รายการ FAQ นี้สร้างขึ้นเพื่อสรุปคำถามที่ถามกันบ่อยครั้งและคำตอบคำถามในรูปแบบทีสะดวก.
  โครงสร้างของรายการ FAQ นี้เปลี่ยนไปมากตั้งแต่รุ่นที่แล้ว.
  \textbf{ดูรายละเอียดสำหรับโครงสร้างใหม่ได้จากช่วง ``โครงสร้างและวิธีการอ่าน

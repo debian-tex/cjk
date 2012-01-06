@@ -1,3 +1,34 @@
+cjk (4.8.2+git20111216-1) unstable; urgency=low
+
+  * The "Stayin' alive" release.
+  * New upstream release:
+     - New macros for CJKfntef.sty;
+     - fix line breaks with furigana;
+     - update kpathsea support (remove ancient stuff);
+     - introduce `LATEX' preprocessor macro;
+     - various fixes for cefconv;
+     - make cjk-enc.el work with Emacs23+.
+  * Rebuild against latest TeXlive 2009 packages in Debian.
+  * [debian/rules]
+     - Remove bashism in get-orig-source stanza;
+     - do not use "git reset --hard" anymore, but use the GIT commit hash
+       with "git archive".  Thanks to Miroslav Suchý, Joey Hess and
+       Bernard R. Link.
+  * [debian/compat] Upgrade Debhelper compatibility from version 7 to 8.
+  * [debian/control]
+     - Depend on debhelper (>= 8);
+     - bump Standards-Version to 3.9.2; no changes;
+     - do not suggest the deprecated TTF packages for the xcjk package and
+       replace them with new font packages.  Thanks to Hideki Yamane
+       (Closes: #644768 and #652255);
+     - add "latex-fonts-thai-tlwg" to Build-Depends-Indep.  Thanks Hideki!
+  * [debian/patches/04_extend_examplefiles.diff] Rediff thai.tex.
+  * [debian/README.source] Remove the section about patching, because it
+     is rendered obsolete with Debian source "3.0 (quilt)".
+  * [debian/TODO.Debian] Update.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Fri, 06 Jan 2012 05:36:00 +0100
+
 cjk (4.8.2+git20090105-5) unstable; urgency=low
 
   * The "Find Kimchi" release.

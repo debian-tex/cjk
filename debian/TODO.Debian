@@ -53,9 +53,6 @@ Wed, 2006-09-05 (danai.sae-han@edpnet.be):
     - http://oku.edu.mie-u.ac.jp/~okumura/texwiki/
       http://www.tug.org/interviews/interview-files/haruhiko-okumura.html
 
-  * What about the Debian package "ttf-vlgothic", which is a Japanese Gothic
-    TTF from Vine Linux?
-
   * Remove /var/cache/fonts/pk/bla when purging a font package that
     depends on the use of MakeTeXPK [not necessary for the Type1 font
     packages].  More important for the HBF packages.
@@ -176,5 +173,5 @@ From CJK.txt:
 
   * Fix a few things in README.Debian-msgothic.
 
-Wed, 2006-09-05 (danai.sae-han@edpnet.be):
-  * Switch from dpatch to quilt (DebSrc 3.0).
+Sun, 07 Nov 2010 00:31:10 +0100
+  * Make debian/copyright machine-readable.

@@ -56,11 +56,11 @@ Index: cjk-4.8.2+git20090105/examples/CEF_test.tex
  \end{document}
 Index: cjk-4.8.2+git20090105/examples/CJKfntef.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/CJKfntef.tex	2010-05-17 01:03:13.919356386 +0200
-+++ cjk-4.8.2+git20090105/examples/CJKfntef.tex	2010-05-17 01:03:16.000000000 +0200
-@@ -50,6 +50,11 @@
- 
- \CJKxout*{汉字加点， \CJKunderdot{可同时加下划线加下划，线, 自动换行,}}
+--- cjk-4.8.2+git20090105.orig/examples/CJKfntef.tex	2009-11-07 21:12:42.000000000 +0100
++++ cjk-4.8.2+git20090105/examples/CJKfntef.tex	2010-11-08 02:32:21.443104014 +0100
+@@ -79,6 +79,11 @@
+ \verb|\CJKunderanysymbol{...}{...}{...}|:\\
+ \CJKunderanysymbol{0.5em}{-}{汉字加点， 可同时加下划线加下划，线, 自动换行,}
  
 +% We need to end the CJK environment with a \newpage; otherwise the
 +% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
