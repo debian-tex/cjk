@@ -4,8 +4,10 @@ cjk (4.8.2+git20111216-2) experimental; urgency=low
     latex-cjk-thai in updmap.d
   * fix location of afm files
   * bump build dep on latex-fonts-thai-tlwg for correct afm location
+  * bump standards version, no changes necessary
+  * fix build-deps
 
- -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 10:43:52 +0900
+ -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 10:48:05 +0900
 
 cjk (4.8.2+git20111216-1) unstable; urgency=low
 
