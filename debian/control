@@ -1,6 +1,6 @@
 Source: cjk
 Build-Depends: debhelper (>= 8), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 3)
-Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, thailatex, latex-fonts-thai-tlwg
+Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, thailatex, latex-fonts-thai-tlwg (>= 1:0.5.0-1)
 Section: tex
 Priority: optional
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
