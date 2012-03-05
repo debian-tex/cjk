@@ -1,5 +1,5 @@
 Source: cjk
-Build-Depends: debhelper (>= 8), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 2.04)
+Build-Depends: debhelper (>= 8), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 3)
 Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, thailatex, latex-fonts-thai-tlwg
 Section: tex
 Priority: optional
@@ -99,7 +99,7 @@ Description: Korean module of LaTeX CJK
 
 Package: latex-cjk-thai
 Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 2.04), thailatex (>= 0.4.2), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 3), thailatex (>= 0.4.2), ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Thai module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
