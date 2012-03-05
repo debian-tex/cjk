@@ -4,12 +4,13 @@ cjk (4.8.2+git20111216-2) experimental; urgency=low
     latex-cjk-thai in updmap.d
   * bump manual dep on tex-common to >= 3
   * fix location of afm files
-  * fix name of pinyin hyphen loader for TL2012
+  * remove hyphen definition, it is shipped in TL, where also the files
+    are, add the necessary rm_conffile calls to latex-cjk-chinese.maintscript
   * bump build dep on latex-fonts-thai-tlwg for correct afm location
   * bump standards version, no changes necessary
   * fix build-deps
 
- -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 14:40:47 +0900
+ -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 15:46:24 +0900
 
 cjk (4.8.2+git20111216-1) unstable; urgency=low
 
