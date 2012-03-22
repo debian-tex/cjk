@@ -1,4 +1,4 @@
-cjk (4.8.2+git20111216-2) experimental; urgency=low
+cjk (4.8.2+git20111216-2) unstable; urgency=low
 
   * build for TL2012: depend on tex-common >= 3, remove old config file
     latex-cjk-thai in updmap.d
@@ -10,7 +10,7 @@ cjk (4.8.2+git20111216-2) experimental; urgency=low
   * bump standards version, no changes necessary
   * fix build-deps
 
- -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 15:46:24 +0900
+ -- Norbert Preining <preining@debian.org>  Thu, 22 Mar 2012 18:28:26 +0900
 
 cjk (4.8.2+git20111216-1) unstable; urgency=low
 
