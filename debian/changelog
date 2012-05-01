@@ -1,3 +1,12 @@
+cjk (4.8.2+git20111216-3) UNRELEASED; urgency=low
+
+  * The "Thank you" release.
+  * Acknowledge work by Norbert to make CJK automagically work with TL2012.
+  * New upstream release: [TODO; simply change the date in this changelog]
+     - Improve captions for Chinese (T/S) and Japanese.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Tue, 01 May 2012 22:45:57 +0200
+
 cjk (4.8.2+git20111216-2) unstable; urgency=low
 
   * build for TL2012: depend on tex-common >= 3, remove old config file
