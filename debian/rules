@@ -185,6 +185,7 @@ get-orig-source:
 #	cd cjk-$(upstream_version) && git reset --hard `git rev-list --all -n 1 --before=$(unixdate)`
 
 	# Make a pristine package.
+	mkdir -p ../tarballs
 # --no-name/-n is important because it won't save the timestamp in the
 # 5th to 8th byte of the gzip.
 	cd cjk-$(upstream_version) && git archive --format=tar --prefix=cjk-$(upstream_version)/ $$(git rev-list --all -n 1 --before=$(unixdate)) | gzip -9 --no-name -c > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
