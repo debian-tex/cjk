@@ -214,28 +214,3 @@ Index: cjk-4.8.3+git20090105/examples/UTF8.tex
  \end{CJK}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/xCJK.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/xCJK.tex	2010-05-17 01:03:14.023353303 +0200
-+++ cjk-4.8.3+git20090105/examples/xCJK.tex	2010-05-17 01:03:16.000000000 +0200
-@@ -25,7 +25,7 @@
- % You can also specify a font for a certain CJK family.
- \setCJKfamilyfont{SimpChinese}[BoldFont={SimHei},
-                                ItalicFont={FZKaiTi}]{SimSun}
--\setCJKfamilyfont{TChinese}{FZMingTiB}
-+\setCJKfamilyfont{TChinese}{FZCMingTiB}
- \setCJKfamilyfont{Japanese}{MS Gothic}
- \setCJKfamilyfont{Korean}{Batang}
- 
-@@ -115,6 +115,11 @@
-   변경되었습니다.}  \textbf{상세한 것은 “이 FAQ 을 어떻게 읽을
-   것인가” 라는 대목을 참조하시기 바랍니다.}
- 
-+% We need to end the CJK environment with a \newpage; otherwise the
-+% .aux and .toc files sometimes get messed up.  See `CJK.txt' in
-+% /usr/share/doc/latex-cjk-common/ for more information, under
-+% `Possible errors'.
-+\newpage
- \end{CJK*}
- 
- \end{document}
