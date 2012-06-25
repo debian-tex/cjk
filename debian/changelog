@@ -1,11 +1,23 @@
-cjk (4.8.2+git20111216-3) UNRELEASED; urgency=low
+cjk (4.8.3+git20120621-1) unstable; urgency=low
 
   * The "Thank you" release.
   * Acknowledge work by Norbert to make CJK automagically work with TL2012.
   * New upstream release: [TODO; simply change the date in this changelog]
-     - Improve captions for Chinese (T/S) and Japanese.
+     - Improve captions for Chinese (T/S) and Japanese;
+     - Improve captions for Chinese (T/S) and Japanese;
+     - fix imcompatibilities with 'ulem.sty';
+     - remove xCJK files, as it is superseded by the xeCJK packages;
+     - accept Thai input in utf-8 encoding;
+     - update compatibility of the Thai font-tlwg fonts to 0.5;
+     - make some commands robust.
+  * [debian/latex-cjk-thai.install] Add new thai_utf.tex example file.
+  * [debian/latex-cjk-xcjk.install, debian/xCJK-extended*] Remove all xCJK
+     references because it they are also removed upstream.  Please use the
+     xeCJK package instead.
+  * [debian/rules, debian/control] Remove latex-cjk-xcjk.
+  * [debian/patches/*] Refresh against upstream.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Tue, 01 May 2012 22:45:57 +0200
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Tue, 25 Jun 2012 08:02:27 +0800
 
 cjk (4.8.2+git20111216-2) unstable; urgency=low
 

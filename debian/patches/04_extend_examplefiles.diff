@@ -4,10 +4,10 @@
 ## Improve some of the example files, and put extra comments if
 ## extra packages need to be installed.
 
-Index: cjk-4.8.2+git20090105/examples/Big5.tex
+Index: cjk-4.8.3+git20090105/examples/Big5.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/Big5.tex	2010-05-17 01:33:42.126854558 +0200
-+++ cjk-4.8.2+git20090105/examples/Big5.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/Big5.tex	2010-05-17 01:33:42.126854558 +0200
++++ cjk-4.8.3+git20090105/examples/Big5.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -8,15 +8,33 @@
  %
  % process this file with bg5latex
@@ -51,10 +51,10 @@ Index: cjk-4.8.2+git20090105/examples/Big5.tex
 -%%% TeX-command-default: "CJKLaTeX"
 +%%% TeX-command-default: "LaTeX"
  %%% End:
-Index: cjk-4.8.2+git20090105/examples/CEF_test.tex
+Index: cjk-4.8.3+git20090105/examples/CEF_test.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/CEF_test.tex	2010-05-17 01:33:42.146855075 +0200
-+++ cjk-4.8.2+git20090105/examples/CEF_test.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/CEF_test.tex	2010-05-17 01:33:42.146855075 +0200
++++ cjk-4.8.3+git20090105/examples/CEF_test.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -5,6 +5,10 @@
  %
  % process this text with ceflatex
@@ -66,14 +66,14 @@ Index: cjk-4.8.2+git20090105/examples/CEF_test.tex
  \documentclass[12pt]{article}
  
  \usepackage[global]{CJK}
-Index: cjk-4.8.2+git20090105/examples/CJKbabel.tex
+Index: cjk-4.8.3+git20090105/examples/CJKbabel.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/CJKbabel.tex	2010-05-17 01:33:42.166855731 +0200
-+++ cjk-4.8.2+git20090105/examples/CJKbabel.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/CJKbabel.tex	2010-05-17 01:33:42.166855731 +0200
++++ cjk-4.8.3+git20090105/examples/CJKbabel.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -5,26 +5,32 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.2 (29-Dec-2008)
+ % Version 4.8.3 (07-May-2012)
 -
 -% You need Emacs 20 to process this file!
 +%
@@ -136,14 +136,14 @@ Index: cjk-4.8.2+git20090105/examples/CJKbabel.tex
      FAQ.''}
  \end{otherlanguage}
  
-Index: cjk-4.8.2+git20090105/examples/CJKmixed.tex
+Index: cjk-4.8.3+git20090105/examples/CJKmixed.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/CJKmixed.tex	2010-05-17 01:33:42.186859739 +0200
-+++ cjk-4.8.2+git20090105/examples/CJKmixed.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/CJKmixed.tex	2010-05-17 01:33:42.186859739 +0200
++++ cjk-4.8.3+git20090105/examples/CJKmixed.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -4,8 +4,11 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.2 (29-Dec-2008)
+ % Version 4.8.3 (07-May-2012)
 +
 +% To get Vietnamese working on Debian, make sure you have
 +% "texlive-lang-vietnamese" installed.
@@ -153,14 +153,14 @@ Index: cjk-4.8.2+git20090105/examples/CJKmixed.tex
  
  \documentclass[12pt]{article}
  
-Index: cjk-4.8.2+git20090105/examples/CJKutf8.tex
+Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/CJKutf8.tex	2010-05-17 01:33:42.202855639 +0200
-+++ cjk-4.8.2+git20090105/examples/CJKutf8.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/CJKutf8.tex	2010-05-17 01:33:42.202855639 +0200
++++ cjk-4.8.3+git20090105/examples/CJKutf8.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -4,18 +4,36 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.2 (29-Dec-2008)
+ % Version 4.8.3 (07-May-2012)
 -
 -% Vietnamese support for Babel comes with the VnTeX package.
  %
@@ -216,17 +216,17 @@ Index: cjk-4.8.2+git20090105/examples/CJKutf8.tex
  
  \begin{otherlanguage}{german}
    Dieses FAQ wurde erstellt, um häufig gestellte Fragen und ihre
-Index: cjk-4.8.2+git20090105/examples/KS-hlatex.tex
+Index: cjk-4.8.3+git20090105/examples/KS-hlatex.tex
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ cjk-4.8.2+git20090105/examples/KS-hlatex.tex	2010-05-17 01:37:12.000000000 +0200
++++ cjk-4.8.3+git20090105/examples/KS-hlatex.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -0,0 +1,187 @@
 +% This is a testfile of the CJK Debian package to test Korean.
 +% Please install hlatex-fonts-base (perhaps -extra as well).
 +%
 +% written by Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
 +%
-+ % Version 4.8.2 (29-Dec-2008)
++ % Version 4.8.3 (07-May-2012)
 +
 +\documentclass[12pt]{article}
 +
@@ -408,14 +408,14 @@ Index: cjk-4.8.2+git20090105/examples/KS-hlatex.tex
 +%%% mode: latex
 +%%% TeX-master: t
 +%%% End:
-Index: cjk-4.8.2+git20090105/examples/muletest.tex
+Index: cjk-4.8.3+git20090105/examples/muletest.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/muletest.tex	2010-05-17 01:33:42.234854983 +0200
-+++ cjk-4.8.2+git20090105/examples/muletest.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/muletest.tex	2010-05-17 01:33:42.234854983 +0200
++++ cjk-4.8.3+git20090105/examples/muletest.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -4,26 +4,31 @@
  % written by Werner Lemberg <wl@gnu.org>
  %
- % Version 4.8.2 (29-Dec-2008)
+ % Version 4.8.3 (07-May-2012)
 -
 -% You need Emacs 20 (or Mule 2.3) to process this file!
 +%
@@ -452,13 +452,13 @@ Index: cjk-4.8.2+git20090105/examples/muletest.tex
  
  \documentclass[12pt]{article}
  
-Index: cjk-4.8.2+git20090105/examples/rubytest.tex
+Index: cjk-4.8.3+git20090105/examples/rubytest.tex
 ===================================================================
---- cjk-4.8.2+git20090105.orig/examples/rubytest.tex	2010-05-17 01:33:42.254859199 +0200
-+++ cjk-4.8.2+git20090105/examples/rubytest.tex	2010-05-17 01:37:12.000000000 +0200
+--- cjk-4.8.3+git20090105.orig/examples/rubytest.tex	2010-05-17 01:33:42.254859199 +0200
++++ cjk-4.8.3+git20090105/examples/rubytest.tex	2010-05-17 01:37:12.000000000 +0200
 @@ -5,16 +5,15 @@
  %
- % Version 4.8.2 (29-Dec-2008)
+ % Version 4.8.3 (07-May-2012)
  
 -% You need Emacs 20 (or Mule 2.3) to process this file!
 -
@@ -476,10 +476,10 @@ Index: cjk-4.8.2+git20090105/examples/rubytest.tex
  
  \documentclass[12pt]{article}
  
-Index: cjk-4.8.2+git20090105/examples/thai.tex
+Index: cjk-4.8.3+git20090105/examples/thai.tex
 ===================================================================
---- cjk-4.8.2+git20111216.orig/examples/thai.tex	2011-12-03 15:10:23.000000000 +0100
-+++ cjk-4.8.2+git20111216/examples/thai.tex	2012-01-06 00:15:17.029691808 +0100
+--- cjk-4.8.3+git20111216.orig/examples/thai.tex	2011-12-03 15:10:23.000000000 +0100
++++ cjk-4.8.3+git20111216/examples/thai.tex	2012-01-06 00:15:17.029691808 +0100
 @@ -11,7 +11,8 @@
  %   . font switching between Thai and non-Thai
  %   . intercharacter glue

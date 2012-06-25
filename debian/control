@@ -13,7 +13,6 @@ Homepage: http://cjk.ffii.org/
 Package: latex-cjk-common
 Architecture: any
 Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 3), ${misc:Depends}, ${shlibs:Depends}
-Recommends: latex-cjk-xcjk
 Conflicts: cjk-latex (<= 4.5.1), latex-cjk
 Replaces: cjk-latex
 Provides: cjk-latex
@@ -28,33 +27,6 @@ Description: LaTeX macro package for CJK (Chinese/Japanese/Korean)
  This package will install the common files, as well as a few
  GNU/Emacs Lisp files, and it provides support for furigana
  ("ruby text") and PinYin, either with or without tone marks.
-
-Package: latex-cjk-xcjk
-Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), texlive-xetex, tex-common (>= 3), ${misc:Depends}
-Suggests: fonts-dejima-mincho, fonts-kiloji, 
-          fonts-thai-tlwg, 
-          fonts-arphic-ukai, fonts-arphic-uming, 
-          fonts-baekmuk, 
-          fonts-ipafont-gothic | fonts-japanese-gothic, 
-          fonts-ipafont-mincho | fonts-japanese-mincho,
-          fonts-unfonts-core, fonts-unfonts-extra, 
-          ttf-wqy-zenhei
-Conflicts: cjk-latex (<= 4.5.1)
-Description: XeTeX module of LaTeX CJK
- CJK is a macro package for LaTeX.  This package gives you the possibility
- to include Chinese (traditional and simplified), Japanese, Thai, Vietnamese,
- Korean, and many more scripts in your (La)TeX documents through XeLaTeX,
- which is based on the modern XeTeX engine.
- .
- It allows you to directly use TrueType fonts without any conversion or
- extra packages.
- .
- latex-cjk-xcjk suggests a whole bunch of Japanese, Chinese, Korean and Thai
- fonts that are guaranteed to work with xCJK, but any other TTF should work
- just as well.
- .
- Have a look at latex-cjk-common for a more detailed description.
 
 Package: latex-cjk-chinese
 Architecture: any
@@ -110,7 +82,7 @@ Description: Thai module of LaTeX CJK
 
 Package: latex-cjk-all
 Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), latex-cjk-xcjk (= ${source:Version}), latex-cjk-chinese (>= ${source:Version}), latex-cjk-japanese (>= ${source:Version}), latex-cjk-korean (= ${source:Version}), latex-cjk-thai (= ${source:Version}), latex-cjk-chinese-arphic-bsmi00lp, latex-cjk-chinese-arphic-bkai00mp, latex-cjk-chinese-arphic-gbsn00lp, latex-cjk-chinese-arphic-gkai00mp, latex-cjk-japanese-wadalab, ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), latex-cjk-chinese (>= ${source:Version}), latex-cjk-japanese (>= ${source:Version}), latex-cjk-korean (= ${source:Version}), latex-cjk-thai (= ${source:Version}), latex-cjk-chinese-arphic-bsmi00lp, latex-cjk-chinese-arphic-bkai00mp, latex-cjk-chinese-arphic-gbsn00lp, latex-cjk-chinese-arphic-gkai00mp, latex-cjk-japanese-wadalab, ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: installs all LaTeX CJK packages
  This package will install all CJK packages.

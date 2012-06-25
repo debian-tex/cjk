@@ -127,10 +127,8 @@ binary-indep: build-indep
 	dh_link -platex-cjk-all usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-all
 	dh_link -pcjk-latex usr/share/doc/latex-cjk-common usr/share/doc/cjk-latex
 	dh_link -platex-cjk-thai usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-thai
-	dh_link -platex-cjk-xcjk usr/share/doc/latex-cjk-common usr/share/doc/latex-cjk-xcjk
 	dh_installtex -platex-cjk-thai --flavor=map:config_for_all_maps map=Map,garuda-c90.map map=Map,norasi-c90.map
 	dh_installtex -platex-cjk-korean
-	dh_installtex -platex-cjk-xcjk
 	dh_installemacsen -i
 	dh_compress -i
 	dh_fixperms -i

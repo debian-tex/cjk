@@ -1,7 +1,7 @@
 texinput/thai/c90* usr/share/texmf/tex/latex/CJK/thai/
 texinput/thai/thaicjk.ldf usr/share/texmf/tex/generic/babel/
 doc/thaifont.txt usr/share/doc/latex-cjk-common/
-examples/thai.tex usr/share/doc/latex-cjk-common/examples/
+examples/thai*.tex usr/share/doc/latex-cjk-common/examples/
 utils/thaifont/tools usr/share/latex-cjk-common/utils/thaifont/
 utils/thaifont/texmf/fonts/map/dvips/*/*.map usr/share/texmf/fonts/map/dvips/latex-cjk-thai/
 build_thaifonts/c90.enc usr/share/texmf/fonts/enc/dvips/latex-cjk-thai/
