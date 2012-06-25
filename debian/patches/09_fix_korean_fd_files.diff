@@ -855,7 +855,7 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63tz.fd
 -% Version 4.8.3 (07-May-2012)
 -
 -\def\fileversion{4.8.3}
--\def\filedate{2008/12/29}
+-\def\filedate{2012/05/07}
 -\ProvidesFile{c63tz.fd}[\filedate\space\fileversion]
 -
 -% Korean characters (Hangul)
@@ -913,7 +913,7 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63vd.fd
 -% Version 4.8.3 (07-May-2012)
 -
 -\def\fileversion{4.8.3}
--\def\filedate{2008/12/29}
+-\def\filedate{2012/05/07}
 -\ProvidesFile{c63vd.fd}[\filedate\space\fileversion]
 -
 -% Korean characters (Hangul)
