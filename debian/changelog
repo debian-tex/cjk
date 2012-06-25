@@ -2,8 +2,7 @@ cjk (4.8.3+git20120621-1) unstable; urgency=low
 
   * The "Thank you" release.
   * Acknowledge work by Norbert to make CJK automagically work with TL2012.
-  * New upstream release: [TODO; simply change the date in this changelog]
-     - Improve captions for Chinese (T/S) and Japanese;
+  * New upstream release:
      - Improve captions for Chinese (T/S) and Japanese;
      - fix imcompatibilities with 'ulem.sty';
      - remove xCJK files, as it is superseded by the xeCJK packages;
