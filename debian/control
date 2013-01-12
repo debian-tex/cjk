@@ -13,7 +13,7 @@ Homepage: http://cjk.ffii.org/
 Package: latex-cjk-common
 Architecture: any
 Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 3), ${misc:Depends}, ${shlibs:Depends}
-Conflicts: cjk-latex (<= 4.5.1), latex-cjk
+Conflicts: cjk-latex (<= 4.5.1), latex-cjk, latex-cjk-xcjk
 Replaces: cjk-latex
 Provides: cjk-latex
 Description: LaTeX macro package for CJK (Chinese/Japanese/Korean)

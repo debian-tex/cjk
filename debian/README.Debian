@@ -1,3 +1,18 @@
+4.8.3 CHANGES
+-------------
+
+xCJK
+
+The package `xCJK' is now obsolete.  Upstream suggests to use the
+package `xeCJK' instead, which is currently part of the Debian package
+`texlive-xetex'.
+
+As such, the Debian package "latex-cjk-xcjk" is not built anymore, and from
+now on all LaTeX CJK Debian packages will conflict with said package.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>, Sun, 13 Jan 2013 01:09:51 +0800
+
+
 4.6.0 CHANGES
 -------------
 

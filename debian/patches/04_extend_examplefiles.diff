@@ -157,12 +157,7 @@ Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
 ===================================================================
 --- cjk-4.8.3+git20090105.orig/examples/CJKutf8.tex	2010-05-17 01:33:42.202855639 +0200
 +++ cjk-4.8.3+git20090105/examples/CJKutf8.tex	2010-05-17 01:37:12.000000000 +0200
-@@ -4,18 +4,36 @@
- % written by Werner Lemberg <wl@gnu.org>
- %
- % Version 4.8.3 (07-May-2012)
--
--% Vietnamese support for Babel comes with the VnTeX package.
+@@ -9,11 +9,19 @@
  %
  % Read CJKutf8.txt for more details.
  
@@ -176,12 +171,17 @@ Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
 +
  \documentclass[12pt]{article}
  
+ \usepackage{cmap}
+ 
 -\usepackage[10pt]{type1ec}          % use only 10pt fonts
-+%\usepackage[10pt]{type1ec}          % use only 10pt fonts
++#\usepackage[10pt]{type1ec}          % use only 10pt fonts
  \usepackage[T1]{fontenc}
  
  \usepackage{CJKutf8}
- \usepackage[german, russian, vietnam, USenglish]{babel}
+@@ -23,6 +31,19 @@
+             greek,                  % LGR font encoding
+             USenglish]{babel}
+ 
 +% You need texlive-lang-cyrillic for "russian",
 +% texlive-lang-vietnamese for "vietnam", and texlive-lang-german for
 +% "german".   If you don't have these packages, then adjust the above
@@ -194,10 +194,11 @@ Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
 +% hesitate and e-mail to <danai.sae-han@edpnet.be>.
 +% If you don't mind not using UTF-8, then check out CJKbabel.tex to
 +% get Korean text in harmony with other scripts.
++
+ \usepackage{textalpha}              % improved LGR support
  
  \usepackage[overlap, CJK]{ruby}
- \usepackage{CJKulem}
-@@ -45,12 +63,12 @@
+@@ -53,12 +74,12 @@
  
  \begin{CJK}{UTF8}{}
  
@@ -226,7 +227,7 @@ Index: cjk-4.8.3+git20090105/examples/KS-hlatex.tex
 +%
 +% written by Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
 +%
-+ % Version 4.8.3 (07-May-2012)
++% Version 4.8.3 (07-May-2012)
 +
 +\documentclass[12pt]{article}
 +

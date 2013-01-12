@@ -1,4 +1,4 @@
-## 08_add_newpage_to_examples.diff by <danai@debian.org>
+# 08_add_newpage_to_examples.diff by <danai@debian.org>
 ##
 ## Fix examples/*.tex: add \newpage in a CJK environment.  I add
 ## this because larger documents with \tableofcontents will
@@ -106,8 +106,8 @@ Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
 ===================================================================
 --- cjk-4.8.3+git20090105.orig/examples/CJKutf8.tex	2010-05-17 01:03:16.000000000 +0200
 +++ cjk-4.8.3+git20090105/examples/CJKutf8.tex	2010-05-17 01:03:16.000000000 +0200
-@@ -123,6 +123,11 @@
-     этот FAQ и его структура' объяснены детали этой новой структуры.}
+@@ -144,6 +144,11 @@
+     διαβάσετε αυτή την ΣΤΕ και πώς είναι οργανωμένη>>.}
  \end{otherlanguage}
  
 +% We need to end the CJK environment with a \newpage; otherwise the
