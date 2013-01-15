@@ -1,0 +1,29 @@
+## 10_add_comments_in_KS_example_for_working_ko.tex_fonts.diff by <danai@debian.org>
+## 
+## Fix the default KS.tex example file to use the `gs' font instead
+## of the default `mj' font because the latter is not included anymore
+## in the ko.tex-extra-hlfont package.
+
+Index: cjk-4.8.3+git20120914/examples/KS.tex
+===================================================================
+--- cjk-4.8.3+git20090105.orig//examples/KS.tex	2013-01-13 01:12:57.000000000 +0800
++++ cjk-4.8.3+git20120914/examples/KS.tex	2013-01-13 14:42:46.250636001 +0800
+@@ -13,7 +13,17 @@
+ 
+ \begin{document}
+ 
+-\begin{CJK}[HL]{KS}{}
++\begin{CJK}[HL]{KS}{gs}
++% ko.tex-extra
++% Works: ph bm jsr jmj jnv sh pg yt gs pn
++
++% ko.tex-extra-hlfont
++% Does not work: dn [tries outdn* Unicode fonts, fails] pga [tries outpga* Unicode fonts, fails] 
++
++% Standard
++% Does not work: mj gt [do not seem to be packaged anymore]
++
++%\setCJKfamilyfont{Korean}{Batang}
+ 
+ \noindent 이 FAQ 은 자주 반복되는 질문과 그에 대한 대답을 간단명료한
+ 양식으로 모아 엮어졌습니다. 이 FAQ 의 구조는 지난 판에 비하여

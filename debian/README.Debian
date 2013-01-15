@@ -2,6 +2,7 @@
 -------------
 
 xCJK
+====
 
 The package `xCJK' is now obsolete.  Upstream suggests to use the
 package `xeCJK' instead, which is currently part of the Debian package
@@ -10,7 +11,31 @@ package `xeCJK' instead, which is currently part of the Debian package
 As such, the Debian package "latex-cjk-xcjk" is not built anymore, and from
 now on all LaTeX CJK Debian packages will conflict with said package.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>, Sun, 13 Jan 2013 01:09:51 +0800
+
+Vietnamese and Greek
+====================
+
+I strongly recommended to look at the CJKutf8.tex example if you want to use
+Vietnamese or Greek text.  There are other possibilities such as using the MULE
+encoding in Emacs (M-x cjk-write-file), or using big fonts such as Cyberbit, but
+the method in CJKutf8.tex is definitely the easiest way and will generally yield
+more visually pleasing results.
+
+It is imperative that Debian packages texlive-lang-greek and texlive-lang-vietnamese
+are installed.
+
+
+Korean
+======
+
+A while ago the `hlatex-fonts-base' package was replaced by `ko.tex-extra'.  Not all
+fonts have been included, most notably "mj", the default Korean font in the `CJK'
+package.
+
+I have updated the KS.tex example file to show you which EUC fonts do work with
+`ko.tex-extra'.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>, Sun, 13 Jan 2013 23:57:20 +0800
 
 
 4.6.0 CHANGES

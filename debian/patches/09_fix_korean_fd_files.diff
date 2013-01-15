@@ -3,8 +3,10 @@
 ## Fix texinput/KS/HLaTeX/*.fd files.
 ## The upstream package still uses the obsolete HLaTeX
 ## font packages, which is now superseded by ko.tex.
-## The ko.tex fonts have not retained every font variant
+## ko.tex-extra-hlfont did not retain every font variant
 ## from HLaTeX, and some others were added.
+## What does not work, are: dn, ppa, mj, gt.
+## What does work, are: ph, bm, jsr, jmj, jnv, sh, pg, yt, gs, pn.
 
 Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63bm.fd
 ===================================================================

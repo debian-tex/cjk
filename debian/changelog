@@ -1,4 +1,4 @@
-cjk (4.8.3+git20120914-1) UNRELEASED; urgency=low
+cjk (4.8.3+git20120914-1) experimental; urgency=low
 
   * The "Thank you" release.
   * Acknowledge work by Norbert to make CJK automagically work with TL2012.
@@ -7,16 +7,25 @@ cjk (4.8.3+git20120914-1) UNRELEASED; urgency=low
      - improve captions for Chinese (T/S) and Japanese;
      - fix imcompatibility with ulem.sty;
      - remove xCJK; use the xeCJK package instead;
-     - accept Thai input in UTF-8 with cjk-enc.el and add a thai_utf8.tex example file;
+     - accept Thai input in UTF-8 with cjk-enc.el and add a thai_utf8.tex
+       example file;
      - add support for Thai font tlwg v0.5;
-     - make some commands robust (\CJKtilde, \standardtilde, \CJKspace, \CJKnospace);
-     - add Greek to the CJKutf8.tex example because the recent lgrx package delivers
-       good Babel UTF-8 support for LGR encoding (however, cut-and-paste support remains
-       a problem; see the upstream debian/changelog.gz file for more information).
-  * Rebuild against TexLive 2012.
-  * [debian/*] Do not build the xcjk package anymore as it is made obsolete upstream.
-     Instead use the Debian package "texlive-xetex" which includes the LaTeX package
-     "xeCJK".
+     - make some commands robust (\CJKtilde, \standardtilde, \CJKspace,
+       \CJKnospace);
+     - add Greek to the CJKutf8.tex example because the recent lgrx package
+       delivers good Babel UTF-8 support for LGR encoding (however,
+       cut-and-paste support remains a problem; see the upstream
+       debian/changelog.gz file for more information).
+  * [debian/*] Do not build the xcjk package anymore as it is made obsolete
+     upstream.  Instead use the Debian package "texlive-xetex" which includes
+     the LaTeX package "xeCJK".
+  * [debian/README.Debian] Add information about the deprecation of
+     latex-cjk-xcjk and about the use of Vietnamese and Greek.
+  * [debian/patches/
+  * [debian/patches/10_add_comments_in_KS_example_for_working_ko.tex_fonts.diff
+     New patch.  hlatex-fonts-base does not exist; its replacement
+     ko.tex-extra-hlfont does not contain all necessary fonts.  Explain which
+     fonts do work, and modify the original KS.tex example file
 
  -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Sat, 12 Jan 2013 00:18:49 +0800
 
