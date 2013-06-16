@@ -62,7 +62,7 @@ build-indep:
 # You will need a Build-Dependency on the `sharutils' package in debian/control.
 #	cd debian && uudecode thaifonts.tar.gz.uu && tar xzf thaifonts.tar.gz
 #	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst ../debian/thaifonts/* . && cd ../debian/thaifonts && prename 's/_//' * && prename 's/\./n\./' norasi.* garuda.*)
-	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst /usr/share/texmf/fonts/afm/public/fonts-tlwg/garuda*.afm /usr/share/texmf/fonts/afm/public/fonts-tlwg/norasi*.afm .)
+	(cd $(build_thaifonts) && cp ../utils/thaifont/tools/c90.* ../utils/thaifont/tools/*.fontinst /usr/share/texlive/texmf-dist/fonts/afm/public/fonts-tlwg/garuda*.afm /usr/share/texlive/texmf-dist/fonts/afm/public/fonts-tlwg/norasi*.afm .)
 
 	(cd $(build_thaifonts) && tex norasi-c90.fontinst && tex garuda-c90.fontinst && for i in f*.pl; do pltotf $$i; done)
 
