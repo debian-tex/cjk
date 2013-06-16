@@ -6,8 +6,12 @@ cjk (4.8.3+git20120914-2) UNRELEASED; urgency=low
        `latex-fonts-thai-tlwg' packages to texlive-lang-other
        (>= 2013.20130523-1).  Thanks to Theppitak Karoonboonyanan
        (Closes: #709686);
+     - move from /u/s/doc/texmf to /u/s/texmf/doc and depend on
+       tex-common (>= 4).
+  * Rebuild against some fresh TeXLive packages and move fromo Debian
+    experimental to unstable.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Sun, 16 Jun 2013 18:01:36 +0800
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 17 Jun 2013 00:15:26 +0800
 
 cjk (4.8.3+git20120914-1) experimental; urgency=low
 

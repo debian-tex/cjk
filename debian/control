@@ -1,5 +1,5 @@
 Source: cjk
-Build-Depends: debhelper (>= 8.1.0~), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 3)
+Build-Depends: debhelper (>= 8.1.0~), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 4)
 Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, texlive-lang-other (>= 2013.20130523-1)
 Section: tex
 Priority: optional
@@ -12,7 +12,7 @@ Homepage: http://cjk.ffii.org/
 
 Package: latex-cjk-common
 Architecture: any
-Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 3), ${misc:Depends}, ${shlibs:Depends}
+Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 4), ${misc:Depends}, ${shlibs:Depends}
 Conflicts: cjk-latex (<= 4.5.1), latex-cjk, latex-cjk-xcjk
 Replaces: cjk-latex
 Provides: cjk-latex
@@ -48,7 +48,7 @@ Description: Chinese module of LaTeX CJK
 Package: latex-cjk-japanese
 Architecture: any
 Recommends: latex-cjk-japanese-wadalab
-Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 3), ${misc:Depends}, ${shlibs:Depends}
+Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 4), ${misc:Depends}, ${shlibs:Depends}
 Suggests: hbf-kanji48
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Japanese module of LaTeX CJK
@@ -63,7 +63,7 @@ Description: Japanese module of LaTeX CJK
 Package: latex-cjk-korean
 Architecture: all
 Recommends: ko.tex-extra-hlfont
-Depends: latex-cjk-common (>= ${source:Version}), tex-common (>= 3), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), tex-common (>= 4), ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Korean module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
@@ -71,7 +71,7 @@ Description: Korean module of LaTeX CJK
 
 Package: latex-cjk-thai
 Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 3), texlive-lang-other (>= 2013.20130523-1), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 4), texlive-lang-other (>= 2013.20130523-1), ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Thai module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
