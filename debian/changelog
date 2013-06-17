@@ -1,4 +1,4 @@
-cjk (4.8.3+git20120914-2) UNRELEASED; urgency=low
+cjk (4.8.3+git20120914-2) unstable; urgency=low
 
   * The "Released" release.
   * [debian/control, debian/rules]:
@@ -8,10 +8,11 @@ cjk (4.8.3+git20120914-2) UNRELEASED; urgency=low
        (Closes: #709686);
      - move from /u/s/doc/texmf to /u/s/texmf/doc and depend on
        tex-common (>= 4).
+  * [debian/README.source] Typo.
   * Rebuild against some fresh TeXLive packages and move fromo Debian
     experimental to unstable.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 17 Jun 2013 00:15:26 +0800
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Mon, 17 Jun 2013 09:20:35 +0800
 
 cjk (4.8.3+git20120914-1) experimental; urgency=low
 

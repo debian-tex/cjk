@@ -9,7 +9,7 @@ The upstream source tarball is created each time you build the package using the
 changelog' file and use the ISO date that is provided in the package version
 numbering.
 
-For instance, if the first line of the Debian changelog files looks like:
+For instance, if the first line of the Debian changelog file looks like:
 cjk (4.8.2+git20090105-1) unstable; urgency=medium
 then it will strip off `4.8.2+git' and `-1' from the version, so you get the
 date `20090105'.
@@ -27,4 +27,4 @@ apply on Debian.
 In other words, when you are in the "cjk" folder, just run:
 $ ./debian/rules get-orig-source
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>, Fri,  6 Jan 2012 00:00:44 +0100
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>, Mon, 17 Jun 2013 09:22:07 +0800
