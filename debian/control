@@ -1,5 +1,5 @@
 Source: cjk
-Build-Depends: debhelper (>= 8.1.0~), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 4)
+Build-Depends: debhelper (>= 8.1.0~), quilt, libkpathsea-dev, texlive-extra-utils, git-core, tex-common (>= 4), autotools-dev
 Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, texlive-lang-other (>= 2013.20130523-1)
 Section: tex
 Priority: optional

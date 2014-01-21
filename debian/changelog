@@ -1,3 +1,14 @@
+cjk (4.8.3+git20120914-3) unstable; urgency=low
+
+  * The "Let's update the Korean stuff" update.
+  * [debian/control] Let latex-cjk-korean recommend `texlive-lang-cjk'
+     instead of `ko.tex-extra-hlfont'.
+  * [debian/control,debian/rules] Bug fix: "use autotools-dev to update
+    config.{sub,guess} for new arches", thanks to Logan Rosen
+    (Closes: #733476).
+
+ --
+
 cjk (4.8.3+git20120914-2) unstable; urgency=low
 
   * The "Released" release.

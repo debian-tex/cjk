@@ -38,6 +38,8 @@ build: $(QUILT_STAMPFN) build-stamp
 build-arch:
 	dh_testdir
 
+	# Update config.{guess,sub}
+	dh_autotools-dev_updateconfig
 	# Add here commands to compile the package.
 	$(MAKE)
 
@@ -104,6 +106,9 @@ clean: unpatch
 	rm -f utils/CEFconv/cefsconv
 	rm -f utils/SJISconv/sjisconv
 	rm -f utils/extconv/extconv
+
+	# Clean up config.{guess,sub}
+	dh_autotools-dev_restoreconfig
 
 	dh_clean
 
