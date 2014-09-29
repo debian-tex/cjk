@@ -4,7 +4,7 @@ cjk (4.8.3+git20140831-1) unstable; urgency=low
   *  Bump the release to the latest GIT release from 31 August 2014:
       - Fix in hbf2gf;
       - fix space handling of non-CJK characters.
-  * [debian/control] Let latex-cjk-korean recommend `texlive-lang-cjk'
+  * [debian/control] Let latex-cjk-korean recommend `texlive-lang-korean'
      instead of `ko.tex-extra-hlfont'.
   * [debian/control,debian/rules] Bug fix: "use autotools-dev to update
     config.{sub,guess} for new arches", thanks to Logan Rosen
