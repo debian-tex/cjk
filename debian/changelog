@@ -7,7 +7,9 @@ cjk (4.8.3+git20140831-1) unstable; urgency=low
   * [debian/control]
       - Let latex-cjk-korean recommend `texlive-lang-korean' instead of
         `ko.tex-extra-hlfont';
-      - bump Standards-Version from 3.9.3 to 3.9.6 (no changes required).
+      - bump Standards-Version from 3.9.3 to 3.9.6 (no changes required);
+      - change "package" to "metapackage" for "latex-cjk-all" to not
+        confuse Lintian.
   * [debian/control,debian/rules] Bug fix: "use autotools-dev to update
     config.{sub,guess} for new arches", thanks to Logan Rosen
     (Closes: #733476).

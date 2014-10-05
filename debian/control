@@ -85,7 +85,7 @@ Architecture: all
 Depends: latex-cjk-common (>= ${source:Version}), latex-cjk-chinese (>= ${source:Version}), latex-cjk-japanese (>= ${source:Version}), latex-cjk-korean (= ${source:Version}), latex-cjk-thai (= ${source:Version}), latex-cjk-chinese-arphic-bsmi00lp, latex-cjk-chinese-arphic-bkai00mp, latex-cjk-chinese-arphic-gbsn00lp, latex-cjk-chinese-arphic-gkai00mp, latex-cjk-japanese-wadalab, ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: installs all LaTeX CJK packages
- This package will install all CJK packages.
+ This metapackage will install all CJK packages.
  You may also wish to install each package separately instead.
  See the latex-cjk-common package for a detailed description.
 
