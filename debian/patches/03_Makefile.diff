@@ -2,9 +2,9 @@
 ##
 ## Modify the upstream Makefile so it builds on Debian.
 
---- cjk-20060912/Makefile	2006-09-13 09:38:58.440284066 +0200
-+++ cjk-4.6.0+cvs20060912/Makefile	2006-09-13 09:42:31.981880560 +0200
-@@ -33,6 +33,53 @@
+--- a/Makefile
++++ b/Makefile
+@@ -33,6 +33,54 @@
  # o The TeXLive version of some font definition files are used (in the
  #   `texlive' subdirectory).
  
@@ -14,7 +14,8 @@
 +# written by Anthony Fok <foka@debian.org>
 +# Complaints should be sent to Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
 +
-+CFLAGS = -O2 -g -Wall
++CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
++LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 +TEXMF = $(prefix)/share/texmf
 +
 +cjkutils = utils/Bg5conv/bg5conv \
@@ -33,7 +34,7 @@
 +
 +utils/hbf2gf/hbf2gf:
 +	( cd utils/hbf2gf; \
-+         ./configure --prefix=/usr \
++         LDFLAGS=$(shell dpkg-buildflags --get LDFLAGS) ./configure --prefix=/usr \
 +               --with-kpathsea-lib=/usr/lib \
 +               --with-kpathsea-include=/usr/include \
 +               --mandir='$${prefix}/share/man'; \

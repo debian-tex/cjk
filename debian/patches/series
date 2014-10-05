@@ -5,4 +5,3 @@
 08_add_newpage_to_examples.diff
 09_fix_korean_fd_files.diff
 10_add_comments_in_KS_example_for_working_ko.tex_fonts.diff
-11_add_LDFLAGS_environment_for_binary_builds.diff

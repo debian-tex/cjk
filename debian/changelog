@@ -18,10 +18,10 @@ cjk (4.8.3+git20140831-1) unstable; urgency=low
     config.{sub,guess} for new arches", thanks to Logan Rosen
     (Closes: #733476).
   * [debian/compat] Switch from version 8 to 9.
-  * [debian/patches/11_add_LDFLAGS_environment_for_binary_builds.diff]
-     Add a fix to harden the `hbf2gf' and `*conv' binaries, in particular
-     to have "read-only reolcations" while compiling with GCC.  I use
-     `dpkg-buildflags' instead of hard configuration in the Makefile.  
+  * [debian/patches/03_Makefile.diff] Add a fix to harden the `hbf2gf'
+     and `*conv' binaries, in particular to have "read-only reolcations"
+     while compiling with GCC.  I use `dpkg-buildflags' instead of hard
+     configuration in the Makefile.
 
  --
 
