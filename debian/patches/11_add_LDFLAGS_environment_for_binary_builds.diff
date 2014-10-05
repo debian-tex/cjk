@@ -1,0 +1,21 @@
+--- a/Makefile
++++ b/Makefile
+@@ -39,7 +39,8 @@
+ # written by Anthony Fok <foka@debian.org>
+ # Complaints should be sent to Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>
+ 
+-CFLAGS = -O2 -g -Wall
++CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
++LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+ TEXMF = $(prefix)/share/texmf
+ 
+ cjkutils = utils/Bg5conv/bg5conv \
+@@ -58,7 +59,7 @@ all: $(allutils)
+ 
+ utils/hbf2gf/hbf2gf:
+ 	( cd utils/hbf2gf; \
+-         ./configure --prefix=/usr \
++         LDFLAGS=$(shell dpkg-buildflags --get LDFLAGS) ./configure --prefix=/usr \
+                --with-kpathsea-lib=/usr/lib \
+                --with-kpathsea-include=/usr/include \
+                --mandir='$${prefix}/share/man'; \
