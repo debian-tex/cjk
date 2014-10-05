@@ -9,10 +9,19 @@ cjk (4.8.3+git20140831-1) unstable; urgency=low
         `ko.tex-extra-hlfont';
       - bump Standards-Version from 3.9.3 to 3.9.6 (no changes required);
       - change "package" to "metapackage" for "latex-cjk-all" to not
-        confuse Lintian.
+        confuse Lintian;
+      - Build-Depend on texlive-lang-other (>= 2013.20130523), not
+        2013.20130523-1;
+      - Update Build-Dependency of debhelper from (>= 8.1.0~) to
+        (>= 9.20141003).
   * [debian/control,debian/rules] Bug fix: "use autotools-dev to update
     config.{sub,guess} for new arches", thanks to Logan Rosen
     (Closes: #733476).
+  * [debian/compat] Switch from version 8 to 9.
+  * [debian/patches/11_add_LDFLAGS_environment_for_binary_builds.diff]
+     Add a fix to harden the `hbf2gf' and `*conv' binaries, in particular
+     to have "read-only reolcations" while compiling with GCC.  I use
+     `dpkg-buildflags' instead of hard configuration in the Makefile.  
 
  --
 
