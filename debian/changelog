@@ -1,8 +1,9 @@
 cjk (4.8.4+git20150701-2) UNRELEASED; urgency=medium
 
   * NOT RELEASED YET
+  * fix Vcs fields
 
- -- Norbert Preining <preining@debian.org>  Wed, 01 Jul 2015 12:53:32 +0900
+ -- Norbert Preining <preining@debian.org>  Wed, 01 Jul 2015 12:59:07 +0900
 
 cjk (4.8.4+git20150701-1) unstable; urgency=medium
 
