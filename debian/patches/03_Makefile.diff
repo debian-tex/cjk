@@ -2,9 +2,13 @@
 ##
 ## Modify the upstream Makefile so it builds on Debian.
 
---- a/Makefile
-+++ b/Makefile
-@@ -33,6 +33,54 @@
+---
+ Makefile |   49 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 49 insertions(+)
+
+--- cjk-4.8.4+git20150701.orig/Makefile
++++ cjk-4.8.4+git20150701/Makefile
+@@ -33,6 +33,55 @@
  # o The TeXLive version of some font definition files are used (in the
  #   `texlive' subdirectory).
  
@@ -32,9 +36,10 @@
 +
 +.PHONY: all install clean distclean
 +
++# we need /usr/lib for libkpathsea compilation
 +utils/hbf2gf/hbf2gf:
 +	( cd utils/hbf2gf; \
-+         LDFLAGS=$(shell dpkg-buildflags --get LDFLAGS) ./configure --prefix=/usr \
++         CFLAGS="$(CFLAGS) -I/usr/lib" LDFLAGS="$(LDFLAGS)" ./configure --prefix=/usr \
 +               --with-kpathsea-lib=/usr/lib \
 +               --with-kpathsea-include=/usr/include \
 +               --mandir='$${prefix}/share/man'; \
@@ -56,6 +61,6 @@
 +distclean: clean
 +###
 +
- version=4.8.3
+ version=4.8.4
  
  distdir=cjk-$(version)

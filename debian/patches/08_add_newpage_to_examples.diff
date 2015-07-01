@@ -6,10 +6,24 @@
 ## this behaviour is well documented.  This will surely prevent
 ## many future errors with users.
 
-Index: cjk-4.8.3+git20090105/examples/Big5.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/Big5.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/Big5.tex	2010-05-17 01:03:16.000000000 +0200
+---
+ examples/Big5.tex      |    5 +++++
+ examples/Big5vert.tex  |    5 +++++
+ examples/CEF_test.tex  |    5 +++++
+ examples/CJKfntef.tex  |    5 +++++
+ examples/CJKmixed.tex  |    5 +++++
+ examples/CJKspace.tex  |    5 +++++
+ examples/CJKutf8.tex   |    5 +++++
+ examples/GB.tex        |    5 +++++
+ examples/JIS.tex       |    5 +++++
+ examples/KS-hlatex.tex |    5 +++++
+ examples/KS.tex        |    5 +++++
+ examples/SJIS.tex      |    5 +++++
+ examples/UTF8.tex      |    5 +++++
+ 13 files changed, 65 insertions(+)
+
+--- cjk-4.8.4+git20150701.orig/examples/Big5.tex
++++ cjk-4.8.4+git20150701/examples/Big5.tex
 @@ -41,6 +41,11 @@
  \textbf{¶≥√ˆ∑sµ≤∫c™∫≤”∏`°A•i∞—¶“°u¶p¶Ûæ\≈™•ª∞›µ™∂∞§Œ§F∏—®‰Ωs±∆µ≤∫c°v∏”
  ∂µ§§™∫ª°©˙°C}
@@ -22,10 +36,8 @@ Index: cjk-4.8.3+git20090105/examples/Big5.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/Big5vert.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/Big5vert.tex	2010-05-17 01:03:13.903352943 +0200
-+++ cjk-4.8.3+git20090105/examples/Big5vert.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/Big5vert.tex
++++ cjk-4.8.4+git20150701/examples/Big5vert.tex
 @@ -23,6 +23,11 @@
  \textbf{¶≥√ˆ∑sµ≤∫c™∫≤”∏`°A•i∞—¶“°u¶p¶Ûæ\≈™•ª∞›µ™∂∞§Œ§F∏—®‰Ωs±∆µ≤∫c°v∏”
  ∂µ§§™∫ª°©˙°C}
@@ -38,10 +50,8 @@ Index: cjk-4.8.3+git20090105/examples/Big5vert.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/CEF_test.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/CEF_test.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/CEF_test.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/CEF_test.tex
++++ cjk-4.8.4+git20150701/examples/CEF_test.tex
 @@ -40,6 +40,11 @@
  \verb|\CJKchar[CNS7]{"5A}{"5A}| \CJKchar[CNS7]{"5A}{"5A}
  \quad \verb|&C7-|\verb|5A5A;| &C7-5A5A;
@@ -54,10 +64,8 @@ Index: cjk-4.8.3+git20090105/examples/CEF_test.tex
  \end{CJK}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/CJKfntef.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/CJKfntef.tex	2009-11-07 21:12:42.000000000 +0100
-+++ cjk-4.8.3+git20090105/examples/CJKfntef.tex	2010-11-08 02:32:21.443104014 +0100
+--- cjk-4.8.4+git20150701.orig/examples/CJKfntef.tex
++++ cjk-4.8.4+git20150701/examples/CJKfntef.tex
 @@ -79,6 +79,11 @@
  \verb|\CJKunderanysymbol{...}{...}{...}|:\\
  \CJKunderanysymbol{0.5em}{-}{∫∫◊÷º”µ„£¨ ø…Õ¨ ±º”œ¬ªÆœﬂº”œ¬ªÆ£¨œﬂ, ◊‘∂Øªª––,}
@@ -70,10 +78,8 @@ Index: cjk-4.8.3+git20090105/examples/CJKfntef.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/CJKmixed.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/CJKmixed.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/CJKmixed.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/CJKmixed.tex
++++ cjk-4.8.4+git20150701/examples/CJKmixed.tex
 @@ -73,6 +73,11 @@
      Ë©≤È†Ö‰∏≠ÁöÑË™™Êòé„ÄÇ}
  \end{TChinese}
@@ -86,10 +92,8 @@ Index: cjk-4.8.3+git20090105/examples/CJKmixed.tex
  \end{CJK}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/CJKspace.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/CJKspace.tex	2010-05-17 01:03:13.939352150 +0200
-+++ cjk-4.8.3+git20090105/examples/CJKspace.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/CJKspace.tex
++++ cjk-4.8.4+git20150701/examples/CJKspace.tex
 @@ -29,6 +29,11 @@
    Ê∑∑Êéí \verb+anything+ ‰øùÊåÅ \texttt{spaces} Á©∫Ê†º \LaTeX\ Èó¥Èöî
    \mbox{boxes} ÁõíÂ≠ê \hbox{hbox} ‰∏≠Êñá 123456 Êï∞Â≠ó.
@@ -102,11 +106,9 @@ Index: cjk-4.8.3+git20090105/examples/CJKspace.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/CJKutf8.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/CJKutf8.tex	2010-05-17 01:03:16.000000000 +0200
-@@ -144,6 +144,11 @@
+--- cjk-4.8.4+git20150701.orig/examples/CJKutf8.tex
++++ cjk-4.8.4+git20150701/examples/CJKutf8.tex
+@@ -143,6 +143,11 @@
      Œ¥ŒπŒ±Œ≤Œ¨œÉŒµœÑŒµ Œ±œÖœÑŒÆ œÑŒ∑ŒΩ Œ£Œ§Œï Œ∫Œ±Œπ œÄœéœÇ ŒµŒØŒΩŒ±Œπ ŒøœÅŒ≥Œ±ŒΩœâŒºŒ≠ŒΩŒ∑>>.}
  \end{otherlanguage}
  
@@ -118,10 +120,8 @@ Index: cjk-4.8.3+git20090105/examples/CJKutf8.tex
  \end{CJK}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/GB.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/GB.tex	2010-05-17 01:03:13.959353781 +0200
-+++ cjk-4.8.3+git20090105/examples/GB.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/GB.tex
++++ cjk-4.8.4+git20150701/examples/GB.tex
 @@ -20,6 +20,11 @@
  \textbf{”–πÿ–¬Ω·ππµƒœ∏Ω⁄£¨ø…≤Œøº°∏»Á∫Œ‘ƒ∂¡±æŒ ¥ºØº∞¡ÀΩ‚∆‰±‡≈≈Ω·ππ°π∏√
  œÓ÷–µƒÀµ√˜°£}
@@ -134,10 +134,8 @@ Index: cjk-4.8.3+git20090105/examples/GB.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/JIS.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/JIS.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/JIS.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/JIS.tex
++++ cjk-4.8.4+git20150701/examples/JIS.tex
 @@ -40,6 +40,11 @@
  \CJKfamily{maru}
  \testpar
@@ -150,10 +148,8 @@ Index: cjk-4.8.3+git20090105/examples/JIS.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/KS-hlatex.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/KS-hlatex.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/KS-hlatex.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/KS-hlatex.tex
++++ cjk-4.8.4+git20150701/examples/KS-hlatex.tex
 @@ -176,6 +176,11 @@
  \testpar
  
@@ -166,10 +162,8 @@ Index: cjk-4.8.3+git20090105/examples/KS-hlatex.tex
  \end{CJK}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/KS.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/KS.tex	2010-05-17 01:03:13.995371844 +0200
-+++ cjk-4.8.3+git20090105/examples/KS.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/KS.tex
++++ cjk-4.8.4+git20150701/examples/KS.tex
 @@ -20,6 +20,11 @@
  »π±‚¿˚¿∏∑Œ ∫Ø∞Êµ«æ˙Ω¿¥œ¥Ÿ.  \textbf{ªÛºº«— ∞Õ¿∫ ``¿Ã FAQ ¿ª æÓ∂ª∞‘
  ¿–¿ª ∞Õ¿Œ∞°'' ∂Û¥¬ ¥Î∏Ò¿ª ¬¸¡∂«œΩ√±‚ πŸ∂¯¥œ¥Ÿ.}
@@ -182,10 +176,8 @@ Index: cjk-4.8.3+git20090105/examples/KS.tex
  \end{CJK}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/SJIS.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/SJIS.tex	2010-05-17 01:03:14.003353696 +0200
-+++ cjk-4.8.3+git20090105/examples/SJIS.tex	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/examples/SJIS.tex
++++ cjk-4.8.4+git20150701/examples/SJIS.tex
 @@ -27,6 +27,11 @@
  ÇÃì«Ç›ï˚Ç∆ÇªÇÃç\ë¢ÅvÇÃçÄñ⁄Ç\ruby{éQ}{Ç≥ÇÒ}\ruby{è∆}{ÇµÇÂÇ§}ÇµÇƒâ∫Ç≥
  Ç¢ÅB}
@@ -198,10 +190,8 @@ Index: cjk-4.8.3+git20090105/examples/SJIS.tex
  \end{CJK*}
  
  \end{document}
-Index: cjk-4.8.3+git20090105/examples/UTF8.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig/examples/UTF8.tex	2010-05-17 01:03:16.000000000 +0200
-+++ cjk-4.8.3+git20090105/examples/UTF8.tex	2010-05-17 01:15:10.858854935 +0200
+--- cjk-4.8.4+git20150701.orig/examples/UTF8.tex
++++ cjk-4.8.4+git20150701/examples/UTF8.tex
 @@ -37,6 +37,11 @@
  \CJKnospace
  \noindent „Åì„Çì„Å´„Å°„ÅØ ‰∏ñÁïå

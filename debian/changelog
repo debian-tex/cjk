@@ -1,3 +1,12 @@
+cjk (4.8.4+git20150701-1) unstable; urgency=medium
+
+  * update patches for new release
+  * fix building when LDFLAGS contains path with spaces (Closes:  #767870)
+  * fix building with new libkpathsea (Closes: #790656)
+  * fix emacs installation warnings (Closes: #765595)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 01 Jul 2015 12:47:24 +0900
+
 cjk (4.8.3+git20140831-1) unstable; urgency=low
 
   * The "Alexander Nikolajevitsch Scriabin" release.

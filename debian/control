@@ -12,7 +12,7 @@ Homepage: http://cjk.ffii.org/
 
 Package: latex-cjk-common
 Architecture: any
-Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 4), ${misc:Depends}, ${shlibs:Depends}
+Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 4), emacsen-common (>= 2.0.8), ${misc:Depends}, ${shlibs:Depends}
 Conflicts: cjk-latex (<= 4.5.1), latex-cjk, latex-cjk-xcjk
 Replaces: cjk-latex
 Provides: cjk-latex
@@ -71,7 +71,7 @@ Description: Korean module of LaTeX CJK
 
 Package: latex-cjk-thai
 Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 4), texlive-lang-other (>= 2013.20130523-1), ${misc:Depends}
+Depends: latex-cjk-common (>= ${source:Version}), texlive-latex-base, tex-common (>= 4), texlive-lang-other (>= 2013.20130523-1), emacsen-common (>= 2.0.8), ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: Thai module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility

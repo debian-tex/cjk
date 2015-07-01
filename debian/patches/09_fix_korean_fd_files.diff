@@ -8,10 +8,28 @@
 ## What does not work, are: dn, ppa, mj, gt.
 ## What does work, are: ph, bm, jsr, jmj, jnv, sh, pg, yt, gs, pn.
 
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63bm.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63bm.fd	2010-05-17 01:03:13.579377358 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63bm.fd	2010-05-17 01:03:16.000000000 +0200
+---
+ texinput/KS/HLaTeX/c63bm.fd  |   16 ++++++------
+ texinput/KS/HLaTeX/c63dn.fd  |   44 +++++++++++++++++------------------
+ texinput/KS/HLaTeX/c63gr.fd  |   16 ++++++------
+ texinput/KS/HLaTeX/c63gs.fd  |   38 +++++++++++++++---------------
+ texinput/KS/HLaTeX/c63gt.fd  |   16 ++++++------
+ texinput/KS/HLaTeX/c63jgt.fd |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63jmj.fd |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63jnv.fd |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63jsr.fd |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63mj.fd  |   16 ++++++------
+ texinput/KS/HLaTeX/c63pg.fd  |   36 ++++++++++++++---------------
+ texinput/KS/HLaTeX/c63pga.fd |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63ph.fd  |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63pn.fd  |   28 +++++++++++-----------
+ texinput/KS/HLaTeX/c63sh.fd  |   24 +++++++++----------
+ texinput/KS/HLaTeX/c63tt.fd  |   53 +++++++++++++++++++++++++++++++++++++++++++
+ texinput/KS/HLaTeX/c63yt.fd  |   16 ++++++------
+ 17 files changed, 262 insertions(+), 209 deletions(-)
+
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63bm.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63bm.fd
 @@ -26,12 +26,12 @@
  \DeclareFontShape{C63}{bm}{m}{sl}{<-> CJK * wbmo}{}
  \DeclareFontShape{C63}{bm}{m}{it}{<-> CJKssub * bm/m/sl}{}
@@ -46,10 +64,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63bm.fd
  \DeclareFontShape{C63}{bm}{bux}{it}{<-> CJKssub * bm/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63dn.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63dn.fd	2010-05-17 01:03:13.587353412 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63dn.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63dn.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63dn.fd
 @@ -18,52 +18,52 @@
  
  \DeclareFontFamily{C63}{dn}{\hyphenchar \font\m@ne}
@@ -125,10 +141,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63dn.fd
  \DeclareFontShape{C63}{dn}{lux}{it}{<-> CJKssub * dn/lux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gr.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63gr.fd	2010-05-17 01:03:13.599352798 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gr.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63gr.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63gr.fd
 @@ -26,12 +26,12 @@
  \DeclareFontShape{C63}{gr}{m}{sl}{<-> CJK * wgro}{}
  \DeclareFontShape{C63}{gr}{m}{it}{<-> CJKssub * gr/m/sl}{}
@@ -163,10 +177,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gr.fd
  \DeclareFontShape{C63}{gr}{bux}{it}{<-> CJKssub * gr/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gs.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63gs.fd	2010-05-17 01:03:13.607352249 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gs.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63gs.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63gs.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{gs}{\hyphenchar \font\m@ne}
@@ -223,10 +235,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gs.fd
 +\DeclareFontShape{C63}{gs}{ux}{it}{<-> CJKssub * gs/ux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gt.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63gt.fd	2010-05-17 01:03:13.615353377 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gt.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63gt.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63gt.fd
 @@ -26,12 +26,12 @@
  \DeclareFontShape{C63}{gt}{m}{sl}{<-> CJK * wgto}{}
  \DeclareFontShape{C63}{gt}{m}{it}{<-> CJKssub * gt/m/sl}{}
@@ -261,10 +271,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63gt.fd
  \DeclareFontShape{C63}{gt}{bux}{it}{<-> CJKssub * gt/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jgt.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63jgt.fd	2010-05-17 01:03:13.627353112 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jgt.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63jgt.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63jgt.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{jgt}{\hyphenchar \font\m@ne}
@@ -316,10 +324,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jgt.fd
  \DeclareFontShape{C63}{jgt}{bux}{it}{<-> CJKssub * jgt/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jmj.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63jmj.fd	2010-05-17 01:03:13.639352847 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jmj.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63jmj.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63jmj.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{jmj}{\hyphenchar \font\m@ne}
@@ -371,10 +377,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jmj.fd
  \DeclareFontShape{C63}{jmj}{bux}{it}{<-> CJKssub * jmj/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jnv.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63jnv.fd	2010-05-17 01:03:13.647356279 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jnv.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63jnv.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63jnv.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{jnv}{\hyphenchar \font\m@ne}
@@ -426,10 +430,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jnv.fd
  \DeclareFontShape{C63}{jnv}{bux}{it}{<-> CJKssub * jnv/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jsr.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63jsr.fd	2010-05-17 01:03:13.655352866 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jsr.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63jsr.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63jsr.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{jsr}{\hyphenchar \font\m@ne}
@@ -481,10 +483,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63jsr.fd
  \DeclareFontShape{C63}{jsr}{bux}{it}{<-> CJKssub * jsr/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63mj.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63mj.fd	2010-05-17 01:03:13.667353019 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63mj.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63mj.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63mj.fd
 @@ -26,12 +26,12 @@
  \DeclareFontShape{C63}{mj}{m}{sl}{<-> CJK * wmjo}{}
  \DeclareFontShape{C63}{mj}{m}{it}{<-> CJKssub * mj/m/sl}{}
@@ -519,10 +519,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63mj.fd
  \DeclareFontShape{C63}{mj}{bux}{it}{<-> CJKssub * mj/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pga.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63pga.fd	2010-05-17 01:03:13.675353518 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pga.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63pga.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63pga.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{pga}{\hyphenchar \font\m@ne}
@@ -574,10 +572,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pga.fd
  \DeclareFontShape{C63}{pga}{bux}{it}{<-> CJKssub * pga/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pg.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63pg.fd	2010-05-17 01:03:13.683353248 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pg.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63pg.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63pg.fd
 @@ -20,34 +20,34 @@
  
  \DeclareFontShape{C63}{pg}{c}{n}{<-> CJK * wpgc}{}
@@ -631,10 +627,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pg.fd
 +\DeclareFontShape{C63}{pg}{bux}{it}{<-> CJKssub * pg/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63ph.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63ph.fd	2010-05-17 01:03:13.691367504 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63ph.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63ph.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63ph.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{ph}{\hyphenchar \font\m@ne}
@@ -686,10 +680,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63ph.fd
  \DeclareFontShape{C63}{ph}{bux}{it}{<-> CJKssub * ph/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pn.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63pn.fd	2010-05-17 01:03:13.699352847 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pn.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63pn.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63pn.fd
 @@ -18,36 +18,36 @@
  
  \DeclareFontFamily{C63}{pn}{\hyphenchar \font\m@ne}
@@ -741,10 +733,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63pn.fd
  \DeclareFontShape{C63}{pn}{bux}{it}{<-> CJKssub * pn/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63sh.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63sh.fd	2010-05-17 01:03:13.707352786 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63sh.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63sh.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63sh.fd
 @@ -26,28 +26,28 @@
  \DeclareFontShape{C63}{sh}{m}{sl}{<-> CJK * wsho}{}
  \DeclareFontShape{C63}{sh}{m}{it}{<-> CJKssub * sh/m/sl}{}
@@ -786,10 +776,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63sh.fd
  \DeclareFontShape{C63}{sh}{bux}{it}{<-> CJKssub * sh/bux/sl}{}
  
  \endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63tt.fd
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63tt.fd	2010-05-17 01:03:16.000000000 +0200
+--- /dev/null
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63tt.fd
 @@ -0,0 +1,53 @@
 +% This is file c63tt.fd of the CJK package
 +%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
@@ -844,126 +832,8 @@ Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63tt.fd
 +\DeclareFontShape{C63}{tt}{bux}{it}{<-> CJKssub * tt/bux/sl}{}
 +
 +\endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63tz.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63tz.fd	2010-05-17 01:03:13.723368309 +0200
-+++ /dev/null	1970-01-01 00:00:00.000000000 +0000
-@@ -1,53 +0,0 @@
--% This is file c63tz.fd of the CJK package
--%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
--%
--% created by Werner Lemberg <wl@gnu.org>
--%
--% Version 4.8.3 (07-May-2012)
--
--\def\fileversion{4.8.3}
--\def\filedate{2012/05/07}
--\ProvidesFile{c63tz.fd}[\filedate\space\fileversion]
--
--% Korean characters (Hangul)
--%
--% character set: KS X 1001:1992 (=KS C 5601-1992)
--% font encoding: HL
--
--% UhcTypewriter
--
--\DeclareFontFamily{C63}{tz}{\hyphenchar \font\m@ne}
--
--\DeclareFontShape{C63}{tz}{c}{n}{<-> CJK * wttc}{}
--\DeclareFontShape{C63}{tz}{c}{sl}{<-> CJK * wttco}{}
--\DeclareFontShape{C63}{tz}{c}{it}{<-> CJKssub * tz/c/sl}{}
--
--\DeclareFontShape{C63}{tz}{m}{n}{<-> CJK * wtt}{}
--\DeclareFontShape{C63}{tz}{m}{sl}{<-> CJK * wtto}{}
--\DeclareFontShape{C63}{tz}{m}{it}{<-> CJKssub * tz/m/sl}{}
--
--\DeclareFontShape{C63}{tz}{x}{n}{<-> CJK * wttx}{}
--\DeclareFontShape{C63}{tz}{x}{sl}{<-> CJK * wttxo}{}
--\DeclareFontShape{C63}{tz}{x}{it}{<-> CJKssub * tz/x/sl}{}
--
--\DeclareFontShape{C63}{tz}{ux}{n}{<-> CJK * wttu}{}
--\DeclareFontShape{C63}{tz}{ux}{sl}{<-> CJK * wttuo}{}
--\DeclareFontShape{C63}{tz}{ux}{it}{<-> CJKssub * tz/ux/sl}{}
--
--\DeclareFontShape{C63}{tz}{bc}{n}{<-> CJKb * wttc}{\CJKbold}
--\DeclareFontShape{C63}{tz}{bc}{sl}{<-> CJKb * wttco}{\CJKbold}
--\DeclareFontShape{C63}{tz}{bc}{it}{<-> CJKssub * tz/bc/sl}{}
--
--\DeclareFontShape{C63}{tz}{b}{n}{<-> CJKb * wtt}{\CJKbold}
--\DeclareFontShape{C63}{tz}{b}{sl}{<-> CJKb * wtto}{\CJKbold}
--\DeclareFontShape{C63}{tz}{b}{it}{<-> CJKssub * tz/b/sl}{}
--
--\DeclareFontShape{C63}{tz}{bx}{n}{<-> CJKb * wttx}{\CJKbold}
--\DeclareFontShape{C63}{tz}{bx}{sl}{<-> CJKb * wttxo}{\CJKbold}
--\DeclareFontShape{C63}{tz}{bx}{it}{<-> CJKssub * tz/bx/sl}{}
--
--\DeclareFontShape{C63}{tz}{bux}{n}{<-> CJKb * wttu}{\CJKbold}
--\DeclareFontShape{C63}{tz}{bux}{sl}{<-> CJKb * wttuo}{\CJKbold}
--\DeclareFontShape{C63}{tz}{bux}{it}{<-> CJKssub * tz/bux/sl}{}
--
--\endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63vd.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63vd.fd	2010-05-17 01:03:13.731352813 +0200
-+++ /dev/null	1970-01-01 00:00:00.000000000 +0000
-@@ -1,53 +0,0 @@
--% This is file c63vd.fd of the CJK package
--%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
--%
--% created by Werner Lemberg <wl@gnu.org>
--%
--% Version 4.8.3 (07-May-2012)
--
--\def\fileversion{4.8.3}
--\def\filedate{2012/05/07}
--\ProvidesFile{c63vd.fd}[\filedate\space\fileversion]
--
--% Korean characters (Hangul)
--%
--% character set: KS X 1001:1992 (=KS C 5601-1992)
--% font encoding: HL
--
--% UhcVada
--
--\DeclareFontFamily{C63}{vd}{\hyphenchar \font\m@ne}
--
--\DeclareFontShape{C63}{vd}{c}{n}{<-> CJK * wvdc}{}
--\DeclareFontShape{C63}{vd}{c}{sl}{<-> CJK * wvdco}{}
--\DeclareFontShape{C63}{vd}{c}{it}{<-> CJKssub * vd/c/sl}{}
--
--\DeclareFontShape{C63}{vd}{m}{n}{<-> CJK * wvd}{}
--\DeclareFontShape{C63}{vd}{m}{sl}{<-> CJK * wvdo}{}
--\DeclareFontShape{C63}{vd}{m}{it}{<-> CJKssub * vd/m/sl}{}
--
--\DeclareFontShape{C63}{vd}{x}{n}{<-> CJK * wvdx}{}
--\DeclareFontShape{C63}{vd}{x}{sl}{<-> CJK * wvdxo}{}
--\DeclareFontShape{C63}{vd}{x}{it}{<-> CJKssub * vd/x/sl}{}
--
--\DeclareFontShape{C63}{vd}{ux}{n}{<-> CJK * wvdu}{}
--\DeclareFontShape{C63}{vd}{ux}{sl}{<-> CJK * wvduo}{}
--\DeclareFontShape{C63}{vd}{ux}{it}{<-> CJKssub * vd/ux/sl}{}
--
--\DeclareFontShape{C63}{vd}{bc}{n}{<-> CJKb * wvdc}{\CJKbold}
--\DeclareFontShape{C63}{vd}{bc}{sl}{<-> CJKb * wvdco}{\CJKbold}
--\DeclareFontShape{C63}{vd}{bc}{it}{<-> CJKssub * vd/bc/sl}{}
--
--\DeclareFontShape{C63}{vd}{b}{n}{<-> CJKb * wvd}{\CJKbold}
--\DeclareFontShape{C63}{vd}{b}{sl}{<-> CJKb * wvdo}{\CJKbold}
--\DeclareFontShape{C63}{vd}{b}{it}{<-> CJKssub * vd/b/sl}{}
--
--\DeclareFontShape{C63}{vd}{bx}{n}{<-> CJKb * wvdx}{\CJKbold}
--\DeclareFontShape{C63}{vd}{bx}{sl}{<-> CJKb * wvdxo}{\CJKbold}
--\DeclareFontShape{C63}{vd}{bx}{it}{<-> CJKssub * vd/bx/sl}{}
--
--\DeclareFontShape{C63}{vd}{bux}{n}{<-> CJKb * wvdu}{\CJKbold}
--\DeclareFontShape{C63}{vd}{bux}{sl}{<-> CJKb * wvduo}{\CJKbold}
--\DeclareFontShape{C63}{vd}{bux}{it}{<-> CJKssub * vd/bux/sl}{}
--
--\endinput
-Index: cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63yt.fd
-===================================================================
---- cjk-4.8.3+git20090105.orig/texinput/KS/HLaTeX/c63yt.fd	2010-05-17 01:03:13.743352896 +0200
-+++ cjk-4.8.3+git20090105/texinput/KS/HLaTeX/c63yt.fd	2010-05-17 01:03:16.000000000 +0200
+--- cjk-4.8.4+git20150701.orig/texinput/KS/HLaTeX/c63yt.fd
++++ cjk-4.8.4+git20150701/texinput/KS/HLaTeX/c63yt.fd
 @@ -26,12 +26,12 @@
  \DeclareFontShape{C63}{yt}{m}{sl}{<-> CJK * wyto}{}
  \DeclareFontShape{C63}{yt}{m}{it}{<-> CJKssub * yt/m/sl}{}
