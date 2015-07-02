@@ -39,7 +39,7 @@
 +# we need /usr/lib for libkpathsea compilation
 +utils/hbf2gf/hbf2gf:
 +	( cd utils/hbf2gf; \
-+         CFLAGS="$(CFLAGS) -I/usr/lib" LDFLAGS="$(LDFLAGS)" ./configure --prefix=/usr \
++         CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" ./configure --prefix=/usr \
 +               --with-kpathsea-lib=/usr/lib \
 +               --with-kpathsea-include=/usr/include \
 +               --mandir='$${prefix}/share/man'; \
