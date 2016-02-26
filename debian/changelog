@@ -6,8 +6,10 @@ cjk (4.8.4+git20150701-2) unstable; urgency=medium
   * remove hacks for c-auto.h, libkpathsea-dev is fixed
 
   [ Danai SAE-HAN (韓達耐) ]
-  * [debian/control] Bump dh to >=9.20160115 for the automatic creation
-     of -dbgsym packages.
+  * [debian/control]
+      - Bump dh to >=9.20160115 for the automatic creation of -dbgsym
+        packages;
+      - bump Standards-Version from 3.9.6 to 3.9.7 (no changes required).
 
  -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Thu, 25 Feb 2016 02:16:35 +0800
 
