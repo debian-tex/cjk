@@ -1,10 +1,15 @@
-cjk (4.8.4+git20150701-2) UNRELEASED; urgency=medium
+cjk (4.8.4+git20150701-2) unstable; urgency=medium
 
+  [ Norbert Preining ]
   * NOT RELEASED YET
   * fix Vcs fields
   * remove hacks for c-auto.h, libkpathsea-dev is fixed
 
- -- Norbert Preining <preining@debian.org>  Thu, 02 Jul 2015 09:22:33 +0900
+  [ Danai SAE-HAN (韓達耐) ]
+  * [debian/control] Bump dh to >=9.20160115 for the automatic creation
+     of -dbgsym packages.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Thu, 25 Feb 2016 02:16:35 +0800
 
 cjk (4.8.4+git20150701-1) unstable; urgency=medium
 
