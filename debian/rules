@@ -35,7 +35,9 @@ unixdate := $(shell expr $(unixdate) + 86400 )
 
 
 build: $(QUILT_STAMPFN) build-stamp
-build-arch:
+build-arch: build-arch-stamp
+
+build-arch-stamp:
 	dh_testdir
 
 	# Update config.{guess,sub}
@@ -45,7 +47,9 @@ build-arch:
 
 	touch build-arch-stamp
 
-build-indep:
+build-indep: build-indep-stamp
+
+build-indep-stamp:
 	dh_testdir
 
 	mkdir $(build_thaifonts)
