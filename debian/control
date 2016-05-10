@@ -5,7 +5,7 @@ Section: tex
 Priority: optional
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Danai SAE-HAN (韓達耐) <danai@debian.org>, Norbert Preining <preining@debian.org>
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Vcs-Svn: svn://anonscm.debian.org/debian-tex/cjk/trunk
 Vcs-Browser: http://anonscm.debian.org/viewvc/debian-tex/cjk/trunk/
 Homepage: http://cjk.ffii.org/

@@ -1,7 +1,6 @@
 cjk (4.8.4+git20150701-2) unstable; urgency=medium
 
   [ Norbert Preining ]
-  * NOT RELEASED YET
   * fix Vcs fields
   * remove hacks for c-auto.h, libkpathsea-dev is fixed
 
@@ -9,9 +8,11 @@ cjk (4.8.4+git20150701-2) unstable; urgency=medium
   * [debian/control]
       - Bump dh to >=9.20160115 for the automatic creation of -dbgsym
         packages;
-      - bump Standards-Version from 3.9.6 to 3.9.7 (no changes required).
+      - bump Standards-Version from 3.9.6 to 3.9.8 (no changes required).
+  * [debian/rules]
+      - Apply patch from Santiago Vila to fix FTBFS (Closes: #806608).
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Thu, 25 Feb 2016 02:16:35 +0800
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Wed, 11 May 2016 01:50:21 +0800
 
 cjk (4.8.4+git20150701-1) unstable; urgency=medium
 
