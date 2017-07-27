@@ -1,9 +1,15 @@
-cjk (4.8.4+git20150701-3) UNRELEASED; urgency=low
+cjk (4.8.4+git20170127-1) UNRELEASED; urgency=low
 
   * [debian/changelog]
       - Fix typo: change ffi.org to ffii.org; thanks to Hilmar Preuße.
+  * [debian/patches/04_extend_examplefiles.diff]
+      - Remove some unnecessary changes to some example files.
+  * Bump the release to the latest GIT release from 27 January 2017:
+      - * examples/*.tex: Fixes Vietnamese bit-rot, adds requirement comments
+      - * utils/lisp/emacs/cjk-enc.el (cjk-coding): Remove `chinese-big5'
+      - [cjk-enc.el] Updated to work with Emacs 25 and later.
 
- --
+ -- Danai SAE-HAN <danai@debian.org>  Thu, 27 Jul 2017 09:33:19 +0800
 
 cjk (4.8.4+git20150701-2) unstable; urgency=medium
 

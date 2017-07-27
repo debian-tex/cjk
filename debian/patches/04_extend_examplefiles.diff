@@ -7,20 +7,18 @@
 ---
  examples/Big5.tex      |   24 +++++-
  examples/CEF_test.tex  |    4 +
- examples/CJKbabel.tex  |   33 +++++---
- examples/CJKmixed.tex  |    5 +
+ examples/CJKbabel.tex  |   11 ++
  examples/CJKutf8.tex   |   35 +++++++--
  examples/KS-hlatex.tex |  187 +++++++++++++++++++++++++++++++++++++++++++++++++
- examples/muletest.tex  |   21 +++--
  examples/rubytest.tex  |    7 -
  examples/thai.tex      |   20 ++++-
- 9 files changed, 300 insertions(+), 36 deletions(-)
+ 7 files changed, 269 insertions(+), 19 deletions(-)
 
---- cjk-4.8.4+git20150701.orig/examples/Big5.tex
-+++ cjk-4.8.4+git20150701/examples/Big5.tex
+--- a/examples/Big5.tex
++++ b/examples/Big5.tex
 @@ -8,15 +8,33 @@
  %
- % process this file with bg5latex
+ % process this file with bg5latex (or cjk-enc.el; see cjk-enc.txt)
  
 -\documentclass[12pt]{article} 
 +\documentclass[12pt]{scrartcl}
@@ -61,11 +59,11 @@
 -%%% TeX-command-default: "CJKLaTeX"
 +%%% TeX-command-default: "LaTeX"
  %%% End:
---- cjk-4.8.4+git20150701.orig/examples/CEF_test.tex
-+++ cjk-4.8.4+git20150701/examples/CEF_test.tex
-@@ -5,6 +5,10 @@
- %
- % process this text with ceflatex
+--- a/examples/CEF_test.tex
++++ b/examples/CEF_test.tex
+@@ -7,6 +7,10 @@
+ 
+ % - requires fonts from the cns package
  
 +% CEF doesn't work on Debian, because I haven't packaged the HBF
 +% (bitmap fonts) yet.
@@ -74,52 +72,26 @@
  \documentclass[12pt]{article}
  
  \usepackage[global]{CJK}
---- cjk-4.8.4+git20150701.orig/examples/CJKbabel.tex
-+++ cjk-4.8.4+git20150701/examples/CJKbabel.tex
-@@ -5,26 +5,32 @@
- % written by Werner Lemberg <wl@gnu.org>
- %
- % Version 4.8.4 (18-Apr-2015)
--
--% You need Emacs 20 to process this file!
-+%
-+% Read cjk-enc.txt for more details.
- 
- % You should load this file into Emacs (C-x C-f) and call
--% `cjk-write-file' (M-x cjk-write-file).  Then run LaTeX on the file
--% `CJKbabel.cjk'.
-+% `cjk-write-file' (M-x cjk-write-file).  `cjk-write-file' has a
-+% shortcut: C-c SPC C-x.  Then run LaTeX on the file `CJKbabel.cjk'.
- %
+--- a/examples/CJKbabel.tex
++++ b/examples/CJKbabel.tex
+@@ -15,6 +15,14 @@
  % `cjk-write-file' will be available after loading cjk-enc.el into
--% Emacs 20 with the commands load-file or load-library.
-+% Emacs with the commands load-file or load-library.
-+% If you didn't touch the default Debian installation, then this is
-+% already taken care of.
-+
-+% To get all the languages working on Debian, make sure you read the
-+% comments a few lines below.
+ % Emacs 20 with the commands load-file or load-library.
  %
--% Vietnamese support for Babel comes with the VnTeX package.
-+% Korean text works in an emule-encoded TeX file on Debian, but you'll
-+% need to have "hlatex-fonts-base" installed as well.
- %
--% Read cjk-enc.txt for more details.
-+%   Danai SAE-HAN (’´Ú’Ã£’ÂÑ) <danai.sae-han@edpnet.be>
- 
- \documentclass[12pt]{article}
- 
- \usepackage{inputenc}               % load it without argument
-                                     % to avoid Babel warnings
- 
--\usepackage[10pt]{type1ec}          % use only 10pt fonts
-+%\usepackage[10pt]{type1ec}          % use only 10pt fonts
- \usepackage[T1]{fontenc}
- 
- \usepackage[german,
-@@ -33,6 +39,11 @@
++% If you didn't touch the default Debian installation, then cjk-enc.el
++% should already be loaded by default.
++% German needs the "texlive-lang-german" Debian package.
++% Greek needs the "texlive-lang-greek" Debian package.
++% Korean needs the "hlatex-fonts-base" Debian package.
++% Russian needs the "texlive-lang-cyrillic" Debian package.
++% Vietnamese and Thai need the "texlive-lang-other" Debian package.
++%
+ % Vietnamese support comes with the VnTeX package.
+ % - T2A encoding for Computer Modern Cyrillic requires LH fonts
+ % - uses CB Greek fonts and CM-Super fonts
+@@ -36,6 +44,11 @@
              greek,                  % LGR font encoding
-             vietnam,                % T5 font encoding
+             vietnamese,             % T5 font encoding
              USenglish]{babel}
 +% You need texlive-lang-cyrillic for "russian",
 +% texlive-lang-vietnamese for "vietnam", and texlive-lang-german for
@@ -129,37 +101,68 @@
  
  \usepackage[overlap, CJK]{ruby}
  \usepackage{CJKulem}
-@@ -109,9 +120,9 @@
+@@ -77,10 +90,10 @@
+ \textbf{‘ÓĞ‘¹Ø‘ĞÂ‘½á‘¹¹‘µÄ‘Ï¸‘½Ú‘£¬‘¿É‘²Î‘¿¼‘¡¸‘Èç‘ºÎ‘ÔÄ‘¶Á‘±¾‘ÎÊ‘´ğ‘¼¯‘¼°‘ÁË‘½â‘Æä‘±à‘ÅÅ‘½á‘¹¹‘¡¹‘¸Ã
+   ‘Ïî‘ÖĞ‘µÄ‘Ëµ‘Ã÷‘¡£}
+ 
+-˜¨Ü˜¼§˜»Ã˜»Ã˜Ã±˜Äö~(FAQ list)~˜³Ó˜¼¸˜¦¢˜­é˜Çï˜¼§˜¿¸˜»Ã˜®°˜°ü˜»Ã˜Ùï˜§°˜®¨˜ÑË˜Ç¶˜°ü˜ÈÙ˜Ã±˜¦ä˜¡¢˜§é˜§Ê
+-˜±î˜°ü˜¬±˜ª£˜Êó˜µÓ˜ªÕ˜§ù˜°ü˜¡¤\uline{˜Èú˜¦¹˜¦¢˜°ë˜¦ã˜©Ò˜°ü˜³Ó˜¡¢˜®¨˜Ğ¾˜¼ë˜Ã¹˜Ë­˜¦Ù˜Êæ˜¯¶˜¬Ò˜ŞÉ˜¡¤}
+-\textbf{˜ªµ˜ÛÃ˜Æ¼˜Ã¹˜Ë­˜°ü˜¾Ù˜Çè˜¡¢˜¨¬˜»·˜ªÔ˜¡Ö˜©ò˜ªõ˜Ñæ˜İõ˜¨Ü˜»Ã˜Ã±˜Äö˜§°˜¦¨˜ÈÙ˜®¨˜Ğ¾˜¼ë˜Ã¹˜Ë­˜¡×˜ÈÛ
+-  ˜Äû˜¦ä˜°ü˜Íª˜¯ı˜¡¤}
++‘±¾‘³£•ÙÂ•ÙÂ‘´ğ‘¼¯~(FAQ list)~‘ÊÇ•Ú·‘Ò»‘Ğ©•åî‘³£‘±»•ÙÂ‘µ½‘µÄ•ÙÂ•÷î‘¼°‘Æä•ïË•åµ‘µÄ‘½â‘´ğ‘ÖĞ‘£¬‘ÒÔ‘·½
++‘±ã‘µÄ‘ĞÎ‘Ê½‘Õª‘Òª‘¶ø‘³ö‘µÄ‘¡£\uline{‘¸ú‘ÉÏ‘Ò»‘°æ‘²»‘Í¬‘µÄ‘ÊÇ‘£¬‘Æä•î¾‘ÅÅ•á¸•é¬‘ÒÑ•èå‘µ×‘¸Ä•üÈ‘¡£}
++\textbf{‘ÓĞ•ùÃ‘ĞÂ•á¸•é¬‘µÄ•ÜØ•åç‘£¬‘¿É•Ù¶‘¿¼‘¡¸‘Èç‘ºÎ•ïå•ûô‘±¾•ÙÂ‘´ğ‘¼¯‘¼°‘ÁË‘½â‘Æä•î¾‘ÅÅ•á¸•é¬‘¡¹•æÚ
++  •âú‘ÖĞ‘µÄ•ë©‘Ã÷‘¡£}
+ 
+ This FAQ list was made to summarize some frequently asked questions
+ and their answers in a convenient form.  \uline{The structure of this
+@@ -88,19 +101,19 @@ and their answers in a convenient form.
+ \textbf{For details of the new structure, see the entry of `How to
+   read this FAQ and its structure'.}
+ 
+-’¤³’¤Î~FAQ~’¥ê’¥¹’¥È’¤Ï’¡¢’¤è’¤¯’¤¢’¤ë’¼Á’Ìä’¤È’¤½’¤Î’Åú’¤ò’½¸’¤á’¡¢’Ìò’¤Ë’Î©’¤Ä’¤è’¤¦’¤Ë’¤·’¤¿’¤â’¤Î
+-’¤Ç’¤¹’¡£\uline{’¤³’¤Î~FAQ~’¥ê’¥¹’¥È’¤Î’¹½’Â¤’¤Ï’¡¢’°Ê’Á°’¤Î’¤â’¤Î’¤È’Èæ’¤Ù’¤Æ’Âç’Éı’¤Ë’ÊÑ’¹¹’¤µ’¤ì
+-  ’¤Æ’¤¤’¤Ş’¤¹’¡£}\textbf{\ruby{’¿·}{’¤¢’¤¿’¤é}’¤·’¤¤’¹½’Â¤’¤Ë’´Ø’¤·’¤Æ’¤Ï’¡¢’¡Ö’¤³’¤Î~FAQ~
+-  ’¤Î’ÆÉ’¤ß’Êı’¤È’¤½’¤Î’¹½’Â¤’¡×’¤Î’¹à’ÌÜ’¤ò\ruby{’»²}{’¤µ’¤ó}\ruby{’¾È}{’¤·’¤ç’¤¦}’¤·’¤Æ’²¼’¤µ
+-  ’¤¤’¡£}
++‘¤³‘¤Î~FAQ~‘¥ê‘¥¹‘¥È‘¤Ï‘¡¢‘¤è‘¤¯‘¤¢‘¤ë•ï³•ÙÂ‘¤È‘¤½‘¤Î‘´ğ‘¤ò‘¼¯‘¤á‘¡¢‘ÒÛ‘¤Ë‘Á¢‘¤Ä‘¤è‘¤¦‘¤Ë‘¤·‘¤¿‘¤â‘¤Î
++‘¤Ç‘¤¹‘¡£\uline{‘¤³‘¤Î~FAQ~‘¥ê‘¥¹‘¥È‘¤Î•é¬‘Ôì‘¤Ï‘¡¢‘ÒÔ‘Ç°‘¤Î‘¤â‘¤Î‘¤È‘±È‘¤Ù‘¤Æ‘´ó‘·ù‘¤Ëö«ù‘¸ü‘¤µ‘¤ì
++  ‘¤Æ‘¤¤‘¤Ş‘¤¹‘¡£}\textbf{\ruby{‘ĞÂ}{‘¤¢‘¤¿‘¤é}‘¤·‘¤¤•é¬‘Ôì‘¤ËöÊ½‘¤·‘¤Æ‘¤Ï‘¡¢‘¡¸‘¤³‘¤Î~FAQ~
++  ‘¤Î’ÆÉ‘¤ß‘·½‘¤È‘¤½‘¤Î•é¬‘Ôì‘¡¹‘¤Î•âú‘Ä¿‘¤ò\ruby{‘²Î}{‘¤µ‘¤ó}\ruby{‘ÕÕ}{‘¤·‘¤ç‘¤¦}‘¤·‘¤Æ‘ÏÂ‘¤µ
++  ‘¤¤‘¡£}
+ 
+ \begin{otherlanguage}{vietnamese}
+-Phš¢¥n ``Nhš¢æng cš¢âu hš¢öi vš¢à giš¢äi š¢ğš¢áp thš¢ßš¢¶ng gš¢£p'' (viš¢ªt tš¢¡t tš¢× tiš¢ªng Anh
+-lš¢à FAQ) š¢ğš¢ßš¢şc nš¢êu ra š¢· š¢ğš¢ây nhš¢¢m mš¢øc š¢ğš¢ích thu thš¢§p nhš¢æng cš¢âu hš¢öi thš¢ßš¢¶ng
+-gš¢£p trong thš¢ñc tš¢ª vš¢à nhš¢æng lš¢¶i giš¢äi š¢ğš¢áp thš¢ích hš¢şp nhš¢¤t cš¢üa nš¢ó.
+-\uline{Tš¢× lš¢¥n š¢¤n bš¢än cuš¢¯i cš¢ùng š¢ğš¢ªn nay, š¢ğš¢ã cš¢ó nhš¢æng sš¢ñ thay š¢ğš¢±i khš¢á
+-  lš¢¾n trong cš¢¤u trš¢úc cš¢üa FAQ.}  \textbf{š£ğš¢¬ hiš¢¬u rš¢õ hš¢½n bš¢Õn nš¢ên xem lš¢Õi
+-  chš¢ßš¢½ng ``Lš¢àm sao tš¢ôi cš¢ó thš¢¬ š¢ğš¢÷c š¢ğuš¢şc FAQ''.}
++Phš¢¥n ``Nhš¢æng câu hš¢öi và giš¢äi ‚ğáp thš¢ßš¢¶ng gš¢£p'' (viš¢ªt tš¢¡t tš¢× tiš¢ªng Anh
++là FAQ) ‚ğš¢ßš¢şc nêu ra š¢· ‚ğây nhš¢¢m mš¢øc ‚ğích thu thš¢§p nhš¢æng câu hš¢öi thš¢ßš¢¶ng
++gš¢£p trong thš¢ñc tš¢ª và nhš¢æng lš¢¶i giš¢äi ‚ğáp thích hš¢şp nhš¢¤t cš¢üa nó.
++\uline{Tš¢× lš¢¥n š¢¤n bš¢än cuš¢¯i cùng ‚ğš¢ªn nay, ‚ğã có nhš¢æng sš¢ñ thay ‚ğš¢±i khá
++  lš¢¾n trong cš¢¤u trúc cš¢üa FAQ.}  \textbf{‚Ğš¢¬ hiš¢¬u rõ hš¢½n bš¢Õn nên xem lš¢Õi
++  chš¢ßš¢½ng ``Làm sao tôi có thš¢¬ ‚ğš¢÷c ‚ğuš¢şc FAQ''.}
+ \end{otherlanguage}
+ 
+ \begin{otherlanguage}{russian}
+@@ -112,9 +125,9 @@ gš¢£p trong thš¢ñc tš¢ª vš¢à nhš¢æng lš¢
  \end{otherlanguage}
  
  \begin{otherlanguage}{thaicjk}
 -  …Ã…Ò…Â…¡…Ò…Ã FAQ €¥¹¥Õ¥é…Ê€¥Ã¥é…Ò…§€¥¢¥Ö¥é…¹…à€¥¾¥×¥è…Í…Ê€¥Ã¥Ø…»…¤…Ó…¶…Ò…Á€¥·¥Õ¥è…¶…Ò…Á€¥¡¥Ñ…¹€¥º¥è…Í…Â…¤€¥Ã¥Ñ¥é…§…á…Å…Ğ…¤…Ó…µ…Í…º…¤…Ó…¶…Ò…Á…ã…¹€¥Ã¥Ù…»…á…º…º€¥·¥Õ…Ê…Ğ…´…Ç…¡.
 -  \uline{…â…¤…Ã…§…Ê€¥Ã¥é…Ò…§…¢…Í…§…Ã…Ò…Â…¡…Ò…Ã FAQ €¥¹¥Õ¥é…à…»€¥Å¥Õ¥è…Â…¹…ä…»…Á…Ò…¡€¥µ¥Ñ¥é…§…á€¥µ¥è€¥Ã¥Ø¥è…¹€¥·¥Õ¥è…á€¥Å¥é…Ç.}
 -  \textbf{€¥´¥Ù…Ã…Ò…Â…Å…Ğ…à€¥Í¥Õ…Â…´…Ê…Ó…Ë€¥Ã¥Ñ…º…â…¤…Ã…§…Ê€¥Ã¥é…Ò…§…ã…Ë€¥Á¥è…ä€¥´¥é…¨…Ò…¡€¥ª¥è…Ç…§ ``…â…¤…Ã…§…Ê€¥Ã¥é…Ò…§…á…Å…Ğ€¥Ç¥Ô€¥¸¥Õ…¡…Ò…Ã€¥Í¥è…Ò…¹
-+  …Ã…Ò…Â…¡…Ò…Ã FAQ €ò¤£…¹…Õ…é…Ê€ò¤¢…Ã…é…Ò…§€ò¤£…¢…Ö…é…¹…à€ò¤£…¾…×…è…Í…Ê€ò¤¢…Ã…Ø…»…¤…Ó…¶…Ò…Á€ò¤£…·…Õ…è…¶…Ò…Á€ò¤¢…¡…Ñ…¹€ò¤¢…º…è…Í…Â…¤€ò¤£…Ã…Ñ…é…§…á…Å…Ğ…¤…Ó…µ…Í…º…¤…Ó…¶…Ò…Á…ã…¹€ò¤¢…Ã…Ù…»…á…º…º€ò¤¢…·…Õ…Ê…Ğ…´…Ç…¡.
-+  \uline{…â…¤…Ã…§…Ê€ò¤¢…Ã…é…Ò…§…¢…Í…§…Ã…Ò…Â…¡…Ò…Ã FAQ €ò¤£…¹…Õ…é…à…»€ò¤£…Å…Õ…è…Â…¹…ä…»…Á…Ò…¡€ò¤£…µ…Ñ…é…§…á€ò¤¢…µ…è€ò¤£…Ã…Ø…è…¹€ò¤£…·…Õ…è…á€ò¤¢…Å…é…Ç.}
-+  \textbf{€ò¤¢…´…Ù…Ã…Ò…Â…Å…Ğ…à€ò¤¢…Í…Õ…Â…´…Ê…Ó…Ë€ò¤¢…Ã…Ñ…º…â…¤…Ã…§…Ê€ò¤¢…Ã…é…Ò…§…ã…Ë€ò¤¢…Á…è…ä€ò¤¢…´…é…¨…Ò…¡€ò¤¢…ª…è…Ç…§ ``…â…¤…Ã…§…Ê€ò¤¢…Ã…é…Ò…§…á…Å…Ğ€ò¤¢…Ç…Ô€ò¤¢…¸…Õ…¡…Ò…Ã€ò¤¢…Í…è…Ò…¹
++  …Ã…Ò…Â…¡…Ò…Ã FAQ …¹…Õ…é…Ê…Ã…é…Ò…§…¢…Ö…é…¹…à…¾…×…è…Í…Ê…Ã…Ø…»…¤…Ó…¶…Ò…Á…·…Õ…è…¶…Ò…Á…¡…Ñ…¹…º…è…Í…Â…¤…Ã…Ñ…é…§…á…Å…Ğ…¤…Ó…µ…Í…º…¤…Ó…¶…Ò…Á…ã…¹…Ã…Ù…»…á…º…º…·…Õ…Ê…Ğ…´…Ç…¡.
++  \uline{…â…¤…Ã…§…Ê…Ã…é…Ò…§…¢…Í…§…Ã…Ò…Â…¡…Ò…Ã FAQ …¹…Õ…é…à…»…Å…Õ…è…Â…¹…ä…»…Á…Ò…¡…µ…Ñ…é…§…á…µ…è…Ã…Ø…è…¹…·…Õ…è…á…Å…é…Ç.}
++  \textbf{…´…Ù…Ã…Ò…Â…Å…Ğ…à…Í…Õ…Â…´…Ê…Ó…Ë…Ã…Ñ…º…â…¤…Ã…§…Ê…Ã…é…Ò…§…ã…Ë…Á…è…ä…´…é…¨…Ò…¡…ª…è…Ç…§ ``…â…¤…Ã…§…Ê…Ã…é…Ò…§…á…Å…Ğ…Ç…Ô…¸…Õ…¡…Ò…Ã…Í…è…Ò…¹
      FAQ.''}
  \end{otherlanguage}
  
---- cjk-4.8.4+git20150701.orig/examples/CJKmixed.tex
-+++ cjk-4.8.4+git20150701/examples/CJKmixed.tex
-@@ -4,8 +4,11 @@
- % written by Werner Lemberg <wl@gnu.org>
- %
- % Version 4.8.4 (18-Apr-2015)
-+
-+% To get Vietnamese working on Debian, make sure you have
-+% "texlive-lang-vietnamese" installed.
- %
--% Vietnamese support for Babel comes with the VnTeX package.
-+%   Danai SAE-HAN (éŸ“é”è€) <danai.sae-han@edpnet.be>
- 
- \documentclass[12pt]{article}
- 
---- cjk-4.8.4+git20150701.orig/examples/CJKutf8.tex
-+++ cjk-4.8.4+git20150701/examples/CJKutf8.tex
-@@ -9,11 +9,19 @@
+--- a/examples/CJKutf8.tex
++++ b/examples/CJKutf8.tex
+@@ -14,11 +14,19 @@
  %
  % Read CJKutf8.txt for more details.
  
@@ -179,8 +182,8 @@
 +#\usepackage[10pt]{type1ec}          % use only 10pt fonts
  \usepackage[T1]{fontenc}
  
- \usepackage{CJKutf8}
-@@ -23,6 +31,19 @@
+ \usepackage{CJKutf8}                % CJK wrapper of [utf8]{inputenc}
+@@ -28,6 +36,19 @@
              greek,                  % LGR font encoding
              USenglish]{babel}
  
@@ -189,7 +192,7 @@
 +% "german".   If you don't have these packages, then adjust the above
 +% line accordingly, and comment out the corresponding language block
 +% beneath.
-+% 
++%
 +% With regard to Korean, I have yet to package the Unicode fonts for
 +% Debian.  Don't hold your breath though.  If you want an easy
 +% Makefile that creates and installs everything automatically, don't
@@ -200,7 +203,7 @@
  \usepackage{textalpha}              % improved LGR support
  
  \usepackage[overlap, CJK]{ruby}
-@@ -53,12 +74,12 @@
+@@ -58,12 +79,12 @@
  
  \begin{CJK}{UTF8}{}
  
@@ -220,7 +223,7 @@
  \begin{otherlanguage}{german}
    Dieses FAQ wurde erstellt, um hÃ¤ufig gestellte Fragen und ihre
 --- /dev/null
-+++ cjk-4.8.4+git20150701/examples/KS-hlatex.tex
++++ b/examples/KS-hlatex.tex
 @@ -0,0 +1,187 @@
 +% This is a testfile of the CJK Debian package to test Korean.
 +% Please install hlatex-fonts-base (perhaps -extra as well).
@@ -409,50 +412,8 @@
 +%%% mode: latex
 +%%% TeX-master: t
 +%%% End:
---- cjk-4.8.4+git20150701.orig/examples/muletest.tex
-+++ cjk-4.8.4+git20150701/examples/muletest.tex
-@@ -4,26 +4,31 @@
- % written by Werner Lemberg <wl@gnu.org>
- %
- % Version 4.8.4 (18-Apr-2015)
--
--% You need Emacs 20 (or Mule 2.3) to process this file!
-+%
-+% Read cjk-enc.txt for more details.
- 
- % You should load this file into Mule with `*internal*' encoding scheme
- % (C-u C-x C-f) and call `cjk-write-file' (M-x cjk-write-file).
-+% `cjk-write-file' has a shortcut: C-c SPC C-x.
- % Then run LaTeX on the file `muletest.cjk'.
- %
- % Under Emacs 20 type `C-x C-f muletest.tex' to load this file.
- %
- % `cjk-write-file' will be available after loading cjk-enc.el into Mule
- % (Emacs 20) with the commands load-file or load-library.
-+% If you didn't touch the default Debian installation, then this is
-+% already taken care of.
- %
--% If you don't have german.sty, comment out the `\usepackage{german}'
--% line.
-+% To get all the languages working on Debian, make sure you read the
-+% comments a few lines below.
- %
--% The T5 encoding is part of the VnTeX package (available at CTAN) which
--% contains Vietnamese fonts and other support files for both TeX and
--% LaTeX.
-+% Korean text works in an emule-encoded TeX file on Debian, but you'll
-+% need to have "hlatex-fonts-base" installed as well.
- %
--% Read cjk-enc.txt for more details.
-+% Also install the "cm-super" package if you want LaTeX fonts to be
-+% scaled to any size you want.  Uncomment the "type1ec" line below.
-+%
-+%   Danai SAE-HAN (’´Ú’Ã£’ÂÑ) <danai.sae-han@edpnet.be>
- 
- \documentclass[12pt]{article}
- 
---- cjk-4.8.4+git20150701.orig/examples/rubytest.tex
-+++ cjk-4.8.4+git20150701/examples/rubytest.tex
+--- a/examples/rubytest.tex
++++ b/examples/rubytest.tex
 @@ -5,16 +5,15 @@
  %
  % Version 4.8.4 (18-Apr-2015)
@@ -473,8 +434,8 @@
  
  \documentclass[12pt]{article}
  
---- cjk-4.8.4+git20150701.orig/examples/thai.tex
-+++ cjk-4.8.4+git20150701/examples/thai.tex
+--- a/examples/thai.tex
++++ b/examples/thai.tex
 @@ -11,7 +11,8 @@
  %   . font switching between Thai and non-Thai
  %   . intercharacter glue
