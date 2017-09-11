@@ -41,7 +41,8 @@ build-arch-stamp:
 	dh_testdir
 
 	# Update config.{guess,sub}
-	dh_autotools-dev_updateconfig
+	dh_update_autotools_config
+
 	# Add here commands to compile the package.
 	$(MAKE)
 
@@ -112,7 +113,7 @@ clean: unpatch
 	rm -f utils/extconv/extconv
 
 	# Clean up config.{guess,sub}
-	dh_autotools-dev_restoreconfig
+#	dh_autotools-dev_restoreconfig
 
 	dh_clean
 

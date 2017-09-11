@@ -42,7 +42,7 @@
 +         CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" ./configure --prefix=/usr \
 +               --with-kpathsea-lib=/usr/lib \
 +               --with-kpathsea-include=/usr/include \
-+               --mandir='$${prefix}/share/man'; \
++               --mandir='$${prefix}/share/man' && \
 +	$(MAKE) )
 +
 +install: all

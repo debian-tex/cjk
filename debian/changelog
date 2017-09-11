@@ -1,15 +1,34 @@
 cjk (4.8.4+git20170127-1) UNRELEASED; urgency=low
 
+  [ Danai SAE-HAN (韓達耐) ]
+  * I tried to use dh-elpa but to no avail, despite the maintainer claiming
+    it should be used now for all Emacs Lisp files even if upstream is not
+    using ELPA.  Feel free to send in a patch.  I've given up.
   * [debian/changelog]
       - Fix typo: change ffi.org to ffii.org; thanks to Hilmar Preuße.
   * [debian/patches/04_extend_examplefiles.diff]
       - Remove some unnecessary changes to some example files.
+  * [debian/control]
+      - Bump up debhelper dependency to version >=10.2.5.
+      - Bump up the Standards-Version from 3.9.8 to 4.0.0.
+      - Remove dependency on autotools-dev; compat=10 now includes it by
+        default.
+  * [debian/compat]
+      - Bump from 9 to 10.
+  * [patches/03_Makefile.diff]
+      - Make sure "make" is not run if "configure" fails (Closes: #875478).
+        Thanks Helmut!
+  * [debian/rules]
+      - Remove dh_autotools-dev_restoreconfig; dh_update_autotools_config(1)
+        now says dh_clean will restore the original config.{guess,sub}.
+      - Replace "dh_autotools-dev_updateconfig" with
+        "dh_update_autotools_config".
   * Bump the release to the latest GIT release from 27 January 2017:
       - * examples/*.tex: Fixes Vietnamese bit-rot, adds requirement comments
       - * utils/lisp/emacs/cjk-enc.el (cjk-coding): Remove `chinese-big5'
       - [cjk-enc.el] Updated to work with Emacs 25 and later.
 
- -- Danai SAE-HAN <danai@debian.org>  Thu, 27 Jul 2017 09:33:19 +0800
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Tue, 12 Sep 2017 07:13:20 +0800
 
 cjk (4.8.4+git20150701-2) unstable; urgency=medium
 
