@@ -1,4 +1,4 @@
-cjk (4.8.4+git20170127-1) UNRELEASED; urgency=low
+cjk (4.8.4+git20170127-1) unstable; urgency=low
 
   [ Danai SAE-HAN (韓達耐) ]
   * I tried to use dh-elpa but to no avail, despite the maintainer claiming
@@ -28,7 +28,7 @@ cjk (4.8.4+git20170127-1) UNRELEASED; urgency=low
       - * utils/lisp/emacs/cjk-enc.el (cjk-coding): Remove `chinese-big5'
       - [cjk-enc.el] Updated to work with Emacs 25 and later.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Tue, 12 Sep 2017 07:13:20 +0800
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Fri, 15 Sep 2017 19:37:31 +0800
 
 cjk (4.8.4+git20150701-2) unstable; urgency=medium
 
