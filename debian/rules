@@ -11,7 +11,7 @@
 
 SHELL = /bin/sh
 
-include /usr/share/quilt/quilt.make
+include /usr/share/dpkg/buildflags.mk
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
@@ -44,7 +44,12 @@ build-arch-stamp:
 	dh_update_autotools_config
 
 	# Add here commands to compile the package.
-	$(MAKE)
+	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	dh_auto_configure --sourcedirectory=utils/hbf2gf -- \
+        --with-kpathsea-lib=/usr/lib \
+        --with-kpathsea-include=/usr/include
+	dh_auto_build --sourcedirectory=utils/hbf2gf
+	dh_auto_build
 
 	touch build-arch-stamp
 
@@ -78,7 +83,7 @@ build-indep-stamp:
 build-stamp:
 	touch build-stamp
 
-clean: unpatch
+clean:
 #	dh_testdir doc/CJKutf8.txt examples/CJKbabel.tex
 	dh_testroot
 	rm -f build-stamp build-indep-stamp build-arch-stamp

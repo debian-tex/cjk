@@ -1,3 +1,13 @@
+cjk (4.8.4+git20170127-2) unstable; urgency=medium
+
+  * Fix FTCBFS: (Closes: #875932)
+    [debian/rules]
+      - Remove manual patching and unpatching in a 3.0 (quilt) package.
+      - Let dh_auto_configure and dh_auto_build pass cross flags.
+        Bug report and patch thanks to Helmut Grohne!
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Tue, 26 Sep 2017 21:26:31 +0800
+
 cjk (4.8.4+git20170127-1) unstable; urgency=low
 
   [ Danai SAE-HAN (韓達耐) ]
