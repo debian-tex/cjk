@@ -1,3 +1,9 @@
+cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
+
+  * Convert to git, update VCS fields, update my email (Closes: #925915)
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 01 Apr 2019 12:27:01 +0900
+
 cjk (4.8.4+git20170127-2) unstable; urgency=medium
 
   * Fix FTCBFS: (Closes: #875932)
