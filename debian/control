@@ -97,6 +97,7 @@ Depends: latex-cjk-common (>= ${source:Version}),
  latex-cjk-chinese-arphic-gbsn00lp,
  latex-cjk-chinese-arphic-gkai00mp,
  latex-cjk-japanese-wadalab,
+ fonts-arphic-uming,
  ${misc:Depends}
 Conflicts: cjk-latex (<= 4.5.1)
 Description: installs all LaTeX CJK packages
