@@ -1,6 +1,6 @@
 ;;; cjktilde.el -- minor mode exchanging `~' and ` ' keys.
 
-;; Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+;; Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 ;; Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
 ;; MA 02110-1301 USA
 
-;; This file is part of the CJK package Version 4.8.3 (07-May-2012)
+;; This file is part of the CJK package Version 4.8.4 (18-Apr-2015)
 
 ;; Function `cjk-tilde-mode' activates a minor mode (`cjk-tilde-minor-mode')
 ;; which exchanges the tilde key with the space key. This is useful for

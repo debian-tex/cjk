@@ -1,7 +1,7 @@
 /*
 
-  This is the file pinyin.c of the CJK macro package ver. 4.8.3
-  (07-May-2012).
+  This is the file pinyin.c of the CJK macro package ver. 4.8.4
+  (18-Apr-2015).
 
   Use this file to generate a hyphenation input file for patgen.
 
@@ -12,7 +12,7 @@
  */
 
 /*
-  Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+  Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
   
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

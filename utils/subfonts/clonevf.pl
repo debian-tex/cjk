@@ -13,7 +13,7 @@
 #
 #   perl clonevf.pl bsmiuv bsmilpv
 
-# Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+# Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

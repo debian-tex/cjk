@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+# Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 # MA 02110-1301 USA
 
 # This script fixes the Wadalab fonts which have been created with the
-# `makefont' script version 1.0 (from CJK 4.8.3), or which have been updated
+# `makefont' script version 1.0 (from CJK 4.8.4), or which have been updated
 # with the `fixwada' script.
 #
 #   . Make all glyph names compliant to the Adobe Glyph List (AGL) to

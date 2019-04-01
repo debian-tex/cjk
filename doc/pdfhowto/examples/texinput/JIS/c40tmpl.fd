@@ -1,6 +1,6 @@
 % This is the file c40tmpl.fd of the CJK package
-\def\fileversion{4.8.3}
-\def\filedate{2012/05/07}
+\def\fileversion{4.8.4}
+\def\filedate{2015/04/18}
 \ProvidesFile{c40tmpl.fd}[\filedate\space\fileversion]
 
 \DeclareFontFamily{C40}{tmpl}{\hyphenchar \font\m@ne}

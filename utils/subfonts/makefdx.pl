@@ -39,7 +39,7 @@
 # A collection of useful subfont definition files for CJK fonts can be found
 # in the ttf2pk package.
 
-# Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+# Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -110,10 +110,10 @@ my $oldfh = select(FDX);
 print("% This is the file $fdxfile of the CJK package
 %   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
 %
-% created by the script makefdx.pl for CJK Version 4.8.3 (07-May-2012).
+% created by the script makefdx.pl for CJK Version 4.8.4 (18-Apr-2015).
 
-\\def\\fileversion{4.8.3}
-\\def\\filedate{2012/05/07}
+\\def\\fileversion{4.8.4}
+\\def\\filedate{2015/04/18}
 \\ProvidesFile{$fdxfile}[\\filedate\\space\\fileversion]
 
 \\CJKvdef{fullheight}{1em}

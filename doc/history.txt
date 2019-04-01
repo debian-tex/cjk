@@ -1536,4 +1536,14 @@ Version 4.8.3:
                     Fix case where furigana is smaller than base glyph.
 
 
+Version 4.8.4:
+18-Apr-2015
+                errors:
+                  CJKutf8.sty:
+                    Fix space handling of non-CJK characters.
+
+                  CJK.sty:
+                    In \Unicode, fix conditional to allow line breaks.
+
+
 ---End of history.txt---

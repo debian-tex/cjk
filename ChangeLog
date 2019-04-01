@@ -1,3 +1,24 @@
+2015-04-18  Werner LEMBERG  <wl@gnu.org>
+
+	Version 4.8.4 released
+	======================
+
+	Set version to 4.8.4.
+
+	* doc/history.txt: Updated.
+
+	* Makefile (distsrc, distdoc): Use tar's `ustar' format.
+	Compress better.
+
+	Update headers in all text files.
+
+2015-04-18  Werner LEMBERG  <wl@gnu.org>
+
+	[hbf2gf] Update aux scripts.
+
+	* utils/hbf2gf/config.guess, utils/hbf2gf/config.sub,
+	utils/hbf2gf/install-sh: Updated to current versions.
+
 2014-08-31  Peter Breitenlohner  <peb@mppmu.mpg.de>
 
 	[hbf2gf]: Avoid undefined behaviour when `char' is signed.

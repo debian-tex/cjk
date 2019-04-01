@@ -1,11 +1,11 @@
 /*----------------------------------------------------------------------*\
     cefsltx.cmd
 
-    This file is part of the CJK macro package for LaTeX2e ver. 4.8.3
+    This file is part of the CJK macro package for LaTeX2e ver. 4.8.4
 
-    This file is part of the CJK macro package for LaTeX2e ver. 4.8.3
+    This file is part of the CJK macro package for LaTeX2e ver. 4.8.4
 
-    Copyright (C) 1994-2012  Wonkoo Kim <wkim+@pitt.edu>
+    Copyright (C) 1994-2015  Wonkoo Kim <wkim+@pitt.edu>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

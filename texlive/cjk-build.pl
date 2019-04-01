@@ -8,7 +8,7 @@
 # the ctan2tds perl script.  It installs the necessary files from the CJK
 # package into the correct destinations.
 #
-# It expects that the CJK packages (cjk-4.8.3 and cjk-4.8.3-doc) have been
+# It expects that the CJK packages (cjk-4.8.4 and cjk-4.8.4-doc) have been
 # unpacked (unmodified) in the current directory.  For installation, it
 # simply uses `install -d' so that missing subdirectories are created
 # automatically.

@@ -1,4 +1,4 @@
-# Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+# Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@
 # o The TeXLive version of some font definition files are used (in the
 #   `texlive' subdirectory).
 
-version=4.8.3
+version=4.8.4
 
 distdir=cjk-$(version)
 abs-distdir=$(shell pwd)/$(distdir)
@@ -162,7 +162,7 @@ distsrc:
 	for f in `find $(abs-distdir)/utils -name '*.w'`; do \
 	  ctangle $$f - `echo $$f | sed s/w$$/c/`; \
 	done
-	tar cfh - $(distdir) | gzip -c > $(distdir).tar.gz
+	tar -H ustar -chf - $(distdir) | gzip -9 -c > $(distdir).tar.gz
 
 predistdoc:
 	mkdir -p $(distdir)/doc/{cjk,dvi,pdf}
@@ -187,7 +187,7 @@ distdoc: $(DISTTARGETS) manpages cweb
 	-for d in `find $(distdir) -depth -type d`; do \
 	  rmdir --ignore-fail-on-non-empty $$d; \
 	done
-	tar cfh - $(distdir) | gzip -c > $(distdir)-doc.tar.gz
+	tar -H ustar -chf - $(distdir) | gzip -9 -c > $(distdir)-doc.tar.gz
 	rm -rf $(distdir)
 
 manpages:

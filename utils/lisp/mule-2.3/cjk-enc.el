@@ -22,7 +22,7 @@
 ;; the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 
 ;;
-;; CJK Version 4.8.3 (07-May-2012)
+;; CJK Version 4.8.4 (18-Apr-2015)
 ;;
 
 ;;; Code

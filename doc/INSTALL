@@ -1,4 +1,4 @@
-This is the file INSTALL of the CJK macro package ver. 4.8.3 (07-May-2012).
+This is the file INSTALL of the CJK macro package ver. 4.8.4 (18-Apr-2015).
 
 Installation Guide
 ==================
@@ -624,11 +624,11 @@ How to get CJK and related software
 . The documentation bundle of the CJK package is not unpackaged; download it
   as
 
-    get cjk-4.8.3-doc.tar.gz
+    get cjk-4.8.4-doc.tar.gz
 
   or
 
-    get cjk-4.8.3-doc.tar.gz cjkdoc.tgz
+    get cjk-4.8.4-doc.tar.gz cjkdoc.tgz
 
   whatever is appropriate for your system. It contains precompiled versions
   (in DVI, PDF, text format) of all documentation and example files.

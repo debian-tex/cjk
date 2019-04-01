@@ -1,6 +1,6 @@
-dnl This file is part of the CJK package ver. 4.8.3
+dnl This file is part of the CJK package ver. 4.8.4
 
-dnl Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+dnl Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
 
 dnl This program is free software; you can redistribute it and/or modify
 dnl it under the terms of the GNU General Public License as published by
