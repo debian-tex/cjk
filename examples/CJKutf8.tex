@@ -5,7 +5,12 @@
 %
 % Version 4.8.4 (18-Apr-2015)
 
-% Vietnamese support for Babel comes with the VnTeX package.
+% Vietnamese support comes with the VnTeX package.
+% UTF-8 support for Greek comes with the greek-inputenc package.
+%
+% - T2A encoding for Computer Modern Cyrillic requires LH fonts
+% - uses CB Greek fonts, CM-Super fonts
+% - requires cyrillic, greek-fontenc, greek-inputenc, vntex
 %
 % Read CJKutf8.txt for more details.
 
@@ -16,7 +21,7 @@
 \usepackage[10pt]{type1ec}          % use only 10pt fonts
 \usepackage[T1]{fontenc}
 
-\usepackage{CJKutf8}
+\usepackage{CJKutf8}                % CJK wrapper of [utf8]{inputenc}
 \usepackage[german,
             russian,                % T2A font encoding
             vietnamese,             % T5 font encoding
@@ -26,7 +31,7 @@
 \usepackage{textalpha}              % improved LGR support
 
 \usepackage[overlap, CJK]{ruby}
-\usepackage{CJKulem}
+\usepackage{CJKulem}                % CJK wrapper of {ulem}
 
 \renewcommand{\rubysep}{-0.2ex}
 

@@ -15,7 +15,10 @@
 % `cjk-write-file' will be available after loading cjk-enc.el into
 % Emacs 20 with the commands load-file or load-library.
 %
-% Vietnamese support for Babel comes with the VnTeX package.
+% Vietnamese support comes with the VnTeX package.
+% - T2A encoding for Computer Modern Cyrillic requires LH fonts
+% - uses CB Greek fonts and CM-Super fonts
+% - requires cyrillic, greek-fontenc, vntex
 %
 % Read cjk-enc.txt for more details.
 
@@ -31,7 +34,7 @@
             russian,                % T2A font encoding
             thaicjk,                % C90 font encoding
             greek,                  % LGR font encoding
-            vietnam,                % T5 font encoding
+            vietnamese,             % T5 font encoding
             USenglish]{babel}
 
 \usepackage[overlap, CJK]{ruby}
@@ -91,7 +94,7 @@ and their answers in a convenient form.  \uline{The structure of this
   ’¤Î’ÆÉ’¤ß’Êý’¤È’¤½’¤Î’¹½’Â¤’¡×’¤Î’¹à’ÌÜ’¤ò\ruby{’»²}{’¤µ’¤ó}\ruby{’¾È}{’¤·’¤ç’¤¦}’¤·’¤Æ’²¼’¤µ
   ’¤¤’¡£}
 
-\begin{otherlanguage}{vietnam}
+\begin{otherlanguage}{vietnamese}
 Phš¢¥n ``Nhš¢æng cš¢âu hš¢öi vš¢à giš¢äi š¢ðš¢áp thš¢ßš¢¶ng gš¢£p'' (viš¢ªt tš¢¡t tš¢× tiš¢ªng Anh
 lš¢à FAQ) š¢ðš¢ßš¢þc nš¢êu ra š¢· š¢ðš¢ây nhš¢¢m mš¢øc š¢ðš¢ích thu thš¢§p nhš¢æng cš¢âu hš¢öi thš¢ßš¢¶ng
 gš¢£p trong thš¢ñc tš¢ª vš¢à nhš¢æng lš¢¶i giš¢äi š¢ðš¢áp thš¢ích hš¢þp nhš¢¤t cš¢üa nš¢ó.

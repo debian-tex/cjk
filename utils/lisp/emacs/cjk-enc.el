@@ -444,6 +444,7 @@
     (korean-ksc5601 . KS)
     (chinese-big5-1 . Bg5)
     (chinese-big5-2 . Bg5)
+    (big5 . Bg5)
     (chinese-cns11643-1 . CNS1)
     (chinese-cns11643-2 . CNS2)
     (chinese-cns11643-3 . CNS3)
@@ -505,6 +506,7 @@
     (chinese-gb2312    . ("\17767\177\177" . "\177%c\177%d\177"))
     (chinese-big5-1    . ("\17768\177\177" . "\177%c\177%d\177"))
     (chinese-big5-2    . ("\17768\177\177" . "\177%c\177%d\177"))
+    (big5              . ("\17768\177\177" . "\177%c\177%d\177"))
     (korean-ksc5601    . ("\17769\177\177" . "\177%c\177%d\177"))
 
     ;; Cdr part is a formatter string FORMAT.  Each character is
@@ -629,7 +631,8 @@
           ch ch1 ch2
           format-spec
           (skipped-whitespace nil)
-          (last-pos 0))
+          (last-pos 0)
+          (unsupported-charset-warned nil))
       ;; Now we go to beginning of TEMP-BUF and start the loop.
       (goto-char (point-min))
       (setq prev-charset 'ascii)
@@ -652,6 +655,13 @@
         ;; `char-charset'.
         (if (eq charset 'tis620-2533)
             (setq charset (char-charset ch '(thai-tis620 ascii))))
+
+        ;; emacs 25+: Language-detection heuristics changed.
+        ;; `big5' is preferred over `chinese-big5-1' and `chinese-big5-1'.
+        ;; If not overridden, can also swallow LaTeX (ascii) instructions
+        ;; afterwards.
+        (if (eq charset 'big5)
+            (setq charset (char-charset ch '(ascii big5))))
 
         ;; Check whether we have Unicode based input.
         (if (eq charset 'unicode)
@@ -685,8 +695,9 @@
           ;;   CH1 -- first character code
           ;;   CH2 -- second character code (of two-byte characters)
           ;;          if any
-          (if (or (eq charset 'chinese-big5-1)
-                  (eq charset 'chinese-big5-2))
+          (if (or (eq charset 'big5)
+                  (or (eq charset 'chinese-big5-1)
+                      (eq charset 'chinese-big5-2)))
               ;; Emacs uses two special character sets for Big5
               ;; characters.  We must decode the current character to
               ;; get the real Big5 character code.
@@ -712,8 +723,14 @@
           ;; FORMAT-SPEC tells how to encode this character.
           (setq format-spec (cdr (assq charset cjk-format-spec-table)))
           (if (null format-spec)
-              ;; Unsupported character set.  Do nothing.
-              nil
+              ;; Unsupported character set.
+              (when (not unsupported-charset-warned)
+                (let ((coding-system-for-write (terminal-coding-system)))
+                  (message "WARNING: Detected unsupported character set %s"
+                           charset)
+                  (message "Consider using \`coding:\' or setting LANG."))
+                ;; Suppress further warning in the same lang block.
+                (setq unsupported-charset-warned t))
             ;; Ok, it is supported.  If this character set is a CJK
             ;; character set (i.e., it is in CJK-ENC-TABLE), we need a
             ;; special header at the beginning of the output file.
@@ -765,6 +782,9 @@
                   (re-search-forward "\\ct+" nil t)
                   (setq end (point-marker))
                   (goto-char start)
+                  ;; THAI-BREAK-WORDS is in `thai-word.el',
+                  ;; shipped with emacs 22+ onwards.
+                  ;; loads from cjk for emacs 21 or below.
                   (thai-break-words "|" end)
                   ;; Extract this run.
                   (setq str (buffer-substring start end)
@@ -879,8 +899,9 @@
         (if (> (- (point) last-pos) 1000)
             (progn
               (setq last-pos (point))
-              (message "Converting: %2d%%"
-                       (/ (* 100 (point)) (point-max)))))
+              (let ((coding-system-for-write (terminal-coding-system)))
+                (message "Converting: %2d%%"
+                         (/ (* 100 (point)) (point-max))))))
 
         ;; Advance to the next character and loop.
         (forward-char 1))
