@@ -21,8 +21,9 @@ cjk (4.8.4+git20170127-1) unstable; urgency=low
   * I tried to use dh-elpa but to no avail, despite the maintainer claiming
     it should be used now for all Emacs Lisp files even if upstream is not
     using ELPA.  Feel free to send in a patch.  I've given up.
-  * [debian/changelog]
+  * [debian/copyright]
       - Fix typo: change ffi.org to ffii.org; thanks to Hilmar Preuße.
+        (Closes: #856804)
   * [debian/patches/04_extend_examplefiles.diff]
       - Remove some unnecessary changes to some example files.
   * [debian/control]
