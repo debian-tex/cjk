@@ -1,0 +1,333 @@
+Installation of Thai fonts for TeX with fontinst
+------------------------------------------------
+
+0. The files `c90.etx' and `c90.mtx' must be in the TEXINPUTS path.
+   Normally, the current directory also works.  Note that you need
+   fontinst version 1.918 or higher.
+
+1. In case your Thai font doesn't come with an AFM metrics file you
+   must extract it from the font using tools like `type1afm' (from the
+   t1lib package) or ghostscript's `ps2afm' program.
+
+2. Create a control file for fontinst.
+
+   Example:
+
+     Let us assume that we have the following AFM files for the Garuda
+     family, using version 0.5 of the `fonts-tlwg' project:
+
+       garuda.afm
+       garuda_b.afm
+       garuda_o.afm
+       garuda_bo.afm
+
+     You should use glyph names compliant to Karl Berry's `fontname'
+     scheme.  For `garuda', this could be `fgdr8z': `f' is the foundry
+     (`small foundry'), `gd' is the typeface name, `r' means the
+     weight (`regular'), and `8z' the encoding (`8bit user').
+     Similarly, suitable names for the other fonts are `fgdb8z',
+     `fgdo8z', and `fgdbo8z', respectively.
+
+     Fonts with `f' as the supplier should go into a `public' font
+     directory.  The typeface `Garuda' already exists in the latest
+     fontname version (typeface.map version 4-Jul-2005 at the time of
+     writing), the associated directory is `garuda'.  Please consult
+     the `fontname' standard for more information.
+
+     A template for the fontinst control file can be found as
+     `garuda-c90.fontinst' which looks like the following.
+
+     ==== garuda-c90.fontinst ====
+
+       \input fontinst.sty
+
+       \needsfontinstversion{1.918}
+
+
+       % we explicitly set all slots in the encoding, so provide all
+       % glyph names in AFM files equally (this is, don't create
+       % `<glyph>-not' names)
+       \let\setnotglyph \setrawglyph
+
+       % we want warnings for missing glyphs
+       \fontinstcc
+       \add_to\pre_fourth_etx_pass_hook{
+         \def\do_slot{
+           \if_undefined{g-\slot_name}\then
+             \fontinstwarningnoline{fontinst}
+                                   {missing~glyph~`\slot_name'\space
+                                    for~slot~\the\slot_number\space
+                                    in~font~`\out_filename'}
+           \fi
+           \do_character
+         }
+       }
+       \normalcc
+
+
+       % create PL files and an FD file
+       \installfonts
+         \setint{fontdimen(2)}{500}  % SPACE
+         \setint{fontdimen(3)}{300}  % STRETCH
+         \setint{fontdimen(4)}{100}  % SHRINK
+         \setint{fontdimen(6)}{1000} % QUAD
+         \setint{fontdimen(7)}{0}    % EXTRASPACE
+
+         \installrawfont{fdbr8z}{garuda,c90}{c90}
+                        {C90}{garuda}{m}{n}{}
+         \installrawfont{fdbb8z}{garuda_b,c90}{c90}
+                        {C90}{garuda}{bx}{n}{}
+         \installrawfont{fdbbo8z}{garuda_bo,c90}{c90}
+                        {C90}{garuda}{bx}{sl}{}
+         \installrawfont{fdbo8z}{garuda_o,c90}{c90}
+                        {C90}{garuda}{m}{sl}{}
+       \endinstallfonts
+
+
+       \input finstmsc.sty
+
+
+       % create the c90.enc file
+       \installfonts
+         % the `makeenc' flag is used in c90.etx
+         \setint{makeenc}{1}
+         \setstr{encodingname}{C90Encoding}
+         \etxtoenc{c90}{c90}
+       \endinstallfonts
+
+       \end
+
+     ==== garuda-c90.fontinst ====
+
+     Some explanations.
+
+     - The control files also create MTX and PL files for the AFM
+       files (e.g., garuda.mtx and garuda.pl) which aren't needed and
+       can be deleted.
+
+     - AFM files don't provide all necessary font dimensions for TeX.
+       Consequently, you have to set some dimensions manually.  The
+       `SPACE' value must be larger than for a Latin font; a
+       reasonable value is 500.  You should increase the `STRETCH'
+       value also -- some tests have shown that 300 yields good
+       results, but this depends on the font.  `EXTRASPACE' can be set
+       to zero since you must always use TeX's \frenchspacing command
+       for Thai.  All other font dimension values given above are
+       default values and can stay unmodified.
+
+       There is nothing for free: The changed font dimensions improve
+       spacing between Thai words, but Latin words are far too widely
+       spaced.
+
+     - The arguments to \installrawfont are as follows.
+
+         #1    The target font name.
+         #2    A comma separated list (without spaces) of metric
+               files.  Above, the first one is the AFM file, the
+               second one is c90.mtx which sets up the three mandatory
+               alias glyph slots.
+         #3    The name of the encoding file (c90.etx).
+         #4-#7 The NFSS attributes for the font.
+         #8    The size command.  If it is empty, `<->' is used.
+
+     - The second \installfonts...\endinstallfonts block creates an
+       encoding file.
+
+3. Run fontinst:
+
+     tex garuda-c90.fontinst
+
+   If you get warnings about missing glyphs which are critical (this
+   is, if they affect Thai characters), you have to configure fontinst
+   to use an alias file for glyph names.  This is described below.
+
+4. Say
+
+     pltotf <PL-file>
+
+  for all target PL files to create TFM files.
+
+  Example:
+
+     pltotf fgdr8z
+     pltotf fgdb8z
+     pltotf fgdo8z
+     pltotf fgdbo8z
+
+  After the conversion, the PL files are no longer needed and can be
+  deleted.  As mentioned above, the PL files created directly from the
+  AFM files need not be converted.
+
+5. Create a mapping file <font>.map for the PS fonts (which can be
+   used by both dvips and pdftex).
+
+   Example `garuda-c90.map' (the lines are split for readability only):
+
+     fgdr8z Garuda \
+       " C90Encoding ReEncodeFont " <c90.enc <garuda.pfb
+     fgdb8z Garuda-Bold \
+       " C90Encoding ReEncodeFont " <c90.enc <garuda_b.pfb
+     fgdo8z Garuda-Oblique \
+       " C90Encoding ReEncodeFont " <c90.enc <garuda_o.pfb
+     fgdbo8z Garuda-BoldOblique \
+       " C90Encoding ReEncodeFont " <c90.enc <garuda_bo.pfb
+
+  A proper entry for the mapping file (dvipdfm.map) of dvipdfm (and
+  dvipdfmx) looks like this:
+
+     fgdr8z c90 garuda
+     fgdb8z c90 garuda_b
+     fgdo8z c90 garuda_o
+     fgdbo8z c90 garuda_bo
+
+  Note that teTeX's (and TeXLive's) `updmap' script can automatically
+  convert a map line for dvips to a proper entry for dvipdfm and
+  dvipdfmx.
+
+6. There are two possibilities how to make the Thai fonts known to
+   dvips.
+
+  - Append the contents of the map file to `psfonts.map' (or the map
+    file specified in the configuration file of dvips, `config.ps',
+    with the `p' option).  How to do this may vary depending on the
+    used TeX system; for example, teTeX and TeXLive both use a script
+    called `updmap' to maintain `psfonts.map'.
+
+  - Write a small file called config.<font> (e.g. `config.garuda-c90')
+    with the following line in it:
+
+      p +<map_file>
+
+    Example:
+
+      p +garuda-c90.map
+
+    Then you can use the `-P' command line option of dvips to include
+    the reencoded font.  Example:
+
+      dvips -P garuda-c90 test.dvi
+
+7. After testing, install the font and its support files in your TeX
+   tree.  In the following example, `TEXMF' denotes the location of
+   your (local) `texmf' directory (we assume a TeX installation
+   compliant to TDS 1.1 as provided recent versions of TeXLive and
+   teTeX).
+
+     garuda.pfb    ->   TEXMF/fonts/type1/public/garuda/
+     garuda.afm    ->   TEXMF/fonts/afm/public/garuda/
+     ...
+
+     c90.enc       ->   TEXMF/fonts/enc/dvips/thai/
+
+     garuda.map    ->   TEXMF/fonts/map/dvips/garuda-c90/
+     config.garuda ->   TEXMF/dvips/garuda-c90/
+
+     fgdr8z.tfm    ->   TEXMF/fonts/tfm/public/garuda-c90/
+     ...
+
+     c90gar.fd     ->   TEXMF/tex/latex/CJK/thai/
+
+8. Run texhash or a similar program to update the TDS database if
+   necessary.
+
+
+You are done!  With plain TeX, say e.g.
+
+  \font\thai = fgdr9z at 16pt
+
+to use the font \thai.  This will typeset TIS-620 encoded Thai.  Note,
+however, that you need CJK's cjk-enc.el for Emacs to insert proper
+inter-character glue and word breakpoints in case you want to typeset
+longer Thai phrases.
+
+
+Reencoding Thai fonts
+---------------------
+
+Older Thai fonts don't use proper glyph names, and recent ones
+probably use different suffixes; it is thus necessary to make fontinst
+aware of those names.
+
+A complete example can be found in the `dbtt-old' subdirectory (which
+can be used for the dbtt fonts from TeXLive 8 or earlier).
+
+a. Set up a file which contains all the aliases, using the \galias
+   macro.  This file should have the extension `.tex'.
+
+   Example:
+
+     If glyph `endash' is represented with glyph name `ucircumflex' in
+     the font, use the following:
+
+       \galias{ucircumflex}{endash}
+
+b. Set up both ETX and MTX files which load the just created glyph
+   alias file.  To do that, use the files `dbtt-old-alias.etx' and
+   `dbtt-old-alias.mtx' as templates.  Leave everything unchanged
+   except the line with \input which should load your glyph alias
+   file.
+
+c. Set up a proper fontinst control file.  Use `dbtt-old.fontinst' as
+   a template, replacing the `dbtt-old-alias' items in the
+   \installrawfont lines with the name of your MTX file.  Similarly,
+   the three last lines in the second \installfonts...\endinstallfonts
+   block should be adjusted accordingly.
+
+d. Continue with item 3 above.  Note that in item 5, you have to use
+   not `C90Encoding' but the encoding name defined with the \setstr
+   line in your fontinst control file.
+
+
+Using different LaTeX encodings for Thai
+----------------------------------------
+
+The used encoding scheme within the CJK package for Thai is `C90', but
+it is straightforward to adapt it to other Thai encodings like `LTH'
+by reordering the `\setslot ... \endsetslot' blocks in the file
+`c90.etx'.
+
+Currently, only CJK's cjk-enc.el output filter for Emacs needs the
+Thai ligatures -- other Thai word segmentation programs like `swath'
+or `cttex' already replace the input characters with proper glyph
+variants.  Anyway, they don't harm, and it is on the TODO list of the
+thailatex maintainers to finally use those ligatures also.
+
+
+Printing c90.etx
+----------------
+
+It is possible to convert the main fontinst encoding file for Thai,
+c90.etx, into a printable document.  To do so, you have to apply the
+patch below to the file `fontdoc.sty' (which is part of the fontinst
+package -- tested with fontinst version 1.926; newer versions have
+already been corrected and don't need this patch), then simply say
+
+  latex c90.etx
+
+
+====================================================================
+
+
+--- fontdoc.sty.old	Mon Feb  9 21:28:59 2004
++++ fontdoc.sty	Wed Jun 23 12:13:04 2004
+@@ -1052,7 +1052,7 @@
+ \x@cs\def{FD@lig-/LIG}#1#2{%
+    \FD@typeset@string{\slot@name}${}*{}$\typeset@glyph{#1}%
+    ${}\rightarrow{}$%
+-   \FD@typeset@string{\slot@name}${}*{}$\typeset@glyph{#2}$%
++   \FD@typeset@string{\slot@name}${}*{}$\typeset@glyph{#2}%
+ }
+ \x@cs\def{FD@lig-LIG/}#1#2{%
+    \FD@typeset@string{\slot@name}${}*{}$\typeset@glyph{#1}%
+@@ -1085,7 +1085,7 @@
+    \FD@typeset@string{\slot@name}${}*{}$\typeset@glyph{#1}%
+    ${}\rightarrow{}$%
+    \FD@typeset@string{\slot@name}${}*{}$%
+-   \typeset@glyph{#2}${}*\lfloor$\typeset@glyph{#1}$}
++   \typeset@glyph{#2}${}*\lfloor$\typeset@glyph{#1}}
+ \def\nextlarger#1{\Bheading{Next larger} \typeset@glyph{#1}}
+ \def\makerightboundary#1{%
+    \Bheading{Right boundary marker slot} designation \typeset@glyph{#1}%
+
+
+---End of INSTALL---

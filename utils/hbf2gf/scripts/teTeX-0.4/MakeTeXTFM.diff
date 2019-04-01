@@ -1,0 +1,28 @@
+--- MakeTeXTFM.orig	Mon Feb 10 22:40:31 1997
++++ MakeTeXTFM	Tue Aug 18 08:14:40 1998
+@@ -48,7 +48,24 @@
+ BDPI=${MT_DEF_BDPI-600}
+ DPI=$BDPI
+ 
+-cmd="mf \mode:=$MODE; mag:=$MAG; scrollmode; input $NAME"
++unset cmd
++
++# test for CJK bitmap font in HBF format
++hbf2gf -q $NAME $DPI
++errstatus=$?
++
++if test $errstatus -ne 2; then
++  if test $errstatus -ne 0; then
++    echo "$progname: \`hbf2gf failed." >&2
++    exit 1
++  fi
++  pltotf ./$NAME.pl $TFMNAME || exit 1
++  cmd=true
++fi
++
++if test -z "$cmd"; then
++  cmd="mf \mode:=$MODE; mag:=$MAG; scrollmode; input $NAME"
++fi
+ 
+ set x `MakeTeXnames $NAME $DPI $MODE $DEST`
+ PKDEST=$2

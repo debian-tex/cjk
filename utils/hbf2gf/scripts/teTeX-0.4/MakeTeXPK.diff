@@ -1,0 +1,63 @@
+--- MakeTeXPK.orig	Sun Feb 23 22:12:05 1997
++++ MakeTeXPK	Tue Aug 18 08:07:40 1998
+@@ -80,18 +80,57 @@
+ : ${MAKETEXDIR=$TEXMF/maketex}
+ export TEXMF MAKETEXDIR
+ 
++unset cmd
++
++# test for TTF fonts
++if test -z "$cmd"; then
++  ttf2pk -q $NAME $DPI
++  errstatus=$?
++
++  if test $errstatus -ne 2; then
++    if test $errstatus -ne 0; then
++      echo "ttf2pk failed" >&2
++      exit 1
++    fi
++    MODE=ttf2pk		# preferred mode for TDS would be `modeless'
++    cmd=true
++  fi
++fi
++
++# test for HBF fonts
++if test -z "$cmd"; then
++  hbf2gf -q -p $NAME $DPI
++  errstatus=$?
++
++  if test $errstatus -ne 2; then
++    if test $errstatus -ne 0; then
++      echo "hbf2gf failed" >&2
++      exit 1
++    fi
++    MODE=hbf2gf		# preferred mode for TDS would be `modeless'
++    cmd=true
++  fi
++fi
++
++unset psline
++
+ # grep for the font in $PSMAPFILE, if some ps-to-pk is claimed to be supported.
+ # We have to figure out the name of the base font -- $NAME is probably
+ # something like pplr, but it's rpplr or pplr0 or pplr8r that's in psfonts.map.
+-pattern="^r?$NAME"'(0|8r)?([ 	]|$)' 
+-psline=`egrep "$pattern" $PSMAPFILE`
++if test -z "$cmd"; then
++  pattern="^r?$NAME"'(0|8r)?([ 	]|$)' 
++  psline=`egrep "$pattern" $PSMAPFILE`
++fi
++
+ if test -n "$psline"; then
+   cmd="gsftopk $NAME $DPI"
+   MODE=gsftopk
+   # some installations have set up gs in such a way that creating files
+   # is only allowed if the parameter -DNOSAFER is used:
+   GS_OPTIONS=-DNOSAFER; export GS_OPTIONS
+-else
++fi
++
++if test -z "$cmd"; then
+   # If an explicit mode is not supplied, try to guess. You can get a
+   # list of extant modes from ftp.cs.umb.edu:pub/tex/modes.mf.
+   if test -z "$MODE" || test "$MODE" = default; then

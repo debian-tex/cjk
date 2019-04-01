@@ -1,0 +1,36 @@
+--- mktextfm.orig	Mon Feb 16 08:56:13 1998
++++ mktextfm	Tue Aug 18 06:13:22 1998
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+-# original mktextfm -- make a new TFM file, because one wasn't found.
++# mktextfm -- make a new TFM file, because one wasn't found.
+ # 
+ # (If you change or delete the word `original' on the previous line,
+ # installation won't write this script over yours.)
+@@ -70,7 +70,25 @@
+   exit 1
+ fi
+ 
+-cmd="mf \mode:=$MODE; mag:=$MAG; nonstopmode; input $NAME"
++unset cmd
++
++# test for CJK bitmap font in HBF format
++hbf2gf -q $NAME $DPI
++errstatus=$?
++
++if test $errstatus -ne 2; then
++  if test $errstatus -ne 0; then
++    echo "$progname: \`hbf2gf failed." >&2
++    exit 1
++  fi
++  pltotf ./$NAME.pl $TFMNAME || exit 1
++  cmd=true
++fi
++
++if test -z "$cmd"; then
++  cmd="mf \mode:=$MODE; mag:=$MAG; nonstopmode; input $NAME"
++fi
++
+ echo "$progname: Running $cmd"
+ 
+ $cmd </dev/null || {
