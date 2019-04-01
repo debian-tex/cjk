@@ -1,0 +1,4 @@
+fdbr8z DBThaiText " dbtt-oldEncoding ReEncodeFont " <dbtt-old.enc <dbtt.pfb
+fdbb8z DBThaiTextBold " dbtt-oldEncoding ReEncodeFont " <dbtt-old.enc <dbttb.pfb
+fdbo8z DBThaiTextItalic " dbtt-oldEncoding ReEncodeFont " <dbtt-old.enc <dbtti.pfb
+fdbbo8z DBThaiTextBoldItalic " dbtt-oldEncoding ReEncodeFont " <dbtt-old.enc <dbttbi.pfb

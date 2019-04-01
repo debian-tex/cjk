@@ -1,0 +1,78 @@
+% dbtt-old.fontinst
+
+% Copyright (C) 1994-2012  Werner Lemberg <wl@gnu.org>
+%
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program in doc/COPYING; if not, write to the Free
+% Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+% MA 02110-1301 USA
+
+\input fontinst.sty
+
+\needsfontinstversion{1.918}
+
+
+% we explicitly set all slots in the encoding, so provide all glyph names
+% in AFM files equally (this is, don't create `<glyph>-not' names)
+\let\setnotglyph \setrawglyph
+
+% we want warnings for missing glyphs
+\fontinstcc
+\add_to\pre_fourth_etx_pass_hook{
+  \def\do_slot{
+    \if_undefined{g-\slot_name}\then
+      \fontinstwarningnoline{fontinst}
+                            {missing~glyph~`\slot_name'\space
+                             for~slot~\the\slot_number\space
+                             in~font~`\out_filename'}
+    \fi
+    \do_character
+  }
+}
+\normalcc
+
+
+% create PL files and an FD file
+\installfonts
+  \setint{fontdimen(2)}{500}    % SPACE
+  \setint{fontdimen(3)}{300}    % STRETCH
+  \setint{fontdimen(4)}{100}    % SHRINK
+  \setint{fontdimen(6)}{1000}   % QUAD
+  \setint{fontdimen(7)}{0}      % EXTRASPACE
+
+  \installrawfont{fdbr8z}{dbtt,dbtt-old-alias,c90}{c90}
+                 {C90}{dbss}{m}{n}{<-> s *[1.3]}
+  \installrawfont{fdbb8z}{dbttb,dbtt-old-alias,c90}{c90}
+                 {C90}{dbss}{bx}{n}{<-> s *[1.3]}
+  \installrawfont{fdbbo8z}{dbttbi,dbtt-old-alias,c90}{c90}
+                 {C90}{dbss}{bx}{sl}{<-> s *[1.3]}
+  \installrawfont{fdbo8z}{dbtti,dbtt-old-alias,c90}{c90}
+                 {C90}{dbss}{m}{sl}{<-> s *[1.3]}
+\endinstallfonts
+
+
+\input finstmsc.sty
+
+
+% create the dbtt-old.enc file
+\installfonts
+  % the `makeenc' flag is used in c90.etx
+  \setint{makeenc}{1}
+  \setstr{encodingname}{dbtt-oldEncoding}
+  \inputetx{dbtt-old-alias}
+  \etxtoenc{c90}{dbtt-old}
+\endinstallfonts
+
+\end
+
+% end of dbtt-old.fontinst
