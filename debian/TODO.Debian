@@ -175,3 +175,7 @@ From CJK.txt:
 
 Sun, 07 Nov 2010 00:31:10 +0100
   * Make debian/copyright machine-readable.
+
+Sun, 12 May 2019 14:41:58 +0800
+  * Devise an alternative to d/rules get-orig-source, preferably making use
+    of gbp.conf (Debian policy update v4.1.4.0).

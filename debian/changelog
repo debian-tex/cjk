@@ -1,9 +1,15 @@
 cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
 
+  [ Norbert Preining ]
   * Convert to git, update VCS fields, update my email (Closes: #925915)
   * Add dependency on fonts-arphic-uming (Closes: #925904)
 
- -- Norbert Preining <norbert@preining.info>  Mon, 01 Apr 2019 12:29:50 +0900
+  [ Danai SAE-HAN (韓達耐) ]
+  * [debian/control]
+      - Bump up the Standards-Version from 4.1.0 to 4.3.0.3.
+  * [debian/TODO] Update.
+
+ -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Sun, 12 May 2019 14:58:38 +0800
 
 cjk (4.8.4+git20170127-2) unstable; urgency=medium
 

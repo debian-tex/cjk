@@ -5,7 +5,7 @@ Section: tex
 Priority: optional
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Danai SAE-HAN (韓達耐) <danai@debian.org>, Norbert Preining <norbert@preining.info>
-Standards-Version: 4.1.0
+Standards-Version: 4.3.0.3
 Vcs-Git: https://github.com/debian-tex/cjk.git
 Vcs-Browser: https://github.com/debian-tex/cjk
 Homepage: http://cjk.ffii.org/
