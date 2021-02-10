@@ -8,7 +8,7 @@ Uploaders: Danai SAE-HAN (韓達耐) <danai@debian.org>, Norbert Preining <norbe
 Standards-Version: 4.3.0.3
 Vcs-Git: https://github.com/debian-tex/cjk.git
 Vcs-Browser: https://github.com/debian-tex/cjk
-Homepage: http://cjk.ffii.org/
+Homepage: https://www.nongnu.org/cjk
 
 Package: latex-cjk-common
 Architecture: any
