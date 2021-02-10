@@ -1,5 +1,8 @@
 cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
 
+  [ Hilmar Preusse ]
+  * Replace some "rm -f" in d/rules clean target by d/clean.
+
   [ Norbert Preining ]
   * Convert to git, update VCS fields, update my email (Closes: #925915)
   * Add dependency on fonts-arphic-uming (Closes: #925904)
