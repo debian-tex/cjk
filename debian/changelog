@@ -435,7 +435,7 @@ cjk (4.7.0+git20080122-1) unstable; urgency=low
      - change /usr/bin/rename to /usr/bin/prename;
      - don't install the empty "CEF/" directory in $TEXMF; the
        hbf-* packages will take care of this in the future.
- 
+
  -- Danai SAE-HAN (韓達耐) <danai.sae-han@edpnet.be>  Wed, 30 Jan 2008 18:53:24 +0100
 
 cjk (4.7.0+git20070708-1.1) unstable; urgency=low
@@ -1036,7 +1036,7 @@ latex-cjk (4.5.1+0.20030319-4.3) experimental; urgency=low
   * NMU.
   * tetex-base 2.0.2-7 already has /usr/share/texmf/dvips/config.
   * Bump the dependency of tetex-base to >=1.0-2 and of tetex-bin to >=1.0.7.
-  
+
  -- Danai SAE-HAN (韓達耐) <danai.sae-han@skynet.be>  Sun, 25 Apr 2004 00:46:30 +0200
 
 latex-cjk (4.5.1+0.20030318-4.2) experimental; urgency=low
