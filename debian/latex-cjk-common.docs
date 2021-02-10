@@ -1,6 +1,6 @@
 debian/README.Debian
 debian/THANKS
-debian/TODO.Debian
+debian/TODO
 doc/cjk-enc.txt
 doc/CJK.txt
 doc/CJKnumb.txt
