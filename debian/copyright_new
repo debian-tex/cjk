@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cjk
-Source: http://cjk.ffii.org/cjk-current.tar.gz
-Homepage: http://cjk.ffii.org/
+Source: http://download.savannah.nongnu.org/releases/cjk/cjk-4.8.4.tar.gz
+Homepage: https://www.nongnu.org/cjk/
 
 With help from:
     Per BOTHNER
