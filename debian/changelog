@@ -2,6 +2,8 @@ cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
 
   [ Hilmar Preusse ]
   * Replace some "rm -f" in d/rules clean target by d/clean.
+  * Fix day-of-week for changelog entries 4.6.0+cvs20051031-10, 4.6.0+cvs20051031-5.
+    (thanks to Debian Janitor).
 
   [ Norbert Preining ]
   * Convert to git, update VCS fields, update my email (Closes: #925915)
@@ -775,7 +777,7 @@ cjk (4.6.0+cvs20051031-10) experimental; urgency=low
   * [control] depend on tex-common (>=0.19) because of typo
      in dh_installtex.  Thanks to Norbert Preining.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@skynet.be>  Wed, 13 Mar 2006 14:21:27 +0100
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@skynet.be>  Mon, 13 Mar 2006 14:21:27 +0100
 
 cjk (4.6.0+cvs20051031-9) experimental; urgency=low
 
@@ -838,7 +840,7 @@ cjk (4.6.0+cvs20051031-5) experimental; urgency=low
   * Aaaargh!  I forgot to remove thailatex from the Build-depends in
      debian/control.
 
- -- Danai SAE-HAN (韓達耐) <danai.sae-han@skynet.be>  Sat, 30 Dec 2005 08:21:41 +0100
+ -- Danai SAE-HAN (韓達耐) <danai.sae-han@skynet.be>  Fri, 30 Dec 2005 08:21:41 +0100
 
 cjk (4.6.0+cvs20051031-4) experimental; urgency=low
 
