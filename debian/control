@@ -110,7 +110,7 @@ Architecture: all
 Depends: latex-cjk-common (>= ${source:Version}), ${misc:Depends}
 Suggests: latex-cjk-all (= ${source:Version})
 Conflicts: cjk-latex (<= 4.5.1)
-Description: installs all LaTeX CJK packages
+Description: installs all LaTeX CJK packages - dummy package
  This is a dummy package that allows you to smoothly upgrade
  from the old cjk-latex to the current latex-cjk-common packages.
  After the installation of the latex-cjk-common packages, you can
