@@ -2,8 +2,11 @@ cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
 
   [ Hilmar Preusse ]
   * Replace some "rm -f" in d/rules clean target by d/clean.
-  * Fix day-of-week for changelog entries 4.6.0+cvs20051031-10, 4.6.0+cvs20051031-5.
-    (thanks to Debian Janitor).
+  * Fix day-of-week for changelog entries 4.6.0+cvs20051031-10,
+    4.6.0+cvs20051031-5 (thanks to Debian Janitor).
+  * Project is considered to be dead upstream, remove
+    get-orig-source target from d/rules, correct upstream URL.
+  * More lintian work.
 
   [ Norbert Preining ]
   * Convert to git, update VCS fields, update my email (Closes: #925915)
