@@ -1,0 +1,4 @@
+latex-cjk-korean: national-encoding usr/share/doc/latex-cjk-common/examples/KS.tex
+latex-cjk-korean: national-encoding usr/share/texmf/tex/latex/CJK/KS/hangul.cap
+latex-cjk-korean: national-encoding usr/share/texmf/tex/latex/CJK/KS/hangul2.cap
+latex-cjk-korean: national-encoding usr/share/texmf/tex/latex/CJK/KS/hanja.cap

@@ -1,0 +1,6 @@
+latex-cjk-chinese: national-encoding usr/share/doc/latex-cjk-common/chinese/READMEgb.tex
+latex-cjk-chinese: national-encoding usr/share/doc/latex-cjk-common/examples/Big5.tex
+latex-cjk-chinese: national-encoding usr/share/doc/latex-cjk-common/examples/Big5vert.tex
+latex-cjk-chinese: national-encoding usr/share/doc/latex-cjk-common/examples/GB.tex
+latex-cjk-chinese: national-encoding usr/share/texmf/tex/latex/CJK/Bg5/Bg5.cap
+latex-cjk-chinese: national-encoding usr/share/texmf/tex/latex/CJK/GB/GB.cap

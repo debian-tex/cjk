@@ -7,6 +7,7 @@ cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
   * Project is considered to be dead upstream, remove
     get-orig-source target from d/rules, correct upstream URL.
   * More lintian work.
+    - Override for files having national encoding.
 
   [ Norbert Preining ]
   * Convert to git, update VCS fields, update my email (Closes: #925915)

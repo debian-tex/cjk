@@ -1,0 +1,4 @@
+latex-cjk-japanese: national-encoding usr/share/doc/latex-cjk-common/examples/JIS.tex
+latex-cjk-japanese: national-encoding usr/share/doc/latex-cjk-common/examples/SJIS.tex
+latex-cjk-japanese: national-encoding usr/share/texmf/tex/latex/CJK/JIS/JIS.cap
+latex-cjk-japanese: national-encoding usr/share/texmf/tex/latex/CJK/SJIS/SJIS.cap
