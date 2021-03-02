@@ -3,8 +3,10 @@ Build-Depends: debhelper (>= 10.2.5), quilt, libkpathsea-dev, texlive-extra-util
 Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, texlive-lang-other (>= 2013.20130523)
 Section: tex
 Priority: optional
-Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
-Uploaders: Danai SAE-HAN (韓達耐) <danai@debian.org>, Norbert Preining <norbert@preining.info>
+Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
+Uploaders: Danai SAE-HAN (韓達耐) <danai@debian.org>,
+    Norbert Preining <norbert@preining.info>,
+    Hilmar Preusse <hille42@web.de>
 Standards-Version: 4.3.0.3
 Rules-Requires-Root: no
 Vcs-Git: https://github.com/debian-tex/cjk.git
