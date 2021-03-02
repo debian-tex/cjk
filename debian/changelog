@@ -1,14 +1,4 @@
-cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
-
-  [ Hilmar Preusse ]
-  * Replace some "rm -f" in d/rules clean target by d/clean.
-  * Fix day-of-week for changelog entries 4.6.0+cvs20051031-10,
-    4.6.0+cvs20051031-5 (thanks to Debian Janitor).
-  * Project is considered to be dead upstream, remove
-    get-orig-source target from d/rules, correct upstream URL.
-  * More lintian work.
-    - Override for files having national encoding.
-    - Replace versioned "Conflicts" by "Breaks/Replaces".
+cjk (4.8.4+git20170127-3) unstable; urgency=medium
 
   [ Norbert Preining ]
   * Convert to git, update VCS fields, update my email (Closes: #925915)
@@ -19,7 +9,16 @@ cjk (4.8.4+git20170127-3) UNRELEASED; urgency=medium
       - Bump up the Standards-Version from 4.1.0 to 4.3.0.3.
   * [debian/TODO] Update.
 
- -- Danai SAE-HAN (韓達耐) <danai@debian.org>  Sun, 12 May 2019 14:58:38 +0800
+  * Replace some "rm -f" in d/rules clean target by d/clean.
+  * Fix day-of-week for changelog entries 4.6.0+cvs20051031-10,
+    4.6.0+cvs20051031-5 (thanks to Debian Janitor).
+  * Project is considered to be dead upstream, remove
+    get-orig-source target from d/rules, correct upstream URL.
+  * More lintian work.
+    - Override for files having national encoding.
+    - Replace versioned "Conflicts" by "Breaks/Replaces".
+
+ -- Hilmar Preusse <hille42@web.de>  Tue, 02 Mar 2021 09:44:23 +0100
 
 cjk (4.8.4+git20170127-2) unstable; urgency=medium
 
