@@ -133,6 +133,7 @@ binary-indep: build-indep
 	dh_installtex -platex-cjk-korean
 	dh_installemacsen -i
 	dh_lintian -i
+	dh_elpa -i
 	dh_compress -i
 	dh_fixperms -i
 	dh_shlibdeps -i
@@ -168,6 +169,7 @@ binary-arch: build build-arch install
 	dh_installemacsen -a
 	dh_strip --exclude=.pl -a
 	dh_lintian -a
+	dh_elpa -a
 	dh_compress -a
 	dh_fixperms -a
 	dh_shlibdeps -a

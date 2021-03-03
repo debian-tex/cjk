@@ -27,9 +27,6 @@ texinput/ruby.sty usr/share/texmf/tex/latex/CJK/
 
 texinput/UTF8/UTF8.* usr/share/texmf/tex/latex/CJK/UTF8
 texinput/mule usr/share/texmf/tex/latex/CJK/
-utils/lisp/cjkspace.el usr/share/emacs/site-lisp/latex-cjk-common/
-utils/lisp/cjktilde.el usr/share/emacs/site-lisp/latex-cjk-common/
-utils/lisp/emacs/cjk-enc.el usr/share/emacs/site-lisp/latex-cjk-common/
 utils/hbf2gf/cfg/*.cfg usr/share/texmf/hbf2gf/cfg/
 utils/subfonts usr/share/latex-cjk-common/utils/
 debian/tmp/usr/bin/hbf2gf usr/bin/
