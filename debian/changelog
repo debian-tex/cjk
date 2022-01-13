@@ -1,3 +1,9 @@
+cjk (4.8.4+git20170127-4) UNRELEASED; urgency=medium
+
+  * Remove git-core from BD.
+
+ -- Hilmar Preusse <hille42@web.de>  Thu, 13 Jan 2022 23:01:59 +0100
+
 cjk (4.8.4+git20170127-3) unstable; urgency=medium
 
   [ Norbert Preining ]
