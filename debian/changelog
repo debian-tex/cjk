@@ -1,3 +1,9 @@
+cjk (4.8.4+git20170127-5) UNRELEASED; urgency=medium
+
+  * Remove obsolete Suggests for latex-cjk-chinese & latex-cjk-japanese.
+
+ -- Hilmar Preusse <hille42@web.de>  Wed, 19 Jan 2022 12:24:44 +0100
+
 cjk (4.8.4+git20170127-4) unstable; urgency=medium
 
   * Remove git-core from BD.
