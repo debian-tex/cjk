@@ -1,6 +1,6 @@
 Source: cjk
-Build-Depends: debhelper (>= 10.2.5), quilt, libkpathsea-dev, texlive-extra-utils, tex-common (>= 4)
-Build-Depends-Indep: texlive-base-bin, perl-base (>= 5.8.0), texlive-font-utils, texlive-lang-other (>= 2013.20130523)
+Build-Depends: debhelper (>= 10.2.5), quilt, libkpathsea-dev, texlive-extra-utils, tex-common
+Build-Depends-Indep: texlive-base-bin, perl-base, texlive-font-utils, texlive-lang-other
 Section: tex
 Priority: optional
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
@@ -15,10 +15,8 @@ Homepage: https://www.nongnu.org/cjk
 
 Package: latex-cjk-common
 Architecture: any
-Depends: texlive-latex-base, texlive-font-utils (>= 2007.dfsg.2-1), tex-common (>= 4), emacsen-common (>= 2.0.8), ${misc:Depends}, ${shlibs:Depends}
+Depends: texlive-latex-base, texlive-font-utils, tex-common, emacsen-common, ${misc:Depends}, ${shlibs:Depends}
 Conflicts: latex-cjk, latex-cjk-xcjk
-Breaks: cjk-latex (<= 4.5.1)
-Replaces: cjk-latex (<= 4.5.1)
 Provides: cjk-latex
 Description: LaTeX macro package for CJK (Chinese/Japanese/Korean)
  CJK is a macro package for LaTeX to enable typesetting in Chinese,
@@ -34,15 +32,13 @@ Description: LaTeX macro package for CJK (Chinese/Japanese/Korean)
 
 Package: latex-cjk-chinese
 Architecture: any
-Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 3), ${misc:Depends}, ${shlibs:Depends}
+Depends: latex-cjk-common (= ${binary:Version}), tex-common, ${misc:Depends}, ${shlibs:Depends}
 Recommends: latex-cjk-chinese-arphic-bsmi00lp, latex-cjk-chinese-arphic-bkai00mp, latex-cjk-chinese-arphic-gbsn00lp, latex-cjk-chinese-arphic-gkai00mp
-Breaks: cjk-latex (<= 4.5.1),
-	tfm-arphic-bsmi00lp (<= 2.11.2-0.1),
+Breaks: tfm-arphic-bsmi00lp (<= 2.11.2-0.1),
 	tfm-arphic-bkai00mp (<= 2.11.2-0.1),
 	tfm-arphic-gbsn00lp (<= 2.11.2-0.1),
 	tfm-arphic-gkai00mp (<= 2.11.2-0.1)
-Replaces: cjk-latex (<= 4.5.1),
-	tfm-arphic-bsmi00lp (<= 2.11.2-0.1),
+Replaces: tfm-arphic-bsmi00lp (<= 2.11.2-0.1),
 	tfm-arphic-bkai00mp (<= 2.11.2-0.1),
 	tfm-arphic-gbsn00lp (<= 2.11.2-0.1),
 	tfm-arphic-gkai00mp (<= 2.11.2-0.1)
@@ -60,9 +56,7 @@ Description: Chinese module of LaTeX CJK
 Package: latex-cjk-japanese
 Architecture: any
 Recommends: latex-cjk-japanese-wadalab
-Depends: latex-cjk-common (= ${binary:Version}), tex-common (>= 4), ${misc:Depends}, ${shlibs:Depends}
-Breaks: cjk-latex (<= 4.5.1)
-Replaces: cjk-latex (<= 4.5.1)
+Depends: latex-cjk-common (= ${binary:Version}), tex-common, ${misc:Depends}, ${shlibs:Depends}
 Description: Japanese module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
  to include Japanese text in your (La)TeX documents.  Install
@@ -75,9 +69,7 @@ Description: Japanese module of LaTeX CJK
 Package: latex-cjk-korean
 Architecture: all
 Recommends: texlive-lang-korean
-Depends: latex-cjk-common (>= ${source:Version}), tex-common (>= 4), ${misc:Depends}
-Breaks: cjk-latex (<= 4.5.1)
-Replaces: cjk-latex (<= 4.5.1)
+Depends: latex-cjk-common (>= ${source:Version}), tex-common, ${misc:Depends}
 Description: Korean module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
  to include Korean text in your (La)TeX documents.
@@ -86,12 +78,10 @@ Package: latex-cjk-thai
 Architecture: all
 Depends: latex-cjk-common (>= ${source:Version}),
  texlive-latex-base,
- tex-common (>= 4),
- texlive-lang-other (>= 2013.20130523-1),
- emacsen-common (>= 2.0.8),
+ tex-common,
+ texlive-lang-other,
+ emacsen-common,
  ${misc:Depends}
-Breaks: cjk-latex (<= 4.5.1)
-Replaces: cjk-latex (<= 4.5.1)
 Description: Thai module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
  to include Thai text in your (La)TeX documents.
@@ -113,8 +103,6 @@ Depends: latex-cjk-common (>= ${source:Version}),
  latex-cjk-japanese-wadalab,
  fonts-arphic-uming,
  ${misc:Depends}
-Breaks: cjk-latex (<= 4.5.1)
-Replaces: cjk-latex (<= 4.5.1)
 Description: installs all LaTeX CJK packages
  This metapackage will install all CJK packages.
  You may also wish to install each package separately instead.
