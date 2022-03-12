@@ -1546,4 +1546,31 @@ Version 4.8.4:
                     In \Unicode, fix conditional to allow line breaks.
 
 
+Version 4.8.5:
+16-Oct-2021
+                new:
+                  Hyphenation patterns for pinyin syllables:
+                    The patterns have been extended to cover accented pinyin
+                    syllables, too.
+
+                    [Pinyin patterns are distributed via the `tex-hyphen'
+                     package and are by default activated in TeXLive.]
+
+                errors:
+                  CJK.sty:
+                    Make it work with recent LaTeX versions.  Note, however,
+                    that this problem was not visible to the end user since
+                    the LaTeX kernel contained a first-aid fix to circumvent
+                    the issue.
+
+                  cjk-enc.el:
+                    Make it work with Emacs 25 and later.
+
+                  Hyphenation patterns for pinyin syllables:
+                    Investigation has shown that the apostrophe before a
+                    syllable starting with `a', `e', or `o' should vanish if
+                    a line break occurs.  Consequently, character ' is no
+                    longer part of the hyphenation patterns.  The apostrophe
+                    should now be entered with the Babel shorthand "'.
+
 ---End of history.txt---

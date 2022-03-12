@@ -1,3 +1,75 @@
+2021-10-16  Werner LEMBERG  <wl@gnu.org>
+
+	Version 4.8.5 released
+	======================
+
+	Set version to 4.8.5.
+
+	* doc/history.txt: Updated.
+
+	Update headers in all text files.
+
+2021-10-16  Werner LEMBERG  <wl@gnu.org>
+
+	[hbf2gf] Update config and auxiliary scripts.
+
+	* utils/hbf2gf/config.guess, utils/hbf2gf/config.sub,
+	utils/hbf2gf/install-sh, utils/hbf2gf/mkinstalldirs: Updated to
+	current versions.
+
+	* utils/hbf2gf/configure: Regenerated with autoconf 2.71.
+
+2021-10-16  Werner Lemberg  <wl@gnu.org>
+
+	Update to current LaTeX version.
+
+	Currently, there is a first-aid patch in the LaTeX kernel to make
+	the CJK package work.  This commit moves the corresponding code to
+	here so that the first-aid stuff can be removed.
+
+	* texinput/CJK.sty (\IfFormatAtLeastTF): New macro.
+	(\selectfont): Use the `\selectfont' hook for recent LaTeX versions.
+
+2018-11-25  Werner Lemberg  <wl@gnu.org>
+
+	Generate pinyin hyphenation pattern files from last commit.
+
+	* utils/pyhyphen/hyph-zh-latn-pinyin.tex,
+	utils/pyhyphen/hyph-zh-latn-tonepinyin.tex: New files.
+
+2018-11-25  Werner Lemberg  <wl@gnu.org>
+
+	Rewrite pinyin hyphenation support.
+
+	Investigation has shown that the apostrophe before a syllable
+	starting with `a', `e', or `o' should vanish if a line break occurs. 
+	This commit fixes this bug: The apostrophe should now be entered
+	with the Babel shorthand "'; character ' itself is no longer part of
+	the hyphenation patterns.
+
+	It also adds support for pinyin syllables with tone markers, to be
+	used with Unicode engines like XeTeX or luatex.
+
+	Finally, the license for the resulting pattern files have been
+	changed from GPL to MIT to allow broader usage.
+
+	* utils/pyhyphen/GNUmakefile: New file.  Saying `make' will generate
+	the hyphenation pattern files `hyph-zh-latn-pinyin.tex' and
+	`hyph-zh-latn-tonepinyin.tex'.
+
+	* utils/pyhyphen/hyph-zh-latn-pinyin.in,
+	utils/pyhyphen/make-patterns.sh: New auxiliary files.
+
+	* utils/pyhyphen/pyhyph.tex: Removed.  Obsolete.
+
+	* utils/pyhyphen/pytestutf8.tex: New file to demonstrate patterns
+	for tone pinyin.
+
+	* utils/pyhyphen/pinyin.c, utils/pyhyphen/pinyin.ldf,
+	utils/pyhyphen/pinyin.tr, utils/pytest.tex: Updated.
+
+	* doc/pyhyphen.txt, MANIFEST: Updated.
+
 2016-12-27  Werner Lemberg  <wl@gnu.org>
 
 	* utils/lisp/emacs/cjk-enc.el (cjk-coding): Remove `chinese-big5'.

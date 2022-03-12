@@ -1,6 +1,6 @@
 % This is the file c49song.fd of the CJK package
-\def\fileversion{4.8.4}
-\def\filedate{2015/04/18}
+\def\fileversion{4.8.5}
+\def\filedate{2021/10/16}
 \ProvidesFile{c49song.fd}[\filedate\space\fileversion]
 
 \DeclareFontFamily{C49}{song}{\hyphenchar \font\m@ne}

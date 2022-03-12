@@ -1,15 +1,12 @@
 % This is the file pinyin.ldf of the CJK package
 %   for hyphenating Chinese pinyin syllables.
 %
-% We use the latin-1 character code for `umlaut u' (0xfc). Additionally,
-% the quote character "'" is used in its standard sense (resolving syllabic
-% ambiguities).
 %
 % created by Werner Lemberg <wl@gnu.org>
 %
-% Version 4.8.4 (18-Apr-2015)
+% Version 4.8.5 (16-Oct-2021)
 
-% Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+% Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -26,8 +23,26 @@
 % Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
 % MA 02110-1301 USA
 
+
+% Two shorthands are defined for pinyin.
+%
+%   "u   This represents `u umlaut'.
+%
+%   "'   This represents the apostrophe used to resolve syllabic
+%        ambiguities as in
+%
+%          Tien'anmen  ,
+%
+%        which should be thus typed in as
+%
+%          Tien"'anmen  .
+%
+%        Internally, this converts to a discretionary hyphen, since the
+%        apostrophe should vanish after a line break.
+
+
 \ProvidesLanguage{pinyin}
-        [CJK 4.8.4 pinyin support for the babel system]
+        [CJK 4.8.5 pinyin support for the babel system]
 
 \LdfInit{pinyin}{captionspinyin}
 
@@ -36,7 +51,7 @@
   \adddialect\l@pinyin0
 \fi
 
-\def\pinyinhyphenmins{11}
+\providehyphenmins{pinyin}{\@ne\tw@}
 \def\captionspinyin{}
 \def\datepinyin{}
 
@@ -45,14 +60,12 @@
 \addto\extraspinyin{\languageshorthands{pinyin}}
 \addto\extraspinyin{\bbl@activate{"}}
 \addto\extraspinyin{\babel@save\"\umlautlow}
-\addto\extraspinyin{%
-  \babel@savevariable{\lccode"27}%
-  \lccode"27 "27}
 
 \addto\noextraspinyin{\umlauthigh}
 
-\declare@shorthand{pinyin}{"u}{\textormath{\"{u}}{\ddot u}}
-\declare@shorthand{pinyin}{"U}{\textormath{\"{U}}{\ddot U}}
+\declare@shorthand{pinyin}{"u}{\textormath{\"{u}\allowhyphens}{\ddot u}}
+\declare@shorthand{pinyin}{"U}{\textormath{\"{U}\allowhyphens}{\ddot U}}
+\declare@shorthand{pinyin}{"'}{\textormath{\discretionary{-}{}{'}}{'}}
 
 \def\mdqon{\shorthandon{"}}
 \def\mdqoff{\shorthandoff{"}}

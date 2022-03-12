@@ -1,4 +1,4 @@
-This is the file TDS.txt of the CJK macro package ver. 4.8.4 (18-Apr-2015).
+This is the file TDS.txt of the CJK macro package ver. 4.8.5 (16-Oct-2021).
 
 The TeX Directory Structure (TDS)
 ---------------------------------

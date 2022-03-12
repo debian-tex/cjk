@@ -1,7 +1,7 @@
 /*
 
-  This is the file pinyin.c of the CJK macro package ver. 4.8.4
-  (18-Apr-2015).
+  This is the file pinyin.c of the CJK macro package ver. 4.8.5
+  (16-Oct-2021).
 
   Use this file to generate a hyphenation input file for patgen.
 
@@ -12,7 +12,7 @@
  */
 
 /*
-  Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+  Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
   
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -34,15 +34,36 @@
 
 
 /* A list of all Chinese syllables.  We use latin-1 encoding for the
-   `umlaut u' character. */
+   `umlaut u' character.
+
+   In the array below, syllables starting with `a', `e', or `u' are marked
+   with a leading exclamation mark, which we filter out later on to ensure
+   that those syllables are omitted on the right side.  If written without a
+   line break, an apostrophe must be inserted before such syllables, e.g.,
+
+     Tien'anmen
+
+   However, if there is a line break, the apostrophe disappears:
+
+     Tien-
+     anmen
+
+   This situation can't be handled by patgen; instead, a solution to this
+   problem can be provided by TeX with
+
+     \discretionary{-}{}{'}
+
+   The babel support file (`pinyin.ldf') provides "' as a shorthand for this
+   situation.
+ */
 
 char *py[] =
 {
-  "a",
-  "ai",
-  "an",
-  "ang",
-  "ao",
+  "!a",
+  "!ai",
+  "!an",
+  "!ang",
+  "!ao",
   "ba",
   "bai",
   "ban",
@@ -114,11 +135,11 @@ char *py[] =
   "dui",
   "dun",
   "duo",
-  "e",
-  "ei",
-  "en",
-  "eng",
-  "er",
+  "!e",
+  "!ei",
+  "!en",
+  "!eng",
+  "!er",
   "fa",
   "fan",
   "fang",
@@ -268,8 +289,8 @@ char *py[] =
   "nuo",
   "nü",
   "nüe",
-  "o",
-  "ou",
+  "!o",
+  "!ou",
   "pa",
   "pai",
   "pan",
@@ -450,31 +471,24 @@ char *py[] =
 
 int main(void)
 {
-  int i, j, off;
+  size_t i, j;
   size_t size = sizeof (py) / sizeof (char*);
-  char s[20];
 
   /* Now we loop through all possible syllable combinations. */
 
   for (i = 0; i < size; i++)
+  {
     for (j = 0; j < size; j++)
     {
-      /* The seldom used `%n' construct yields the number of processed
-         characters so far. */
+      if (py[j][0] == '!')
+        continue;
 
-      sprintf(s, "%s%n%s", py[i], &off, py[j]);
-
-      /* We check the first character of the second syllable.  If it is
-         a vowel, a quote will be inserted.  Example: Tian'anmen. */
-
-      if (s[off] == 'a' || s[off] == 'e' || s[off] == 'o')
-        printf("%s'-%s\n", py[i], py[j]);
-
-      /* No special case. */
-
+      if (py[i][0] == '!')
+        printf("%s-%s\n", py[i] + 1, py[j]);
       else
         printf("%s-%s\n", py[i], py[j]);
     }
+  }
 
   return 0;
 }

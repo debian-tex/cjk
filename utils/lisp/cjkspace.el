@@ -1,7 +1,7 @@
 ;;; cjkspace.el --- provide a tilde character if you type a space.
 ;;; use this file with AUCTeX.
 
-;; Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+;; Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 ;; Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
 ;; MA 02110-1301 USA
 
-;; This file is part of the CJK package Version 4.8.4 (18-Apr-2015)
+;; This file is part of the CJK package Version 4.8.5 (16-Oct-2021)
 
 ;; Insert tilde characters instead of spaces for LaTeX CJK documents.
 ;; If `CJK-space-after-space' is non-nil, typing a space yields a space.
