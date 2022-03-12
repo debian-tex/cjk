@@ -2,7 +2,6 @@ utils/hbf2gf/config.log
 utils/hbf2gf/config.status
 utils/hbf2gf/hbf.o
 utils/hbf2gf/hbf2gf
-utils/hbf2gf/hbf2gf.c
 utils/hbf2gf/hbf2gf.o
 utils/hbf2gf/Makefile
 utils/Bg5conv/bg5conv
