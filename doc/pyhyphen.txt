@@ -1,8 +1,8 @@
-This is the file pyhyphen.txt of the CJK macro package ver. 4.8.4
-(18-Apr-2015).
+This is the file pyhyphen.txt of the CJK macro package ver. 4.8.5
+(16-Oct-2021).
 
-Hyphenation patterns for unaccented pinyin syllables
-----------------------------------------------------
+Hyphenation patterns for pinyin syllables with and without tone markers
+-----------------------------------------------------------------------
 
 Sometimes it makes sense to use unaccented pinyin syllables for common names
 and phrases which are repeated frequently; sometimes you are in an
@@ -19,27 +19,57 @@ this can be found in the directory utils/pyhyphen.
 Installation
 ------------
 
+[Note: The hyphenation patterns have been submitted to the `tex-hyphen'
+       project. In recent TeX distributions it is no longer necessary to set
+       up pinyin support manually since everything should work out of the
+       box.]
+
 This is fairly straightforward. Move the Babel language definition file
-pinyin.ldf file to a place found by TeX. If you e.g., maintain a local TEXMF
-tree, a good place would be $TEXMFLOCAL/tex/generic/babel/pinyin.ldf.
-Similarly, move the pinyin hyphenation pattern file pyhyph.tex into your
-(local) TEXMF tree: The analogous place would be
-$TEXMFLOCAL/tex/generic/hyphen/pyhyph.tex.
+pinyin.ldf file to a place found by TeX. If you e.g., maintain a local
+TEXMF tree, a good place would be $TEXMFLOCAL/tex/generic/babel/pinyin.ldf.
+Similarly, move the pinyin hyphenation pattern files hyph-zh-latn-pinyin.tex
+and hyph-zh-latin-tonepinyin.tex into your (local) TEXMF tree: The analogous
+place would be directory $TEXMFLOCAL/tex/generic/hyphen.
 
-Now run texconfig (or a similar tool) to add pyhyph.tex to the used
-hyphenation patterns. In the usual case you have to add a line saying
+Now run texconfig (or a similar tool) to add hyph-zh-latn-pinyin.tex and
+hyph-zh-latin-tonepinyin.tex to the used hyphenation patterns. In the usual
+case you have to add a line saying
 
-  pinyin    pyhyph.tex
+  pinyin    hyph-zh-latn-tonepinyin.tex
 
-to the hyphenation configuration file language.dat. Finally, build a new
-format file (usually the command `initex latex.ltx'); in most cases this
-happens automatically.
+for Unicode-aware TeX engines (XeTeX, luatex, upTeX) or
+
+  pinyin    hyph-zh-latn-pinyin.tex
+
+for all other engines to the hyphenation configuration file language.dat.
+Finally, build a new format file (usually the command `initex latex.ltx');
+in most cases this happens automatically.
 
 Using Babel ensures that it works both with LaTeX and Plain TeX.
 
 
 Usage
 -----
+
+Unicode-aware engines
+- - - - - - - - - - -
+
+Do something like this:
+
+  \documentclass[...]{...}
+
+  \usepackage[pinyin,german,english]{babel}
+  ...
+
+  \begin{document}
+  ...
+  \foreignlanguage{pinyin}{pinyin with tone markers like Běijīng}
+  ...
+  \end{document}
+
+
+Other engines
+- - - - - - -
 
 Do something like this:
 
@@ -51,7 +81,7 @@ Do something like this:
 
   \begin{document}
   ...
-  \foreignlanguage{pinyin}{some pinyin syllables}
+  \foreignlanguage{pinyin}{pinyin without tone markers like Beijing}
   ...
   \end{document}
 
@@ -66,21 +96,20 @@ Note 1: pinyin.ldf is intentionally very minimal. Don't expect that e.g.,
 
           \py{Beijing}
 
-Note 2: The hyphenation patterns use `umlaut u' with code position 0xFC
-        (this is latin-1 and T1 encoding). You can also use OT1 encoding,
-        but then the patterns containing `umlaut u' won't work.
-        Additionally, the quote character `'' is used as a letter which is
-        needed to resolve ambiguities like this:
+Note 2: The apostrophe character `'' is used as to precede syllables
+        starting with `a', `e', or `u'. This is needed to resolve
+        ambiguities like this:
 
-          Xi'an <-> Xian        
+          Xi'an -> Xi-an (two syllables)
+          Xian  -> Xian (one syllable)
 
-        If a syllable not at the beginning of a word starts with a vowel
-        (i.e., `a', `e', or `o'), you must precede it with a quote
-        character. Example:
+        If a line break occurs, the apostrophe should vanish, e.g.,
 
-          Tian'anmen
+          Tian'anmen -> Tian-
+                        anmen
 
-        The hyphenation patterns correctly treat it as Tian'-an-men.
+        Use the Babel shorthand "' to enter '; this internally resolves to
+        \discretionary.
 
         The shorthand `"u' (as used in German) is available to input
         `umlaut u'.
@@ -95,13 +124,12 @@ Technical details
 -----------------
 
 The dictionary used to construct the hyphenation patterns has been created
-with the small C program `pinyin.c' which simply combines all existing
-Chinese syllable pairs, inserting quote characters where needed. Then,
-`patgen' has been run on the dictionary; `pinyin.tr' defines the used
-character set.
+with a small C program `pinyin.c' which simply combines all existing Chinese
+syllable pairs that don't need an apostrophe inbetween. Then, `patgen' has
+been run on the dictionary; `pinyin.tr' defines the used character set.
 
 Due to the regularity of the word combinations, only two-letter patterns of
-the first level are needed to find all possible breaks without a single
-error or omission.
+the first and second level are needed to find all possible breaks without a
+single error or omission.
 
 ---End of pyhyphen.txt---

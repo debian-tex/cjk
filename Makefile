@@ -1,4 +1,4 @@
-# Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+# Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@
 # o The TeXLive version of some font definition files are used (in the
 #   `texlive' subdirectory).
 
-version=4.8.4
+version=4.8.5
 
 distdir=cjk-$(version)
 abs-distdir=$(shell pwd)/$(distdir)

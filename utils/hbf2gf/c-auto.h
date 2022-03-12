@@ -1,12 +1,12 @@
 /*
  *   c-auto.h
  *
- *   This file is part of the CJK package ver 4.8.4  18-Apr-2015
+ *   This file is part of the CJK package ver 4.8.5  16-Oct-2021
  *
  */
 
 /*
-  Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+  Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

@@ -1,10 +1,10 @@
-This is the file thaifont.txt of the CJK macro package ver. 4.8.4
-(18-Apr-2015).
+This is the file thaifont.txt of the CJK macro package ver. 4.8.5
+(16-Oct-2021).
 
 Thai font support in the CJK package
 ------------------------------------
 
-Version 4.8.4 of the CJK package has improved support for Thai. This file
+Version 4.8.5 of the CJK package has improved support for Thai. This file
 describes how to install and use the fonts. Please refer to cjk-enc.txt how
 to set up cjk-enc.el (which automatically loads thai-word.el for finding
 word breaks).

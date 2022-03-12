@@ -24,7 +24,7 @@
 # A collection of useful subfont definition files for CJK fonts can be found
 # in the ttf2pk package.
 
-# Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+# Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

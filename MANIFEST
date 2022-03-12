@@ -1,4 +1,4 @@
-Copyright (C) 1994-2015  Werner Lemberg <wl@gnu.org>
+Copyright (C) 1994-2021  Werner Lemberg <wl@gnu.org>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@ The CJK package contains the following files:
   MANIFEST
   Makefile
   README
+  TODO
   contrib/wadalab/DNP.sfd
   contrib/wadalab/c42goth.fd
   contrib/wadalab/c42goth.fdx
@@ -310,6 +311,7 @@ The CJK package contains the following files:
   texinput/thai/c90gar.fd
   texinput/thai/c90nrsr.fd
   texinput/thai/thaicjk.ldf
+  texlive/README
   texlive/bin-cjkutils.pl
   texlive/c63mj.fd
   texlive/c64mj.fd
@@ -320,7 +322,6 @@ The CJK package contains the following files:
   texlive/dnp.pl
   texlive/garuda-c90.pl
   texlive/norasi-c90.pl
-  texlive/README
   utils/Bg5conv/bg5conv.1
   utils/Bg5conv/bg5conv.c
   utils/Bg5conv/bg5conv.w
@@ -421,11 +422,14 @@ The CJK package contains the following files:
   utils/lisp/emacs/cjk-enc.el
   utils/lisp/emacs/thai-word.el
   utils/lisp/mule-2.3/cjk-enc.el
+  utils/pyhyphen/GNUmakefile
+  utils/pyhyphen/hyph-zh-latn-pinyin.in
+  utils/pyhyphen/make-patterns.sh
   utils/pyhyphen/pinyin.c
   utils/pyhyphen/pinyin.ldf
   utils/pyhyphen/pinyin.tr
-  utils/pyhyphen/pyhyph.tex
   utils/pyhyphen/pytest.tex
+  utils/pyhyphen/pytestutf8.tex
   utils/subfonts/clonevf.pl
   utils/subfonts/hlatex2agl.pl
   utils/subfonts/makefdx.pl
