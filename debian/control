@@ -1,6 +1,6 @@
 Source: cjk
 Build-Depends: debhelper (>= 10.2.5), quilt, libkpathsea-dev, texlive-extra-utils, tex-common
-Build-Depends-Indep: texlive-base-bin, perl-base, texlive-font-utils, texlive-lang-other
+Build-Depends-Indep: texlive-font-utils, texlive-lang-other
 Section: tex
 Priority: optional
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
