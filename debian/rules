@@ -24,11 +24,11 @@ build_thaifonts = build_thaifonts
 
 # Stuff for get-orig-source.
 # Getting the revision numbers according to debian/changelog, the HARD way.
-#upstream_version := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(.*\)-.*/\1/p')
-#isodate := $(shell dpkg-parsechangelog | sed -ne 's/^Version.*git\(.*\)-.*/\1/p')
-#unixdate := $(shell date -d $(isodate) +%s)
+upstream_version := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(.*\)-.*/\1/p')
+isodate := $(shell dpkg-parsechangelog | sed -ne 's/^Version.*git\(.*\)-.*/\1/p')
+unixdate := $(shell date -d $(isodate) +%s)
 # Add 24 hours to the Unix timestamp.
-#unixdate := $(shell expr $(unixdate) + 86400 )
+unixdate := $(shell expr $(unixdate) + 86400 )
 
 # To get the Master revision number (i.e. 4.8.0), use:
 # dpkg-parsechangelog | sed -ne 's/^Version: *\([^+-]*\).*/\1/p'
@@ -176,24 +176,24 @@ binary-arch: build build-arch install
 	dh_md5sums -a
 	dh_builddeb -a
 
-#get-orig-source:
+get-orig-source:
 	# Cleaning
-	#rm -rf cjk-$(upstream_version)
-	#rm -f ../cjk_$(upstream_version).orig.tar.gz
+	rm -rf cjk-$(upstream_version)
+	rm -f ../cjk_$(upstream_version).orig.tar.gz
 
 	# Download the latest GIT version and downgrade it to $(unixdate).
-	#git clone git://git.sv.gnu.org/cjk.git cjk-$(upstream_version)
+	git clone git://git.sv.gnu.org/cjk.git cjk-$(upstream_version)
 
 #	cd cjk-$(upstream_version) && git reset --hard `git rev-list --all -n 1 --before=$(unixdate)`
 
 	# Make a pristine package.
-	#mkdir -p ../tarballs
+	mkdir -p ../tarballs
 # --no-name/-n is important because it won't save the timestamp in the
 # 5th to 8th byte of the gzip.
-	#cd cjk-$(upstream_version) && git archive --format=tar --prefix=cjk-$(upstream_version)/ $$(git rev-list --all -n 1 --before=$(unixdate)) | gzip -9 --no-name -c > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
+	cd cjk-$(upstream_version) && git archive --format=tar --prefix=cjk-$(upstream_version)/ $$(git rev-list --all -n 1 --before=$(unixdate)) | gzip -9 --no-name -c > ../../tarballs/cjk_$(upstream_version).orig.tar.gz
 
 	# Clean again, because we use svn-buildpackage afterwards.
-	#rm -rf cjk-$(upstream_version)
+	rm -rf cjk-$(upstream_version)
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install get-orig-source
