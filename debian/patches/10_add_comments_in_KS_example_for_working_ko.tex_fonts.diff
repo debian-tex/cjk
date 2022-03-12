@@ -4,10 +4,8 @@
 ## of the default `mj' font because the latter is not included anymore
 ## in the ko.tex-extra-hlfont package.
 
-Index: cjk-4.8.3+git20120914/examples/KS.tex
-===================================================================
---- cjk-4.8.3+git20090105.orig//examples/KS.tex	2013-01-13 01:12:57.000000000 +0800
-+++ cjk-4.8.3+git20120914/examples/KS.tex	2013-01-13 14:42:46.250636001 +0800
+--- cjk.orig/examples/KS.tex
++++ cjk/examples/KS.tex
 @@ -13,7 +13,17 @@
  
  \begin{document}

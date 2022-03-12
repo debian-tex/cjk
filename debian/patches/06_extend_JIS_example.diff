@@ -6,11 +6,11 @@
  examples/JIS.tex |   24 ++++++++++++++++++++----
  1 file changed, 20 insertions(+), 4 deletions(-)
 
---- cjk-4.8.4+git20150701.orig/examples/JIS.tex
-+++ cjk-4.8.4+git20150701/examples/JIS.tex
+--- cjk.orig/examples/JIS.tex
++++ cjk/examples/JIS.tex
 @@ -5,24 +5,40 @@
  %
- % Version 4.8.4 (18-Apr-2015)
+ % Version 4.8.5 (16-Oct-2021)
  
 -\documentclass[12pt]{article}
 +\documentclass[12pt]{scrartcl}

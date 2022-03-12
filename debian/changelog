@@ -1,7 +1,9 @@
-cjk (4.8.4+git20170127-5) UNRELEASED; urgency=medium
+cjk (4.8.5-1) UNRELEASED; urgency=medium
 
   [Debian Janitor]
   * https://github.com/debian-tex/cjk/pull/1
+
+  New upstream release. Refresh patches.
 
   * Remove obsolete Suggests for latex-cjk-chinese & latex-cjk-japanese.
   * Introduce d/watch, remove Lintian override, re-enable get-orig-source

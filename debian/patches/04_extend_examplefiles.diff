@@ -14,8 +14,8 @@
  examples/thai.tex      |   20 ++++-
  7 files changed, 269 insertions(+), 19 deletions(-)
 
---- a/examples/Big5.tex
-+++ b/examples/Big5.tex
+--- cjk.orig/examples/Big5.tex
++++ cjk/examples/Big5.tex
 @@ -8,15 +8,33 @@
  %
  % process this file with bg5latex (or cjk-enc.el; see cjk-enc.txt)
@@ -59,8 +59,8 @@
 -%%% TeX-command-default: "CJKLaTeX"
 +%%% TeX-command-default: "LaTeX"
  %%% End:
---- a/examples/CEF_test.tex
-+++ b/examples/CEF_test.tex
+--- cjk.orig/examples/CEF_test.tex
++++ cjk/examples/CEF_test.tex
 @@ -7,6 +7,10 @@
  
  % - requires fonts from the cns package
@@ -72,8 +72,8 @@
  \documentclass[12pt]{article}
  
  \usepackage[global]{CJK}
---- a/examples/CJKbabel.tex
-+++ b/examples/CJKbabel.tex
+--- cjk.orig/examples/CJKbabel.tex
++++ cjk/examples/CJKbabel.tex
 @@ -15,6 +15,14 @@
  % `cjk-write-file' will be available after loading cjk-enc.el into
  % Emacs 20 with the commands load-file or load-library.
@@ -116,7 +116,7 @@
  
  This FAQ list was made to summarize some frequently asked questions
  and their answers in a convenient form.  \uline{The structure of this
-@@ -88,19 +101,19 @@ and their answers in a convenient form.
+@@ -88,19 +101,19 @@
  \textbf{For details of the new structure, see the entry of `How to
    read this FAQ and its structure'.}
  
@@ -147,7 +147,7 @@
  \end{otherlanguage}
  
  \begin{otherlanguage}{russian}
-@@ -112,9 +125,9 @@ gš¢£p trong thš¢ñc tš¢ª vš¢à nhš¢æng lš¢
+@@ -112,9 +125,9 @@
  \end{otherlanguage}
  
  \begin{otherlanguage}{thaicjk}
@@ -160,8 +160,8 @@
      FAQ.''}
  \end{otherlanguage}
  
---- a/examples/CJKutf8.tex
-+++ b/examples/CJKutf8.tex
+--- cjk.orig/examples/CJKutf8.tex
++++ cjk/examples/CJKutf8.tex
 @@ -14,11 +14,19 @@
  %
  % Read CJKutf8.txt for more details.
@@ -223,7 +223,7 @@
  \begin{otherlanguage}{german}
    Dieses FAQ wurde erstellt, um hÃ¤ufig gestellte Fragen und ihre
 --- /dev/null
-+++ b/examples/KS-hlatex.tex
++++ cjk/examples/KS-hlatex.tex
 @@ -0,0 +1,187 @@
 +% This is a testfile of the CJK Debian package to test Korean.
 +% Please install hlatex-fonts-base (perhaps -extra as well).
@@ -412,11 +412,11 @@
 +%%% mode: latex
 +%%% TeX-master: t
 +%%% End:
---- a/examples/rubytest.tex
-+++ b/examples/rubytest.tex
+--- cjk.orig/examples/rubytest.tex
++++ cjk/examples/rubytest.tex
 @@ -5,16 +5,15 @@
  %
- % Version 4.8.4 (18-Apr-2015)
+ % Version 4.8.5 (16-Oct-2021)
  
 -% You need Emacs 20 (or Mule 2.3) to process this file!
 -
@@ -434,8 +434,8 @@
  
  \documentclass[12pt]{article}
  
---- a/examples/thai.tex
-+++ b/examples/thai.tex
+--- cjk.orig/examples/thai.tex
++++ cjk/examples/thai.tex
 @@ -11,7 +11,8 @@
  %   . font switching between Thai and non-Thai
  %   . intercharacter glue

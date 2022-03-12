@@ -22,8 +22,8 @@
  examples/UTF8.tex      |    5 +++++
  13 files changed, 65 insertions(+)
 
---- cjk-4.8.4+git20150701.orig/examples/Big5.tex
-+++ cjk-4.8.4+git20150701/examples/Big5.tex
+--- cjk.orig/examples/Big5.tex
++++ cjk/examples/Big5.tex
 @@ -41,6 +41,11 @@
  \textbf{¦³Ãö·sµ²ºcªº²Ó¸`¡A¥i°Ñ¦Ò¡u¦p¦ó¾\Åª¥»°İµª¶°¤Î¤F¸Ñ¨ä½s±Æµ²ºc¡v¸Ó
  ¶µ¤¤ªº»¡©ú¡C}
@@ -36,8 +36,8 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/Big5vert.tex
-+++ cjk-4.8.4+git20150701/examples/Big5vert.tex
+--- cjk.orig/examples/Big5vert.tex
++++ cjk/examples/Big5vert.tex
 @@ -23,6 +23,11 @@
  \textbf{¦³Ãö·sµ²ºcªº²Ó¸`¡A¥i°Ñ¦Ò¡u¦p¦ó¾\Åª¥»°İµª¶°¤Î¤F¸Ñ¨ä½s±Æµ²ºc¡v¸Ó
  ¶µ¤¤ªº»¡©ú¡C}
@@ -50,9 +50,9 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/CEF_test.tex
-+++ cjk-4.8.4+git20150701/examples/CEF_test.tex
-@@ -40,6 +40,11 @@
+--- cjk.orig/examples/CEF_test.tex
++++ cjk/examples/CEF_test.tex
+@@ -42,6 +42,11 @@
  \verb|\CJKchar[CNS7]{"5A}{"5A}| \CJKchar[CNS7]{"5A}{"5A}
  \quad \verb|&C7-|\verb|5A5A;| &C7-5A5A;
  
@@ -64,8 +64,8 @@
  \end{CJK}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/CJKfntef.tex
-+++ cjk-4.8.4+git20150701/examples/CJKfntef.tex
+--- cjk.orig/examples/CJKfntef.tex
++++ cjk/examples/CJKfntef.tex
 @@ -79,6 +79,11 @@
  \verb|\CJKunderanysymbol{...}{...}{...}|:\\
  \CJKunderanysymbol{0.5em}{-}{ºº×Ö¼Óµã£¬ ¿ÉÍ¬Ê±¼ÓÏÂ»®Ïß¼ÓÏÂ»®£¬Ïß, ×Ô¶¯»»ĞĞ,}
@@ -78,9 +78,9 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/CJKmixed.tex
-+++ cjk-4.8.4+git20150701/examples/CJKmixed.tex
-@@ -73,6 +73,11 @@
+--- cjk.orig/examples/CJKmixed.tex
++++ cjk/examples/CJKmixed.tex
+@@ -70,6 +70,11 @@
      è©²é …ä¸­çš„èªªæ˜ã€‚}
  \end{TChinese}
  
@@ -92,8 +92,8 @@
  \end{CJK}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/CJKspace.tex
-+++ cjk-4.8.4+git20150701/examples/CJKspace.tex
+--- cjk.orig/examples/CJKspace.tex
++++ cjk/examples/CJKspace.tex
 @@ -29,6 +29,11 @@
    æ··æ’ \verb+anything+ ä¿æŒ \texttt{spaces} ç©ºæ ¼ \LaTeX\ é—´éš”
    \mbox{boxes} ç›’å­ \hbox{hbox} ä¸­æ–‡ 123456 æ•°å­—.
@@ -106,9 +106,9 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/CJKutf8.tex
-+++ cjk-4.8.4+git20150701/examples/CJKutf8.tex
-@@ -143,6 +143,11 @@
+--- cjk.orig/examples/CJKutf8.tex
++++ cjk/examples/CJKutf8.tex
+@@ -148,6 +148,11 @@
      Î´Î¹Î±Î²Î¬ÏƒÎµÏ„Îµ Î±Ï…Ï„Î® Ï„Î·Î½ Î£Î¤Î• ÎºÎ±Î¹ Ï€ÏÏ‚ ÎµÎ¯Î½Î±Î¹ Î¿ÏÎ³Î±Î½Ï‰Î¼Î­Î½Î·>>.}
  \end{otherlanguage}
  
@@ -120,8 +120,8 @@
  \end{CJK}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/GB.tex
-+++ cjk-4.8.4+git20150701/examples/GB.tex
+--- cjk.orig/examples/GB.tex
++++ cjk/examples/GB.tex
 @@ -20,6 +20,11 @@
  \textbf{ÓĞ¹ØĞÂ½á¹¹µÄÏ¸½Ú£¬¿É²Î¿¼¡¸ÈçºÎÔÄ¶Á±¾ÎÊ´ğ¼¯¼°ÁË½âÆä±àÅÅ½á¹¹¡¹¸Ã
  ÏîÖĞµÄËµÃ÷¡£}
@@ -134,8 +134,8 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/JIS.tex
-+++ cjk-4.8.4+git20150701/examples/JIS.tex
+--- cjk.orig/examples/JIS.tex
++++ cjk/examples/JIS.tex
 @@ -40,6 +40,11 @@
  \CJKfamily{maru}
  \testpar
@@ -148,8 +148,8 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/KS-hlatex.tex
-+++ cjk-4.8.4+git20150701/examples/KS-hlatex.tex
+--- cjk.orig/examples/KS-hlatex.tex
++++ cjk/examples/KS-hlatex.tex
 @@ -176,6 +176,11 @@
  \testpar
  
@@ -162,8 +162,8 @@
  \end{CJK}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/KS.tex
-+++ cjk-4.8.4+git20150701/examples/KS.tex
+--- cjk.orig/examples/KS.tex
++++ cjk/examples/KS.tex
 @@ -20,6 +20,11 @@
  È¹±âÀûÀ¸·Î º¯°æµÇ¾ú½À´Ï´Ù.  \textbf{»ó¼¼ÇÑ °ÍÀº ``ÀÌ FAQ À» ¾î¶»°Ô
  ÀĞÀ» °ÍÀÎ°¡'' ¶ó´Â ´ë¸ñÀ» ÂüÁ¶ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.}
@@ -176,8 +176,8 @@
  \end{CJK}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/SJIS.tex
-+++ cjk-4.8.4+git20150701/examples/SJIS.tex
+--- cjk.orig/examples/SJIS.tex
++++ cjk/examples/SJIS.tex
 @@ -27,6 +27,11 @@
  ‚Ì“Ç‚İ•û‚Æ‚»‚Ì\‘¢v‚Ì€–Ú‚ğ\ruby{Q}{‚³‚ñ}\ruby{Æ}{‚µ‚å‚¤}‚µ‚Ä‰º‚³
  ‚¢B}
@@ -190,8 +190,8 @@
  \end{CJK*}
  
  \end{document}
---- cjk-4.8.4+git20150701.orig/examples/UTF8.tex
-+++ cjk-4.8.4+git20150701/examples/UTF8.tex
+--- cjk.orig/examples/UTF8.tex
++++ cjk/examples/UTF8.tex
 @@ -37,6 +37,11 @@
  \CJKnospace
  \noindent ã“ã‚“ã«ã¡ã¯ ä¸–ç•Œ
