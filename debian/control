@@ -46,11 +46,6 @@ Description: Chinese module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
  to include Chinese (traditional and simplified) text in your (La)TeX documents.
  .
- Install hbf-jfs56 if you want to use bitmap fonts in simplified Chinese.
- Install hbf-cns40-b5 if you want bitmap fonts in traditional Chinese.
- Install hbf-cns40-[1-7] if you want CEF bitmap fonts.  This is only needed
- if you need extremely rare and exotic Chinese characters.
- .
  Have a look at latex-cjk-common for a more detailed description.
 
 Package: latex-cjk-japanese
@@ -61,8 +56,6 @@ Description: Japanese module of LaTeX CJK
  CJK is a macro package for LaTeX.  This package gives you the possibility
  to include Japanese text in your (La)TeX documents.  Install
  latex-cjk-japanese-wadalab for pretty printing.
- .
- Install hbf-kanji48 if you want to use bitmap fonts in your documents.
  .
  Have a look at latex-cjk-common for a more detailed description.
 

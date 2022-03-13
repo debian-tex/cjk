@@ -5,7 +5,8 @@ cjk (4.8.5-1) UNRELEASED; urgency=medium
 
   New upstream release. Refresh patches.
 
-  * Remove obsolete Suggests for latex-cjk-chinese & latex-cjk-japanese.
+  * Remove obsolete Font Suggests for latex-cjk-chinese &
+    latex-cjk-japanese; remove the packages names from description.
   * Introduce d/watch, remove Lintian override, re-enable get-orig-source
     target in d/rules.
 
