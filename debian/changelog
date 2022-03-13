@@ -9,6 +9,7 @@ cjk (4.8.5-1) UNRELEASED; urgency=medium
     latex-cjk-japanese; remove the packages names from description.
   * Introduce d/watch, remove Lintian override, re-enable get-orig-source
     target in d/rules.
+  * Debhelper compat 13.
 
  -- Hilmar Preusse <hille42@web.de>  Wed, 19 Jan 2022 12:24:44 +0100
 
