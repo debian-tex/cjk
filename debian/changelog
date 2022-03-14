@@ -1,4 +1,4 @@
-cjk (4.8.5-1) UNRELEASED; urgency=medium
+cjk (4.8.5-1) unstable; urgency=low
 
   [Debian Janitor]
   * https://github.com/debian-tex/cjk/pull/1
@@ -15,7 +15,7 @@ cjk (4.8.5-1) UNRELEASED; urgency=medium
   * Drop transitional/dummy package cjk-latex.
   * Debhelper compat 13.
 
- -- Hilmar Preusse <hille42@web.de>  Wed, 19 Jan 2022 12:24:44 +0100
+ -- Hilmar Preusse <hille42@web.de>  Mon, 14 Mar 2022 23:09:04 +0100
 
 cjk (4.8.4+git20170127-4) unstable; urgency=medium
 
