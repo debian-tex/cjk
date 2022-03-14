@@ -100,13 +100,3 @@ Description: installs all LaTeX CJK packages
  This metapackage will install all CJK packages.
  You may also wish to install each package separately instead.
  See the latex-cjk-common package for a detailed description.
-
-Package: cjk-latex
-Architecture: all
-Depends: latex-cjk-common (>= ${source:Version}), ${misc:Depends}
-Suggests: latex-cjk-all (= ${source:Version})
-Description: installs all LaTeX CJK packages - dummy package
- This is a dummy package that allows you to smoothly upgrade
- from the old cjk-latex to the current latex-cjk-common packages.
- After the installation of the latex-cjk-common packages, you can
- safely delete this package.
