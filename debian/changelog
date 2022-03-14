@@ -4,9 +4,12 @@ cjk (4.8.5-1) UNRELEASED; urgency=medium
   * https://github.com/debian-tex/cjk/pull/1
 
   New upstream release. Refresh patches.
+  * It fixes typestting of font faces (bold, italic) for latin fonts.
+    (Closes: #1006974)
 
-  * Remove obsolete Font Suggests for latex-cjk-chinese &
-    latex-cjk-japanese; remove the packages names from description.
+  * Remove Suggests of "hbf-cns40-b5, hbf-jfs56 & hbf-kanji48" from
+    latex-cjk-chinese & latex-cjk-japanese; remove the packages names
+    from description. The packages do not exist any more.
   * Introduce d/watch, remove Lintian override, re-enable get-orig-source
     target in d/rules.
   * Debhelper compat 13.
