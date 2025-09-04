@@ -19,7 +19,7 @@ Files: debian/*
 Copyright: Copyright (C) 1998-2003 Anthony FOK
            Copyright (C) 2003-2016 Danai SAE-HAN
            Copyright (C) 2012-2021 Norbert Preining
-           Copyright (C) 2021-2022 Hilmar Preuße
+           Copyright (C) 2021-2025 Hilmar Preuße
 License: GPL-2+
 
 License: GPL-2+
@@ -34,8 +34,7 @@ License: GPL-2+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ along with this program. If not, see https://www.gnu.org/licenses/.
  .
  On Debian systems, the complete text of the GNU General Public
  License version 2 can be found in `/usr/share/common-licenses/GPL-2'.
