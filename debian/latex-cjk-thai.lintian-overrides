@@ -1,3 +1,5 @@
 latex-cjk-thai: national-encoding [usr/share/doc/latex-cjk-common/examples/thai.tex]
 latex-cjk-thai: national-encoding [usr/share/emacs/site-lisp/latex-cjk-thai/thai-word.el]
 latex-cjk-thai: national-encoding [usr/share/texmf/tex/generic/babel/thaicjk.ldf]
+# We are in TeX world.
+latex-cjk-thai: package-contains-documentation-outside-usr-share-doc [usr/share/latex-cjk-common/utils/thaifont/tools/dbtt-old/dbtt-old-alias.tex]

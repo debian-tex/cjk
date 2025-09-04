@@ -4,3 +4,6 @@ latex-cjk-chinese: national-encoding [usr/share/doc/latex-cjk-common/examples/Bi
 latex-cjk-chinese: national-encoding [usr/share/doc/latex-cjk-common/examples/GB.tex]
 latex-cjk-chinese: national-encoding [usr/share/texmf/tex/latex/CJK/Bg5/Bg5.cap]
 latex-cjk-chinese: national-encoding [usr/share/texmf/tex/latex/CJK/GB/GB.cap]
+# We are in TeX world.
+latex-cjk-chinese: package-contains-documentation-outside-usr-share-doc [usr/share/texmf/tex/generic/hyphen/hyph-zh-latn-pinyin.tex]
+latex-cjk-chinese: package-contains-documentation-outside-usr-share-doc [usr/share/texmf/tex/generic/hyphen/hyph-zh-latn-tonepinyin.tex]
