@@ -7,7 +7,7 @@ Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
 Uploaders: Danai SAE-HAN (韓達耐) <danai@debian.org>,
     Norbert Preining <norbert@preining.info>,
     Hilmar Preuße <hille42@debian.org>
-Standards-Version: 4.3.0.3
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 Vcs-Git: https://github.com/debian-tex/cjk.git
 Vcs-Browser: https://github.com/debian-tex/cjk
