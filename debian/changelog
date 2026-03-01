@@ -1,3 +1,9 @@
+cjk (4.8.5-3) UNRELEASED; urgency=medium
+
+  * Remove explicit BD on quilt (Closes: #1129355).
+
+ -- Hilmar Preuße <hille42@debian.org>  Sun, 01 Mar 2026 12:44:52 +0100
+
 cjk (4.8.5-2) unstable; urgency=medium
 
   * Fix my Uploaders / Maintainers address.
